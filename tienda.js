@@ -35,7 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (cart.length === 0) {
       if (cartItemsContainer) {
-        cartItemsContainer.innerHTML = '<p class="text-xs text-slate-400 text-center py-8">Tu carrito está vacío.</p>';
+        const defaultEmptyMsg = cartItemsContainer.getAttribute('data-empty-text') || '...';
+        cartItemsContainer.innerHTML = `<p class="text-xs text-slate-400 text-center py-8">${defaultEmptyMsg}</p>`;
       }
       if (cartTotal) cartTotal.innerText = '0 €';
       return;
@@ -87,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       const originalText = btn.innerHTML;
-      btn.innerHTML = '✓ ¡Añadido!';
+      btn.innerHTML = '✓ OK!';
       setTimeout(() => {
         btn.innerHTML = originalText;
       }, 1200);
@@ -101,10 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('cart-close-btn')?.addEventListener('click', toggleCartDrawer);
 
   document.getElementById('checkout-btn')?.addEventListener('click', () => {
-    if (cart.length === 0) {
-      alert('Agrega al menos un producto antes de continuar con el pago.');
-      return;
-    }
+    if (cart.length === 0) return;
     window.location.href = STRIPE_LINK;
   });
 });
