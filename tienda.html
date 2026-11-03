@@ -12,32 +12,20 @@
 </head>
 <body class="min-h-screen flex flex-col justify-between overflow-x-hidden bg-[#FAF8F5]">
 
-<nav class="w-full bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 px-6 py-3.5 shadow-sm">
-  <div class="max-w-6xl mx-auto flex justify-between items-center">
-    
-    <a href="./index.html" class="flex items-center gap-2 text-xs font-bold text-[#0A3B7A] hover:text-[#1F8A65] transition-colors">
-      <i class="fa-solid fa-arrow-left"></i>
-      <span>VOLVER A MELIDAN ACADEMY</span>
-    </a>
-
-    <div class="flex items-center gap-4">
-      <div class="flex items-center gap-1.5 text-xs font-bold text-[#0A3B7A] bg-slate-100 px-3 py-1.5 rounded-full border border-slate-200">
-        <a href="./tienda.html" class="text-[#1F8A65] font-extrabold">ES</a>
-        <span class="text-slate-300">|</span>
-        <a href="./pt/tienda.html" class="hover:text-[#1F8A65] transition-colors">PT</a>
-        <span class="text-slate-300">|</span>
-        <a href="./it/tienda.html" class="hover:text-[#1F8A65] transition-colors">IT</a>
-      </div>
-
-      <button id="cart-toggle" class="flex items-center gap-2 px-4 py-2 bg-[#E8F3EE] text-[#1F8A65] rounded-full text-xs font-extrabold border border-[#1F8A65]/20 hover:bg-[#d8ebd2] transition-colors cursor-pointer">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <span>Mi Carrito</span>
-        <span id="cart-count" class="bg-[#1F8A65] text-white px-2 py-0.5 rounded-full text-[10px]">0</span>
+  <nav class="w-full bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 px-6 py-3.5 shadow-sm">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <a href="./index.html" class="flex items-center space-x-2 text-[#0A3B7A] hover:text-[#1F8A65] transition-colors">
+        <i class="fa-solid fa-arrow-left text-xs"></i>
+        <span class="font-extrabold text-xs tracking-wider">VOLVER A MELIDAN ACADEMY</span>
+      </a>
+      
+      <button id="cart-toggle-btn" class="px-4 py-2 bg-[#E8F3EE] text-[#1F8A65] rounded-full hover:bg-[#d8ebd2] transition-all flex items-center gap-2 border border-[#1F8A65]/20 shadow-sm text-xs font-bold cursor-pointer">
+        <i class="fa-solid fa-cart-shopping text-xs"></i>
+        <span>Tu Carrito</span>
+        <span id="cart-count" class="bg-[#1F8A65] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
       </button>
     </div>
-
-  </div>
-</nav>
+  </nav>
 
   <main class="w-full max-w-5xl mx-auto px-6 py-12 space-y-10">
     
@@ -46,10 +34,10 @@
         RECURSOS PRÁCTICOS DIRECTO AL GRANO
       </span>
       <h1 class="text-3xl md:text-5xl font-bold text-[#0A3B7A] leading-tight tracking-tight italic">
-        Todo lo que necesitas para soltar la lengua en inglés.
+        Todo lo que necesitas para soltar la lengua en inglés
       </h1>
       <p class="text-xs md:text-base text-slate-600 leading-relaxed font-medium max-w-xl mx-auto">
-        Ya sea que vayas empezando desde cero o que busques dar el salto a un trabajo remoto en dólares, aquí tienes guías tácticas sin rollos teóricos.
+        Ya sea que vayas empezando desde cero, viajes al extranjero o busques un trabajo remoto, aquí tienes herramientas prácticas sin rollos teóricos.
       </p>
     </div>
 
@@ -57,23 +45,29 @@
       <button data-tab="cero" id="tab-cero" class="tab-btn active px-5 py-2.5 bg-white border border-slate-200 text-[#0A3B7A] text-xs font-bold rounded-full transition-all cursor-pointer shadow-xs">
         🌱 Para Empezar desde Cero
       </button>
-      <button data-tab="estrella" id="tab-estrella" class="tab-btn px-5 py-2.5 bg-white border border-slate-200 text-[#0A3B7A] text-xs font-bold rounded-full transition-all cursor-pointer shadow-xs">
-        💼 Carrera & Entrevistas
+      <button data-tab="viajes" id="tab-viajes" class="tab-btn px-5 py-2.5 bg-white border border-slate-200 text-[#0A3B7A] text-xs font-bold rounded-full transition-all cursor-pointer shadow-xs">
+        ✈️ Viajes & Vida Diaria
       </button>
-      <button data-tab="bundles" id="tab-bundles" class="tab-btn px-5 py-2.5 bg-white border border-slate-200 text-[#0A3B7A] text-xs font-bold rounded-full transition-all cursor-pointer shadow-xs">
-        🎁 Bundles con Descuento
+      <button data-tab="carrera" id="tab-carrera" class="tab-btn px-5 py-2.5 bg-white border border-slate-200 text-[#0A3B7A] text-xs font-bold rounded-full transition-all cursor-pointer shadow-xs">
+        💼 Carrera & Trabajo Remoto
+      </button>
+      <button data-tab="profes" id="tab-profes" class="tab-btn px-5 py-2.5 bg-white border border-slate-200 text-[#0A3B7A] text-xs font-bold rounded-full transition-all cursor-pointer shadow-xs">
+        🍎 Recursos para Profes
+      </button>
+      <button data-tab="programas" id="tab-programas" class="tab-btn px-5 py-2.5 bg-white border border-slate-200 text-[#0A3B7A] text-xs font-bold rounded-full transition-all cursor-pointer shadow-xs">
+        🎁 Bundles & Programas
       </button>
     </div>
 
     <div id="sec-cero" class="tab-content">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-        <div class="bg-white border border-slate-200/80 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
+        <div class="bg-white border-2 border-[#1F8A65]/40 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
           <div class="space-y-3">
             <span class="px-3 py-1 bg-[#E8F3EE] text-[#1F8A65] text-[10px] font-extrabold rounded-full inline-block">GUÍA + ROADMAP EN PDF</span>
             <h3 class="text-lg font-bold text-[#0A3B7A]">Aprende Inglés en 6 Meses: La Ruta Exacta</h3>
             <p class="text-xs text-slate-600 font-medium leading-relaxed">
-              El mapa paso a paso para pasar de cero a tener conversaciones fluidas. Sin libros aburridos de gramática, enfocado 100% en el inglés real que se habla hoy.
+              El mapa paso a paso para pasar de cero a tener conversaciones fluidas. Sin libros aburridos de gramática, enfocado 100% en el inglés real de todos los días.
             </p>
           </div>
           <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
@@ -92,7 +86,7 @@
             <span class="px-3 py-1 bg-amber-50 text-amber-800 border border-amber-200 text-[10px] font-extrabold rounded-full inline-block">EBOOK + AUDIOS</span>
             <h3 class="text-lg font-bold text-[#0A3B7A]">Kit Anti-Bloqueo: Pierde la Pena a Hablar</h3>
             <p class="text-xs text-slate-600 font-medium leading-relaxed">
-              ¿Te da pena hablar o sientes que te trabas? Aprende las técnicas psicológicas y muletillas clave para soltarte sin miedo a equivocarte.
+              ¿Sientes que te quedas en blanco al hablar? Descubre técnicas amables para soltar la lengua, perder el miedo a equivocarte y fluir al conversar.
             </p>
           </div>
           <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
@@ -105,15 +99,15 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
           <div class="space-y-3">
-            <span class="px-3 py-1 bg-rose-50 text-rose-800 border border-rose-200 text-[10px] font-extrabold rounded-full inline-block">PLANNER EN NOTION / PDF</span>
-            <h3 class="text-lg font-bold text-[#0A3B7A]">Planner de Inmersión Diaria en Casa</h3>
+            <span class="px-3 py-1 bg-teal-50 text-teal-800 border border-teal-200 text-[10px] font-extrabold rounded-full inline-block">SISTEMA EN NOTION</span>
+            <h3 class="text-lg font-bold text-[#0A3B7A]">Second Brain para Aprender Inglés</h3>
             <p class="text-xs text-slate-600 font-medium leading-relaxed">
-              Transforma tu rutina para rodearte de inglés todos los días sin salir de tu país. Diseñado para organizar podcasts, series y lecturas en 15 min al día.
+              Tu espacio lindo y organizado en Notion para guardar vocabulario nuevo, registrar tus series y podcasts favoritos, y ver cuánto has avanzado.
             </p>
           </div>
           <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
             <span class="text-xl font-extrabold text-[#0A3B7A]">14 €</span>
-            <button data-add-item="Planner de Inmersión Diaria en Casa" data-price="14" class="px-5 py-2.5 bg-[#0A3B7A] hover:bg-[#082e60] text-white text-xs font-bold rounded-full transition-colors cursor-pointer">
+            <button data-add-item="Second Brain para Aprender Inglés" data-price="14" class="px-5 py-2.5 bg-[#0A3B7A] hover:bg-[#082e60] text-white text-xs font-bold rounded-full transition-colors cursor-pointer">
               + Añadir al Carrito
             </button>
           </div>
@@ -124,7 +118,7 @@
             <span class="px-3 py-1 bg-purple-50 text-purple-800 border border-purple-200 text-[10px] font-extrabold rounded-full inline-block">FLASHCARDS ANKI + AUDIO</span>
             <h3 class="text-lg font-bold text-[#0A3B7A]">Mazo 1,000 Palabras Clave Diarias</h3>
             <p class="text-xs text-slate-600 font-medium leading-relaxed">
-              Las 1,000 palabras más utilizadas en la vida real con pronunciación exacta. Utiliza repetición espaciada en tu cel para no olvidarlas jamás.
+              Las 1,000 palabras más utilizadas en la vida real con pronunciación exacta. Utiliza repetición espaciada en tu celular para no olvidarlas jamás.
             </p>
           </div>
           <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
@@ -138,23 +132,20 @@
       </div>
     </div>
 
-    <div id="sec-estrella" class="tab-content hidden">
+    <div id="sec-viajes" class="tab-content hidden">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-        <div class="bg-white border-2 border-[#1F8A65]/40 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
+        <div class="bg-white border border-slate-200/80 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
           <div class="space-y-3">
-            <span class="px-3 py-1 bg-[#E8F3EE] text-[#1F8A65] text-[10px] font-extrabold rounded-full inline-block">EBOOK + GUÍA TÁCTICA</span>
-            <h3 class="text-lg font-bold text-[#0A3B7A]">Tech Resume + STAR Guide</h3>
+            <span class="px-3 py-1 bg-blue-50 text-blue-800 border border-blue-200 text-[10px] font-extrabold rounded-full inline-block">EBOOK + GUÍA DE AUDIOS</span>
+            <h3 class="text-lg font-bold text-[#0A3B7A]">Kit de Supervivencia: Viajes y Aeropuertos</h3>
             <p class="text-xs text-slate-600 font-medium leading-relaxed">
-              Pasa los filtros automáticos ATS de las empresas y responde entrevistas técnicas con el método STAR. Incluye +100 verbos de acción.
+              Diálogos reales y frases clave para pasar aduanas, hacer check-in, gestionar problemas de equipaje y pedir indicaciones con total autonomía.
             </p>
           </div>
           <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-            <div>
-              <span class="block text-[10px] text-slate-400 line-through font-semibold">37 €</span>
-              <span class="text-xl font-extrabold text-[#1F8A65]">18 €</span>
-            </div>
-            <button data-add-item="Tech Resume + STAR Guide" data-price="18" class="px-5 py-2.5 bg-[#1F8A65] hover:bg-[#186e51] text-white text-xs font-bold rounded-full transition-colors cursor-pointer shadow-sm">
+            <span class="text-xl font-extrabold text-[#0A3B7A]">9 €</span>
+            <button data-add-item="Kit de Supervivencia: Viajes y Aeropuertos" data-price="9" class="px-5 py-2.5 bg-[#0A3B7A] hover:bg-[#082e60] text-white text-xs font-bold rounded-full transition-colors cursor-pointer">
               + Añadir al Carrito
             </button>
           </div>
@@ -162,15 +153,15 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
           <div class="space-y-3">
-            <span class="px-3 py-1 bg-indigo-50 text-indigo-800 border border-indigo-200 text-[10px] font-extrabold rounded-full inline-block">SWIPE FILE</span>
-            <h3 class="text-lg font-bold text-[#0A3B7A]">30+ Plantillas de Email Corporativo</h3>
+            <span class="px-3 py-1 bg-orange-50 text-orange-800 border border-orange-200 text-[10px] font-extrabold rounded-full inline-block">GUÍA PRÁCTICA EN PDF</span>
+            <h3 class="text-lg font-bold text-[#0A3B7A]">Guía Real: Cafés, Restaurantes & Menús</h3>
             <p class="text-xs text-slate-600 font-medium leading-relaxed">
-              Copia y pega plantillas de correo profesionales para pedir aumento de sueldo, dar seguimiento a vacantes o comunicarte con tu jefe en inglés.
+              Pide tu comida favorita, especifica ingredientes o alergias y entiende menús y propinas como si fueras un nativo más.
             </p>
           </div>
           <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-            <span class="text-xl font-extrabold text-[#0A3B7A]">22 €</span>
-            <button data-add-item="30+ Plantillas de Email Corporativo" data-price="22" class="px-5 py-2.5 bg-[#0A3B7A] hover:bg-[#082e60] text-white text-xs font-bold rounded-full transition-colors cursor-pointer">
+            <span class="text-xl font-extrabold text-[#0A3B7A]">7 €</span>
+            <button data-add-item="Guía Real: Cafés, Restaurantes & Menús" data-price="7" class="px-5 py-2.5 bg-[#0A3B7A] hover:bg-[#082e60] text-white text-xs font-bold rounded-full transition-colors cursor-pointer">
               + Añadir al Carrito
             </button>
           </div>
@@ -178,15 +169,15 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
           <div class="space-y-3">
-            <span class="px-3 py-1 bg-blue-50 text-blue-800 border border-blue-200 text-[10px] font-extrabold rounded-full inline-block">PLANTILLA NOTION</span>
-            <h3 class="text-lg font-bold text-[#0A3B7A]">Job Tracker Pro</h3>
+            <span class="px-3 py-1 bg-rose-50 text-rose-800 border border-rose-200 text-[10px] font-extrabold rounded-full inline-block">GUÍA DE EMERGENCIA</span>
+            <h3 class="text-lg font-bold text-[#0A3B7A]">Inglés para Emergencias, Farmacias y Salud</h3>
             <p class="text-xs text-slate-600 font-medium leading-relaxed">
-              Organiza tus postulaciones, entrevistas agendadas y salarios ofrecidos en un tablero fácil y visual.
+              Explica cómo te sientes, solicita medicamentos en la farmacia y completa formularios de salud con calma ante cualquier eventualidad.
             </p>
           </div>
           <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
             <span class="text-xl font-extrabold text-[#0A3B7A]">8 €</span>
-            <button data-add-item="Job Tracker Pro" data-price="8" class="px-5 py-2.5 bg-[#0A3B7A] hover:bg-[#082e60] text-white text-xs font-bold rounded-full transition-colors cursor-pointer">
+            <button data-add-item="Inglés para Emergencias, Farmacias y Salud" data-price="8" class="px-5 py-2.5 bg-[#0A3B7A] hover:bg-[#082e60] text-white text-xs font-bold rounded-full transition-colors cursor-pointer">
               + Añadir al Carrito
             </button>
           </div>
@@ -194,15 +185,15 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
           <div class="space-y-3">
-            <span class="px-3 py-1 bg-purple-50 text-purple-800 border border-purple-200 text-[10px] font-extrabold rounded-full inline-block">PROMPTS IA</span>
-            <h3 class="text-lg font-bold text-[#0A3B7A]">AI Interview Pack (ChatGPT & Claude)</h3>
+            <span class="px-3 py-1 bg-emerald-50 text-emerald-800 border border-emerald-200 text-[10px] font-extrabold rounded-full inline-block">EBOOK POCKET + AUDIOS</span>
+            <h3 class="text-lg font-bold text-[#0A3B7A]">Trámites & Vida Cotidiana en el Extranjero</h3>
             <p class="text-xs text-slate-600 font-medium leading-relaxed">
-              Los prompts exactos para convertir ChatGPT en tu reclutador privado y practicar tu pronunciación gratis.
+              Resuelve desde hacer el check-in en tu hotel hasta abrir una cuenta bancaria, pedir transporte o hacer tus compras del súper.
             </p>
           </div>
           <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-            <span class="text-xl font-extrabold text-[#0A3B7A]">12 €</span>
-            <button data-add-item="AI Interview Pack" data-price="12" class="px-5 py-2.5 bg-[#0A3B7A] hover:bg-[#082e60] text-white text-xs font-bold rounded-full transition-colors cursor-pointer">
+            <span class="text-xl font-extrabold text-[#0A3B7A]">10 €</span>
+            <button data-add-item="Trámites & Vida Cotidiana en el Extranjero" data-price="10" class="px-5 py-2.5 bg-[#0A3B7A] hover:bg-[#082e60] text-white text-xs font-bold rounded-full transition-colors cursor-pointer">
               + Añadir al Carrito
             </button>
           </div>
@@ -211,23 +202,23 @@
       </div>
     </div>
 
-    <div id="sec-bundles" class="tab-content hidden">
+    <div id="sec-carrera" class="tab-content hidden">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-        <div class="bg-white border border-slate-200/80 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
+        <div class="bg-white border-2 border-[#1F8A65]/40 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
           <div class="space-y-3">
-            <span class="px-3 py-1 bg-[#E8F3EE] text-[#1F8A65] text-[10px] font-extrabold rounded-full inline-block">AHORRAS 40%</span>
-            <h3 class="text-lg font-bold text-[#0A3B7A]">Pack Profesional Completo</h3>
+            <span class="px-3 py-1 bg-[#E8F3EE] text-[#1F8A65] text-[10px] font-extrabold rounded-full inline-block">GUÍA TÁCTICA EXPRÉS</span>
+            <h3 class="text-lg font-bold text-[#0A3B7A]">Tech Resume & STAR Guide</h3>
             <p class="text-xs text-slate-600 font-medium leading-relaxed">
-              Lévate el combo definitivo para conseguir empleo remoto: Tech Resume STAR Guide + 30 Plantillas de Email + Job Tracker Pro en Notion.
+              Pasa los filtros automáticos ATS de las empresas internacionales. Incluye plantilla optimizada, +100 verbos de acción y guiones STAR.
             </p>
           </div>
           <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
             <div>
-              <span class="block text-[10px] text-slate-400 line-through font-semibold">68 €</span>
-              <span class="text-xl font-extrabold text-[#1F8A65]">36 €</span>
+              <span class="block text-[10px] text-slate-400 line-through font-semibold">37 €</span>
+              <span class="text-xl font-extrabold text-[#1F8A65]">18 €</span>
             </div>
-            <button data-add-item="Pack Profesional Completo" data-price="36" class="px-5 py-2.5 bg-[#1F8A65] hover:bg-[#186e51] text-white text-xs font-bold rounded-full transition-colors cursor-pointer">
+            <button data-add-item="Tech Resume & STAR Guide" data-price="18" class="px-5 py-2.5 bg-[#1F8A65] hover:bg-[#186e51] text-white text-xs font-bold rounded-full transition-colors cursor-pointer shadow-sm">
               + Añadir al Carrito
             </button>
           </div>
@@ -235,19 +226,203 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
           <div class="space-y-3">
-            <span class="px-3 py-1 bg-blue-50 text-[#0A3B7A] text-[10px] font-extrabold rounded-full inline-block">SISTEMA CERO A FLUIDO</span>
-            <h3 class="text-lg font-bold text-[#0A3B7A]">Bundle Cero a Fluido</h3>
+            <span class="px-3 py-1 bg-indigo-50 text-indigo-800 border border-indigo-200 text-[10px] font-extrabold rounded-full inline-block">EBOOK + GUÍA DE AUDIOS</span>
+            <h3 class="text-lg font-bold text-[#0A3B7A]">Entrevistas de Trabajo en Inglés Sin Miedo</h3>
             <p class="text-xs text-slate-600 font-medium leading-relaxed">
-              Todo para aprender desde casa: Ruta de 6 Meses + Kit Anti-Bloqueo + Planner de Inmersión + Mazo de 1,000 Palabras Clave.
+              Prepara respuestas claras para las 20 preguntas más comunes, demuestra tus competencias y negocia tu salario en USD/EUR.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xl font-extrabold text-[#0A3B7A]">14 €</span>
+            <button data-add-item="Entrevistas de Trabajo en Inglés Sin Miedo" data-price="14" class="px-5 py-2.5 bg-[#0A3B7A] hover:bg-[#082e60] text-white text-xs font-bold rounded-full transition-colors cursor-pointer">
+              + Añadir al Carrito
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200/80 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <span class="px-3 py-1 bg-cyan-50 text-cyan-800 border border-cyan-200 text-[10px] font-extrabold rounded-full inline-block">PLANTILLAS COPIABLES</span>
+            <h3 class="text-lg font-bold text-[#0A3B7A]">E-mails Profesionales, Slack & Networking</h3>
+            <p class="text-xs text-slate-600 font-medium leading-relaxed">
+              Plantillas copiables para redactar correos ejecutivos, enviar mensajes a recruiters por LinkedIn y colaborar con tu equipo remoto.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xl font-extrabold text-[#0A3B7A]">9 €</span>
+            <button data-add-item="E-mails Profesionales, Slack & Networking" data-price="9" class="px-5 py-2.5 bg-[#0A3B7A] hover:bg-[#082e60] text-white text-xs font-bold rounded-full transition-colors cursor-pointer">
+              + Añadir al Carrito
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200/80 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <span class="px-3 py-1 bg-violet-50 text-violet-800 border border-violet-200 text-[10px] font-extrabold rounded-full inline-block">KIT DE ESTRATEGIA EN PDF</span>
+            <h3 class="text-lg font-bold text-[#0A3B7A]">IELTS & TOEFL Academic Accelerator</h3>
+            <p class="text-xs text-slate-600 font-medium leading-relaxed">
+              Estructuras claras para las secciones de Speaking y Writing, conectores avanzados y plantillas paso a paso para el puntaje que buscas.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xl font-extrabold text-[#0A3B7A]">16 €</span>
+            <button data-add-item="IELTS & TOEFL Academic Accelerator" data-price="16" class="px-5 py-2.5 bg-[#0A3B7A] hover:bg-[#082e60] text-white text-xs font-bold rounded-full transition-colors cursor-pointer">
+              + Añadir al Carrito
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="sec-profes" class="tab-content hidden">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <div class="bg-white border border-slate-200/80 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <span class="px-3 py-1 bg-pink-50 text-pink-800 border border-pink-200 text-[10px] font-extrabold rounded-full inline-block">PLANTILLAS CANVA / PPT</span>
+            <h3 class="text-lg font-bold text-[#0A3B7A]">Slide Decks Editables para Clases</h3>
+            <p class="text-xs text-slate-600 font-medium leading-relaxed">
+              Presentaciones interactivas para Zoom o Google Meet con temas de conversación, imágenes para describir y vocabulario clave.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xl font-extrabold text-[#0A3B7A]">15 €</span>
+            <button data-add-item="Slide Decks Editables para Clases" data-price="15" class="px-5 py-2.5 bg-[#0A3B7A] hover:bg-[#082e60] text-white text-xs font-bold rounded-full transition-colors cursor-pointer">
+              + Añadir al Carrito
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200/80 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <span class="px-3 py-1 bg-[#E8F3EE] text-[#1F8A65] text-[10px] font-extrabold rounded-full inline-block">PACK PRINTABLE + WORKSHEETS</span>
+            <h3 class="text-lg font-bold text-[#0A3B7A]">ESL Vocabulary & Activity Starter Pack</h3>
+            <p class="text-xs text-slate-600 font-medium leading-relaxed">
+              Fichas imprimibles, actividades dinámicas y ejercicios prácticos listos para dinamizar tus lecciones con alumnos principiantes e intermedios.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xl font-extrabold text-[#0A3B7A]">14 €</span>
+            <button data-add-item="ESL Vocabulary & Activity Starter Pack" data-price="14" class="px-5 py-2.5 bg-[#0A3B7A] hover:bg-[#082e60] text-white text-xs font-bold rounded-full transition-colors cursor-pointer">
+              + Añadir al Carrito
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200/80 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <span class="px-3 py-1 bg-amber-50 text-amber-800 border border-amber-200 text-[10px] font-extrabold rounded-full inline-block">SISTEMA EN NOTION</span>
+            <h3 class="text-lg font-bold text-[#0A3B7A]">Teacher’s All-in-One Dashboard</h3>
+            <p class="text-xs text-slate-600 font-medium leading-relaxed">
+              Tu centro de control en Notion para organizar la agenda de tus alumnos, planificar tus clases y guardar tus mejores recursos sin caos.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xl font-extrabold text-[#0A3B7A]">12 €</span>
+            <button data-add-item="Teacher’s All-in-One Dashboard" data-price="12" class="px-5 py-2.5 bg-[#0A3B7A] hover:bg-[#082e60] text-white text-xs font-bold rounded-full transition-colors cursor-pointer">
+              + Añadir al Carrito
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200/80 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <span class="px-3 py-1 bg-purple-50 text-purple-800 border border-purple-200 text-[10px] font-extrabold rounded-full inline-block">GUÍA + DINÁMICAS RÁPIDAS</span>
+            <h3 class="text-lg font-bold text-[#0A3B7A]">ESL Warm-ups, Fillers & Icebreakers</h3>
+            <p class="text-xs text-slate-600 font-medium leading-relaxed">
+              Más de 50 dinámicas cortas de 5-10 minutos para romper el hielo, hacer tus clases más livianas o cerrar la sesión con energía.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xl font-extrabold text-[#0A3B7A]">10 €</span>
+            <button data-add-item="ESL Warm-ups, Fillers & Icebreakers" data-price="10" class="px-5 py-2.5 bg-[#0A3B7A] hover:bg-[#082e60] text-white text-xs font-bold rounded-full transition-colors cursor-pointer">
+              + Añadir al Carrito
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="sec-programas" class="tab-content hidden">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <div class="bg-white border border-slate-200/80 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <span class="px-3 py-1 bg-[#E8F3EE] text-[#1F8A65] text-[10px] font-extrabold rounded-full inline-block">BUNDLE DIGITAL (AHORRAS 26 €)</span>
+            <h3 class="text-lg font-bold text-[#0A3B7A]">Pack "De Cero a Conversación"</h3>
+            <p class="text-xs text-slate-600 font-medium leading-relaxed">
+              Incluye: Ruta 6 Meses + Kit Anti-Bloqueo + Second Brain en Notion + Mazo Anki 1,000 Palabras Clave.
             </p>
           </div>
           <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
             <div>
               <span class="block text-[10px] text-slate-400 line-through font-semibold">47 €</span>
-              <span class="text-xl font-extrabold text-[#0A3B7A]">29 €</span>
+              <span class="text-xl font-extrabold text-[#1F8A65]">29 €</span>
             </div>
-            <button data-add-item="Bundle Cero a Fluido" data-price="29" class="px-5 py-2.5 bg-[#0A3B7A] hover:bg-[#082e60] text-white text-xs font-bold rounded-full transition-colors cursor-pointer">
+            <button data-add-item="Pack De Cero a Conversación" data-price="29" class="px-5 py-2.5 bg-[#1F8A65] hover:bg-[#186e51] text-white text-xs font-bold rounded-full transition-colors cursor-pointer">
               + Añadir al Carrito
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200/80 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <span class="px-3 py-1 bg-blue-50 text-[#0A3B7A] text-[10px] font-extrabold rounded-full inline-block">BUNDLE PROFESIONAL</span>
+            <h3 class="text-lg font-bold text-[#0A3B7A]">Pack "Career Booster Remote Work"</h3>
+            <p class="text-xs text-slate-600 font-medium leading-relaxed">
+              Incluye: Tech Resume STAR Guide + Entrevistas de Trabajo Sin Miedo + Plantillas de Email & Networking.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <div>
+              <span class="block text-[10px] text-slate-400 line-through font-semibold">41 €</span>
+              <span class="text-xl font-extrabold text-[#0A3B7A]">25 €</span>
+            </div>
+            <button data-add-item="Pack Career Booster Remote Work" data-price="25" class="px-5 py-2.5 bg-[#0A3B7A] hover:bg-[#082e60] text-white text-xs font-bold rounded-full transition-colors cursor-pointer">
+              + Añadir al Carrito
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white border-2 border-[#1F8A65] rounded-[28px] p-6 shadow-md flex flex-col justify-between space-y-4 relative overflow-hidden md:col-span-2">
+          <div class="absolute top-4 right-4 bg-[#1F8A65] text-white text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+            PROGRAMA ESTRELLA ⭐
+          </div>
+          <div class="space-y-3">
+            <span class="px-3 py-1 bg-[#E8F3EE] text-[#1F8A65] text-[10px] font-extrabold rounded-full inline-block">PROGRAMA COMPLETO DE ACOMPAÑAMIENTO</span>
+            <h3 class="text-2xl font-bold text-[#0A3B7A]">Corporate English Accelerator</h3>
+            <p class="text-xs md:text-sm text-slate-600 font-medium leading-relaxed max-w-2xl">
+              El programa integral para soltar la lengua en reuniones de trabajo y entrevistas sin dudar. Incluye módulos prácticos de simulación de reuniones, redacción de correos ejecutivos sin traductores, retroalimentación directa para corregir tu pronunciación y acceso ilimitado a actualizaciones futuras.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <div>
+              <span class="block text-xs text-slate-400 line-through font-semibold">147 €</span>
+              <span class="text-2xl font-extrabold text-[#1F8A65]">73 € <span class="text-xs bg-rose-100 text-rose-700 px-2 py-0.5 rounded-full font-bold ml-1">-50%</span></span>
+            </div>
+            <button data-add-item="Corporate English Accelerator" data-price="73" class="px-6 py-3 bg-[#1F8A65] hover:bg-[#186e51] text-white text-xs font-extrabold rounded-full transition-all cursor-pointer shadow-md">
+              Unirme Ahora 🚀
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white border-2 border-[#0A3B7A]/30 rounded-[28px] p-6 shadow-md flex flex-col justify-between space-y-4 md:col-span-2">
+          <div class="space-y-3">
+            <span class="px-3 py-1 bg-indigo-50 text-[#0A3B7A] border border-indigo-200 text-[10px] font-extrabold rounded-full inline-block">SESIONES EN VIVO 1:1</span>
+            <h3 class="text-2xl font-bold text-[#0A3B7A]">Mentoría VIP Personalizada</h3>
+            <p class="text-xs md:text-sm text-slate-600 font-medium leading-relaxed max-w-2xl">
+              Acompañamiento individual en directo por Zoom para preparar tu perfil y tus entrevistas reales. Sesiones enfocadas 100% en tus metas, revisión en directo de tu CV y LinkedIn, simulacros con correcciones al instante y soporte prioritario por mensajes.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <div>
+              <span class="block text-[10px] text-amber-700 font-bold uppercase tracking-wider">SOLO 3 CUPOS / MES</span>
+              <span class="text-2xl font-extrabold text-[#0A3B7A]">149 €</span>
+            </div>
+            <button data-add-item="Mentoría VIP Personalizada" data-price="149" class="px-6 py-3 bg-[#0A3B7A] hover:bg-[#082e60] text-white text-xs font-extrabold rounded-full transition-all cursor-pointer shadow-md">
+              Reservar VIP 👑
             </button>
           </div>
         </div>
