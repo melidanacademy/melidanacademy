@@ -9,6 +9,17 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="./styles.css">
+  <style>
+    .tab-btn.active {
+      background-color: #0A3B7A !important;
+      color: #ffffff !important;
+      border-color: #0A3B7A !important;
+      box-shadow: 0 4px 6px -1px rgba(10, 59, 122, 0.2);
+    }
+    .tab-btn.active span {
+      color: #ffffff !important;
+    }
+  </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between overflow-x-hidden bg-[#FAF8F5]">
 
@@ -43,53 +54,51 @@
 
     <div class="space-y-4">
       <div class="flex items-center justify-between">
-        <h2 class="text-sm font-extrabold text-[#0A3B7A] uppercase tracking-wider">¿Qué estás buscando hoy?</h2>
-        <span class="text-xs text-slate-400 font-medium">Haz clic para filtrar</span>
+        <h2 class="text-xs font-extrabold text-[#0A3B7A] uppercase tracking-wider">¿Qué estás buscando hoy?</h2>
+        <span class="text-xs text-slate-400 font-medium">Haz clic en una categoría</span>
       </div>
       
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3">
-        <button data-tab="cero" class="tab-btn active p-4 bg-white border border-slate-200/80 rounded-2xl flex flex-col items-center text-center space-y-2 transition-all cursor-pointer shadow-xs hover:shadow-md hover:border-[#1F8A65] group">
+        <button data-tab="cero" class="tab-btn active p-3.5 bg-slate-100 hover:bg-slate-200 border-2 border-slate-300/80 rounded-2xl flex flex-col items-center text-center space-y-1.5 transition-all cursor-pointer shadow-sm hover:shadow-md hover:-translate-y-0.5 group">
           <span class="text-2xl group-hover:scale-110 transition-transform">🌱</span>
-          <span class="text-xs font-bold text-[#0A3B7A] group-hover:text-[#1F8A65]">Desde Cero</span>
+          <span class="text-xs font-bold text-[#0A3B7A]">Desde Cero</span>
         </button>
 
-        <button data-tab="vida" class="tab-btn p-4 bg-white border border-slate-200/80 rounded-2xl flex flex-col items-center text-center space-y-2 transition-all cursor-pointer shadow-xs hover:shadow-md hover:border-[#1F8A65] group">
+        <button data-tab="vida" class="tab-btn p-3.5 bg-slate-100 hover:bg-slate-200 border-2 border-slate-300/80 rounded-2xl flex flex-col items-center text-center space-y-1.5 transition-all cursor-pointer shadow-sm hover:shadow-md hover:-translate-y-0.5 group">
           <span class="text-2xl group-hover:scale-110 transition-transform">✈️</span>
-          <span class="text-xs font-bold text-[#0A3B7A] group-hover:text-[#1F8A65]">Vida Cotidiana</span>
+          <span class="text-xs font-bold text-[#0A3B7A]">Vida Cotidiana</span>
         </button>
 
-        <button data-tab="carrera" class="tab-btn p-4 bg-white border border-slate-200/80 rounded-2xl flex flex-col items-center text-center space-y-2 transition-all cursor-pointer shadow-xs hover:shadow-md hover:border-[#1F8A65] group">
+        <button data-tab="carrera" class="tab-btn p-3.5 bg-slate-100 hover:bg-slate-200 border-2 border-slate-300/80 rounded-2xl flex flex-col items-center text-center space-y-1.5 transition-all cursor-pointer shadow-sm hover:shadow-md hover:-translate-y-0.5 group">
           <span class="text-2xl group-hover:scale-110 transition-transform">💼</span>
-          <span class="text-xs font-bold text-[#0A3B7A] group-hover:text-[#1F8A65]">Carrera & Work</span>
+          <span class="text-xs font-bold text-[#0A3B7A]">Carrera & Work</span>
         </button>
 
-        <button data-tab="profesiones" class="tab-btn p-4 bg-white border border-slate-200/80 rounded-2xl flex flex-col items-center text-center space-y-2 transition-all cursor-pointer shadow-xs hover:shadow-md hover:border-[#1F8A65] group">
+        <button data-tab="profesiones" class="tab-btn p-3.5 bg-slate-100 hover:bg-slate-200 border-2 border-slate-300/80 rounded-2xl flex flex-col items-center text-center space-y-1.5 transition-all cursor-pointer shadow-sm hover:shadow-md hover:-translate-y-0.5 group">
           <span class="text-2xl group-hover:scale-110 transition-transform">🔬</span>
-          <span class="text-xs font-bold text-[#0A3B7A] group-hover:text-[#1F8A65]">Por Profesión</span>
+          <span class="text-xs font-bold text-[#0A3B7A]">Por Profesión</span>
         </button>
 
-        <button data-tab="examenes" class="tab-btn p-4 bg-white border border-slate-200/80 rounded-2xl flex flex-col items-center text-center space-y-2 transition-all cursor-pointer shadow-xs hover:shadow-md hover:border-[#1F8A65] group">
+        <button data-tab="examenes" class="tab-btn p-3.5 bg-slate-100 hover:bg-slate-200 border-2 border-slate-300/80 rounded-2xl flex flex-col items-center text-center space-y-1.5 transition-all cursor-pointer shadow-sm hover:shadow-md hover:-translate-y-0.5 group">
           <span class="text-2xl group-hover:scale-110 transition-transform">🎓</span>
-          <span class="text-xs font-bold text-[#0A3B7A] group-hover:text-[#1F8A65]">Exámenes</span>
+          <span class="text-xs font-bold text-[#0A3B7A]">Exámenes</span>
         </button>
 
-        <button data-tab="profes" class="tab-btn p-4 bg-white border border-slate-200/80 rounded-2xl flex flex-col items-center text-center space-y-2 transition-all cursor-pointer shadow-xs hover:shadow-md hover:border-[#1F8A65] group">
+        <button data-tab="profes" class="tab-btn p-3.5 bg-slate-100 hover:bg-slate-200 border-2 border-slate-300/80 rounded-2xl flex flex-col items-center text-center space-y-1.5 transition-all cursor-pointer shadow-sm hover:shadow-md hover:-translate-y-0.5 group">
           <span class="text-2xl group-hover:scale-110 transition-transform">🍎</span>
-          <span class="text-xs font-bold text-[#0A3B7A] group-hover:text-[#1F8A65]">Para Profes</span>
+          <span class="text-xs font-bold text-[#0A3B7A]">Para Profes</span>
         </button>
 
-        <button data-tab="programas" class="tab-btn p-4 bg-white border border-slate-200/80 rounded-2xl flex flex-col items-center text-center space-y-2 transition-all cursor-pointer shadow-xs hover:shadow-md hover:border-[#1F8A65] group">
+        <button data-tab="programas" class="tab-btn p-3.5 bg-slate-100 hover:bg-slate-200 border-2 border-slate-300/80 rounded-2xl flex flex-col items-center text-center space-y-1.5 transition-all cursor-pointer shadow-sm hover:shadow-md hover:-translate-y-0.5 group">
           <span class="text-2xl group-hover:scale-110 transition-transform">🎁</span>
-          <span class="text-xs font-bold text-[#0A3B7A] group-hover:text-[#1F8A65]">Bundles</span>
+          <span class="text-xs font-bold text-[#0A3B7A]">Bundles</span>
         </button>
       </div>
     </div>
 
     <div id="sec-cero" class="tab-content space-y-4">
       <div class="flex items-center justify-between border-b border-slate-200 pb-3">
-        <h2 class="text-lg font-bold text-[#0A3B7A] flex items-center gap-2">
-          <span>🌱 Para Empezar desde Cero</span>
-        </h2>
+        <h2 class="text-lg font-bold text-[#0A3B7A]">🌱 Para Empezar desde Cero</h2>
         <span class="text-xs text-slate-400 font-medium">Básicos esenciales de estudio</span>
       </div>
 
@@ -97,12 +106,12 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
           <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img4.png" alt="Aprende Inglés en 6 Meses" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/F5F2EC/0A3B7A?text=Roadmap';">
+            <img src="./img4.png" alt="Aprende Inglés en 6 Meses" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300">
           </div>
           <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
             <div class="space-y-2">
               <span class="px-2.5 py-0.5 bg-[#E8F3EE] text-[#1F8A65] text-[10px] font-extrabold rounded-full inline-block">ROADMAP EN PDF</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">Aprende Inglés en 6 Meses: La Ruta Exacta</h3>
+              <h3 class="text-sm font-bold text-[#0A3B7A] min-h-[2.75rem] flex items-center">Aprende Inglés en 6 Meses: La Ruta Exacta</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 El mapa paso a paso para pasar de cero a hablar con fluidez sin libros aburridos de gramática.
               </p>
@@ -121,12 +130,12 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
           <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img4.png" alt="Kit Anti-Bloqueo" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/FFFBEB/92400E?text=Ebook';">
+            <img src="./img7.png" alt="Kit Anti-Bloqueo" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300">
           </div>
           <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
             <div class="space-y-2">
               <span class="px-2.5 py-0.5 bg-amber-50 text-amber-800 border border-amber-200 text-[10px] font-extrabold rounded-full inline-block">EBOOK + AUDIOS</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">Kit Anti-Bloqueo: Pierde la Pena a Hablar</h3>
+              <h3 class="text-sm font-bold text-[#0A3B7A] min-h-[2.75rem] flex items-center">Kit Anti-Bloqueo: Pierde la Pena a Hablar</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 Técnicas psicológicas y muletillas clave para vencer la pena y expresarte sin trabarte.
               </p>
@@ -142,12 +151,12 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
           <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img6.png" alt="Second Brain Notion" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/F0FDFA/115E59?text=Notion';">
+            <img src="./img6.png" alt="Second Brain Notion" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300">
           </div>
           <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
             <div class="space-y-2">
               <span class="px-2.5 py-0.5 bg-teal-50 text-teal-800 border border-teal-200 text-[10px] font-extrabold rounded-full inline-block">SISTEMA EN NOTION</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">Second Brain para Aprender Inglés</h3>
+              <h3 class="text-sm font-bold text-[#0A3B7A] min-h-[2.75rem] flex items-center">Second Brain para Aprender Inglés</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 Tu espacio interactivo en Notion para organizar vocabulario, lecturas y hábitos diarios.
               </p>
@@ -163,12 +172,12 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
           <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img3.png" alt="Diario de Escritura Guiada" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/FFF1F2/9F1239?text=Journal';">
+            <img src="./img3.png" alt="Diario de Escritura Guiada" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300">
           </div>
           <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
             <div class="space-y-2">
               <span class="px-2.5 py-0.5 bg-rose-50 text-rose-800 border border-rose-200 text-[10px] font-extrabold rounded-full inline-block">WORKBOOK EN PDF</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">Diario de Escritura Guiada (30 Days Journaling)</h3>
+              <h3 class="text-sm font-bold text-[#0A3B7A] min-h-[2.75rem] flex items-center">Diario de Escritura Guiada (30 Days Journaling)</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 30 preguntas diarias diseñadas para empezar a pensar en inglés sin traducir mentalmente.
               </p>
@@ -184,12 +193,12 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
           <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img4.png" alt="Reto 21 Días Shadowing" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/EEF2FF/3730A3?text=Shadowing';">
+            <img src="./img8.png" alt="Reto 21 Días Shadowing" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300">
           </div>
           <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
             <div class="space-y-2">
               <span class="px-2.5 py-0.5 bg-indigo-50 text-indigo-800 border border-indigo-200 text-[10px] font-extrabold rounded-full inline-block">AUDIOBOOK + MP3</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">Reto de 21 Días de Shadowing & Inmersión</h3>
+              <h3 class="text-sm font-bold text-[#0A3B7A] min-h-[2.75rem] flex items-center">Reto de 21 Días de Shadowing & Inmersión</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 Audios cortos con transcripciones para entrenar pronunciación y ritmo imitando a nativos.
               </p>
@@ -205,12 +214,12 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
           <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img6.png" alt="Mazo Anki 1000 Palabras" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/FAF5FF/6B21A8?text=Anki';">
+            <img src="./img6.png" alt="Mazo Anki 1000 Palabras" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300">
           </div>
           <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
             <div class="space-y-2">
               <span class="px-2.5 py-0.5 bg-purple-50 text-purple-800 border border-purple-200 text-[10px] font-extrabold rounded-full inline-block">FLASHCARDS ANKI</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">Mazo 1,000 Palabras Clave Diarias</h3>
+              <h3 class="text-sm font-bold text-[#0A3B7A] min-h-[2.75rem] flex items-center">Mazo 1,000 Palabras Clave Diarias</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 Las 1,000 palabras más útiles en la vida real con repetición espaciada en tu celular.
               </p>
@@ -237,12 +246,12 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
           <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img4.png" alt="Kit Viajes y Aeropuertos" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/EFF6FF/1E40AF?text=Travel';">
+            <img src="./img4.png" alt="Kit Viajes y Aeropuertos" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300">
           </div>
           <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
             <div class="space-y-2">
               <span class="px-2.5 py-0.5 bg-blue-50 text-blue-800 border border-blue-200 text-[10px] font-extrabold rounded-full inline-block">VIAJES & AEROPUERTOS</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">Kit de Supervivencia: Viajes & Aduanas</h3>
+              <h3 class="text-sm font-bold text-[#0A3B7A] min-h-[2.75rem] flex items-center">Kit de Supervivencia: Viajes & Aduanas</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 Diálogos y frases reales para check-in, aduanas, extravío de equipaje e indicaciones.
               </p>
@@ -258,12 +267,12 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
           <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img3.png" alt="Estética y Cuidado Personal" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/FDF2F8/9D174D?text=Beauty';">
+            <img src="./img3.png" alt="Estética y Cuidado Personal" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300">
           </div>
           <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
             <div class="space-y-2">
               <span class="px-2.5 py-0.5 bg-pink-50 text-pink-800 border border-pink-200 text-[10px] font-extrabold rounded-full inline-block">CUIDADO PERSONAL</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">Estética, Peluquería & Cuidado Personal</h3>
+              <h3 class="text-sm font-bold text-[#0A3B7A] min-h-[2.75rem] flex items-center">Estética, Peluquería & Cuidado Personal</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 Aprende a pedir cortes de cabello específicos, tintes, tratamientos y citas de belleza exactas.
               </p>
@@ -279,12 +288,12 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
           <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img3.png" alt="Supermercado y Restaurantes" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/FFF7ED/C2410C?text=Food';">
+            <img src="./img3.png" alt="Supermercado y Restaurantes" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300">
           </div>
           <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
             <div class="space-y-2">
               <span class="px-2.5 py-0.5 bg-orange-50 text-orange-800 border border-orange-200 text-[10px] font-extrabold rounded-full inline-block">COMPRAS Y COMIDA</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">Supermercado, Cafés & Restaurantes</h3>
+              <h3 class="text-sm font-bold text-[#0A3B7A] min-h-[2.75rem] flex items-center">Supermercado, Cafés & Restaurantes</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 Pide tu comida, especifica alergias, entiende etiquetas en el súper y paga sin dudas.
               </p>
@@ -300,12 +309,12 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
           <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img4.png" alt="Alquiler y Servicios" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/ECFDF5/047857?text=Home';">
+            <img src="./img4.png" alt="Alquiler y Servicios" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300">
           </div>
           <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
             <div class="space-y-2">
               <span class="px-2.5 py-0.5 bg-emerald-50 text-emerald-800 border border-emerald-200 text-[10px] font-extrabold rounded-full inline-block">TRÁMITES Y VIVIENDA</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">Alquiler, Servicios & Vida Diaria</h3>
+              <h3 class="text-sm font-bold text-[#0A3B7A] min-h-[2.75rem] flex items-center">Alquiler, Servicios & Vida Diaria</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 Comunicación con caseros, contratación de servicios e interacciones del día a día.
               </p>
@@ -321,12 +330,12 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
           <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img4.png" alt="Emergencias y Salud" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/FFF1F2/BE123C?text=Health';">
+            <img src="./img7.png" alt="Emergencias y Salud" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300">
           </div>
           <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
             <div class="space-y-2">
               <span class="px-2.5 py-0.5 bg-rose-50 text-rose-800 border border-rose-200 text-[10px] font-extrabold rounded-full inline-block">SALUD Y EMERGENCIAS</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">Inglés para Emergencias, Farmacias & Salud</h3>
+              <h3 class="text-sm font-bold text-[#0A3B7A] min-h-[2.75rem] flex items-center">Inglés para Emergencias, Farmacias & Salud</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 Describe síntomas, compra medicamentos y completa formularios médicos ante imprevistos.
               </p>
@@ -342,12 +351,12 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
           <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img6.png" alt="Small Talk y Vida Social" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/F5F3FF/6D28D9?text=Social';">
+            <img src="./img6.png" alt="Small Talk y Vida Social" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300">
           </div>
           <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
             <div class="space-y-2">
               <span class="px-2.5 py-0.5 bg-violet-50 text-violet-800 border border-violet-200 text-[10px] font-extrabold rounded-full inline-block">SOCIAL & NETWORKING</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">Small Talk, Fiestas & Hacer Amigos</h3>
+              <h3 class="text-sm font-bold text-[#0A3B7A] min-h-[2.75rem] flex items-center">Small Talk, Fiestas & Hacer Amigos</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 Frases para romper el hielo en eventos sociales, conversar en bares y hacer amigos fácilmente.
               </p>
@@ -374,12 +383,12 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
           <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img5.png" alt="Tech Resume STAR Guide" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/E8F3EE/1F8A65?text=Resume';">
+            <img src="./img5.png" alt="Tech Resume STAR Guide" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300">
           </div>
           <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
             <div class="space-y-2">
               <span class="px-2.5 py-0.5 bg-[#E8F3EE] text-[#1F8A65] text-[10px] font-extrabold rounded-full inline-block">SELECCIÓN Y CV</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">Tech Resume & STAR Guide</h3>
+              <h3 class="text-sm font-bold text-[#0A3B7A] min-h-[2.75rem] flex items-center">Tech Resume & STAR Guide</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 Prepara tu CV internacional optimizado para filtros ATS y domina el método STAR para entrevistas.
               </p>
@@ -398,12 +407,12 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
           <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img5.png" alt="Entrevistas en Inglés" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/FFFBEB/B45309?text=Interviews';">
+            <img src="./img5.png" alt="Entrevistas en Inglés" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300">
           </div>
           <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
             <div class="space-y-2">
               <span class="px-2.5 py-0.5 bg-amber-50 text-amber-800 border border-amber-200 text-[10px] font-extrabold rounded-full inline-block">ENTREVISTAS</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">Entrevistas de Trabajo en Inglés Sin Miedo</h3>
+              <h3 class="text-sm font-bold text-[#0A3B7A] min-h-[2.75rem] flex items-center">Entrevistas de Trabajo en Inglés Sin Miedo</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 Respuestas modelo a las 20 preguntas más comunes y guiones para negociar tu salario.
               </p>
@@ -419,12 +428,12 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
           <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img5.png" alt="Business Meetings" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/EEF2FF/4338CA?text=Meetings';">
+            <img src="./img5.png" alt="Business Meetings" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300">
           </div>
           <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
             <div class="space-y-2">
               <span class="px-2.5 py-0.5 bg-indigo-50 text-indigo-800 border border-indigo-200 text-[10px] font-extrabold rounded-full inline-block">REUNIONES VIRTUALES</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">Mastering Business Meetings</h3>
+              <h3 class="text-sm font-bold text-[#0A3B7A] min-h-[2.75rem] flex items-center">Mastering Business Meetings</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 Expresa tus ideas con claridad, interviene sin interrumpir y resume acuerdos en Zoom o Teams.
               </p>
@@ -432,69 +441,6 @@
             <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
               <span class="text-lg font-extrabold text-[#0A3B7A]">12 €</span>
               <button data-add-item="Mastering Business Meetings" data-price="12" class="px-4 py-2 bg-[#0A3B7A] text-white text-xs font-bold rounded-full cursor-pointer hover:bg-[#082e60] transition-colors">
-                + Añadir
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
-          <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img5.png" alt="Presentaciones Ejecutivas" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/FAF5FF/7E22CE?text=Presentations';">
-          </div>
-          <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
-            <div class="space-y-2">
-              <span class="px-2.5 py-0.5 bg-purple-50 text-purple-800 border border-purple-200 text-[10px] font-extrabold rounded-full inline-block">PRESENTACIONES</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">Exposiciones & Presentaciones Ejecutivas</h3>
-              <p class="text-xs text-slate-500 font-medium leading-relaxed">
-                Estructuras y conectores clave para exponer proyectos y resultados en público sin trabarte.
-              </p>
-            </div>
-            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
-              <span class="text-lg font-extrabold text-[#0A3B7A]">12 €</span>
-              <button data-add-item="Exposiciones & Presentaciones Ejecutivas" data-price="12" class="px-4 py-2 bg-[#0A3B7A] text-white text-xs font-bold rounded-full cursor-pointer hover:bg-[#082e60] transition-colors">
-                + Añadir
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
-          <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img5.png" alt="Emails y Slack" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/ECFEFF/0E7490?text=Emails';">
-          </div>
-          <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
-            <div class="space-y-2">
-              <span class="px-2.5 py-0.5 bg-cyan-50 text-cyan-800 border border-cyan-200 text-[10px] font-extrabold rounded-full inline-block">COMUNICACIÓN ASÍNCRONA</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">E-mails Profesionales, Slack & Networking</h3>
-              <p class="text-xs text-slate-500 font-medium leading-relaxed">
-                Plantillas copiables para correos ejecutivos, Slack y networking efectivo en LinkedIn.
-              </p>
-            </div>
-            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
-              <span class="text-lg font-extrabold text-[#0A3B7A]">9 €</span>
-              <button data-add-item="E-mails Profesionales, Slack & Networking" data-price="9" class="px-4 py-2 bg-[#0A3B7A] text-white text-xs font-bold rounded-full cursor-pointer hover:bg-[#082e60] transition-colors">
-                + Añadir
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
-          <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img6.png" alt="AI Interview Coach Prompts" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/F0FDFA/0F766E?text=AI+Prompts';">
-          </div>
-          <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
-            <div class="space-y-2">
-              <span class="px-2.5 py-0.5 bg-teal-50 text-teal-800 border border-teal-200 text-[10px] font-extrabold rounded-full inline-block">PROMPTS IA</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">AI Interview & Business Coach (Prompts ChatGPT)</h3>
-              <p class="text-xs text-slate-500 font-medium leading-relaxed">
-                Configura ChatGPT como tu mentor de conversación privado para practicar reuniones e imprevistos.
-              </p>
-            </div>
-            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
-              <span class="text-lg font-extrabold text-[#0A3B7A]">11 €</span>
-              <button data-add-item="AI Interview & Business Coach (Prompts ChatGPT)" data-price="11" class="px-4 py-2 bg-[#0A3B7A] text-white text-xs font-bold rounded-full cursor-pointer hover:bg-[#082e60] transition-colors">
                 + Añadir
               </button>
             </div>
@@ -514,12 +460,12 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
           <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img5.png" alt="Inglés para Tech" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/EFF6FF/1D4ED8?text=Tech';">
+            <img src="./img5.png" alt="Inglés para Tech" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300">
           </div>
           <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
             <div class="space-y-2">
               <span class="px-2.5 py-0.5 bg-blue-50 text-blue-800 border border-blue-200 text-[10px] font-extrabold rounded-full inline-block">TECNOLOGÍA Y SOFTWARE</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">Inglés para Tech & Software Engineering</h3>
+              <h3 class="text-sm font-bold text-[#0A3B7A] min-h-[2.75rem] flex items-center">Inglés para Tech & Software Engineering</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 Vocabulario para code reviews, sprints, arquitectura de software y comunicación dev-to-product.
               </p>
@@ -535,12 +481,12 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
           <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img5.png" alt="Inglés para Ingeniería" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/F1F5F9/334155?text=Engineering';">
+            <img src="./img5.png" alt="Inglés para Ingeniería" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300">
           </div>
           <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
             <div class="space-y-2">
               <span class="px-2.5 py-0.5 bg-slate-100 text-slate-800 border border-slate-300 text-[10px] font-extrabold rounded-full inline-block">INGENIERÍA Y OPERACIONES</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">Inglés para Ingeniería & Industria</h3>
+              <h3 class="text-sm font-bold text-[#0A3B7A] min-h-[2.75rem] flex items-center">Inglés para Ingeniería & Industria</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 Términos técnicos para proyectos industriales, control de calidad y resolución de fallas.
               </p>
@@ -556,12 +502,12 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
           <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img5.png" alt="Inglés para Finanzas" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/ECFDF5/065F46?text=Finance';">
+            <img src="./img5.png" alt="Inglés para Finanzas" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300">
           </div>
           <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
             <div class="space-y-2">
               <span class="px-2.5 py-0.5 bg-emerald-50 text-emerald-800 border border-emerald-200 text-[10px] font-extrabold rounded-full inline-block">NEGOCIOS Y FINANZAS</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">Inglés para Finanzas, Contabilidad & Negocios</h3>
+              <h3 class="text-sm font-bold text-[#0A3B7A] min-h-[2.75rem] flex items-center">Inglés para Finanzas, Contabilidad & Negocios</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 Vocabulario para reportes financieros, métricas clave, presupuestos e informes ejecutivos.
               </p>
@@ -569,69 +515,6 @@
             <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
               <span class="text-lg font-extrabold text-[#0A3B7A]">11 €</span>
               <button data-add-item="Inglés para Finanzas, Contabilidad & Negocios" data-price="11" class="px-4 py-2 bg-[#0A3B7A] text-white text-xs font-bold rounded-full cursor-pointer hover:bg-[#082e60] transition-colors">
-                + Añadir
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
-          <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img5.png" alt="Inglés para Ventas" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/FFF1F2/9F1239?text=Sales';">
-          </div>
-          <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
-            <div class="space-y-2">
-              <span class="px-2.5 py-0.5 bg-rose-50 text-rose-800 border border-rose-200 text-[10px] font-extrabold rounded-full inline-block">VENTAS Y MARKETING</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">Inglés para Ventas, Marketing & Pitching</h3>
-              <p class="text-xs text-slate-500 font-medium leading-relaxed">
-                Guiones para prospección, negociación de acuerdos y presentaciones comerciales.
-              </p>
-            </div>
-            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
-              <span class="text-lg font-extrabold text-[#0A3B7A]">11 €</span>
-              <button data-add-item="Inglés para Ventas, Marketing & Pitching" data-price="11" class="px-4 py-2 bg-[#0A3B7A] text-white text-xs font-bold rounded-full cursor-pointer hover:bg-[#082e60] transition-colors">
-                + Añadir
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
-          <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img5.png" alt="Inglés para Arquitectura" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/FFFBEB/92400E?text=Architecture';">
-          </div>
-          <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
-            <div class="space-y-2">
-              <span class="px-2.5 py-0.5 bg-amber-50 text-amber-800 border border-amber-200 text-[10px] font-extrabold rounded-full inline-block">ARQUITECTURA Y CONSTRUCCIÓN</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">Inglés para Arquitectura, Diseño & Obra</h3>
-              <p class="text-xs text-slate-500 font-medium leading-relaxed">
-                Lenguaje técnico para planos, especificaciones de materiales y gestión de obras.
-              </p>
-            </div>
-            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
-              <span class="text-lg font-extrabold text-[#0A3B7A]">11 €</span>
-              <button data-add-item="Inglés para Arquitectura, Diseño & Obra" data-price="11" class="px-4 py-2 bg-[#0A3B7A] text-white text-xs font-bold rounded-full cursor-pointer hover:bg-[#082e60] transition-colors">
-                + Añadir
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
-          <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img5.png" alt="Inglés para Salud" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/ECFEFF/155E75?text=Medical';">
-          </div>
-          <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
-            <div class="space-y-2">
-              <span class="px-2.5 py-0.5 bg-cyan-50 text-cyan-800 border border-cyan-200 text-[10px] font-extrabold rounded-full inline-block">SALUD Y MEDICINA</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">Inglés para Profesionales de la Salud</h3>
-              <p class="text-xs text-slate-500 font-medium leading-relaxed">
-                Terminología médica, historial clínico y comunicación fluida en entornos hospitalarios.
-              </p>
-            </div>
-            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
-              <span class="text-lg font-extrabold text-[#0A3B7A]">11 €</span>
-              <button data-add-item="Inglés para Profesionales de la Salud" data-price="11" class="px-4 py-2 bg-[#0A3B7A] text-white text-xs font-bold rounded-full cursor-pointer hover:bg-[#082e60] transition-colors">
                 + Añadir
               </button>
             </div>
@@ -651,12 +534,12 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
           <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img4.png" alt="IELTS Booster Kit" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/FEF2F2/991B1B?text=IELTS';">
+            <img src="./img4.png" alt="IELTS Booster Kit" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300">
           </div>
           <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
             <div class="space-y-2">
               <span class="px-2.5 py-0.5 bg-red-50 text-red-800 border border-red-200 text-[10px] font-extrabold rounded-full inline-block">IELTS PREPARATION</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">IELTS Academic & General Booster Kit</h3>
+              <h3 class="text-sm font-bold text-[#0A3B7A] min-h-[2.75rem] flex items-center">IELTS Academic & General Booster Kit</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 Plantillas de respuesta para el Speaking, estructuras para el Writing Task 1 & 2 y conectores avanzados.
               </p>
@@ -672,12 +555,12 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
           <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img4.png" alt="TOEFL Master Guide" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/EFF6FF/1E40AF?text=TOEFL';">
+            <img src="./img4.png" alt="TOEFL Master Guide" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300">
           </div>
           <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
             <div class="space-y-2">
               <span class="px-2.5 py-0.5 bg-blue-50 text-blue-800 border border-blue-200 text-[10px] font-extrabold rounded-full inline-block">TOEFL iBT</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">TOEFL iBT Speaking & Writing Master Guide</h3>
+              <h3 class="text-sm font-bold text-[#0A3B7A] min-h-[2.75rem] flex items-center">TOEFL iBT Speaking & Writing Master Guide</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 Estrategias para organizar respuestas orales en tiempo récord y plantillas para ensayos académicos.
               </p>
@@ -693,12 +576,12 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
           <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img4.png" alt="Cambridge English Pack" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/FEFCE8/854D0E?text=Cambridge';">
+            <img src="./img4.png" alt="Cambridge English Pack" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300">
           </div>
           <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
             <div class="space-y-2">
               <span class="px-2.5 py-0.5 bg-yellow-50 text-yellow-800 border border-yellow-200 text-[10px] font-extrabold rounded-full inline-block">CAMBRIDGE (B2 / C1)</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">Cambridge English (B2 First / C1 Advanced) Pack</h3>
+              <h3 class="text-sm font-bold text-[#0A3B7A] min-h-[2.75rem] flex items-center">Cambridge English (B2 First / C1 Advanced) Pack</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 Estrategias para Use of English, transformaciones de oraciones y conectores discursivos indispensables.
               </p>
@@ -725,12 +608,12 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
           <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img6.png" alt="Slide Decks Canva" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/FDF2F8/831843?text=Slides';">
+            <img src="./img6.png" alt="Slide Decks Canva" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300">
           </div>
           <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
             <div class="space-y-2">
               <span class="px-2.5 py-0.5 bg-pink-50 text-pink-800 border border-pink-200 text-[10px] font-extrabold rounded-full inline-block">PLANTILLAS CANVA / PPT</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">Slide Decks Editables para Clases Conversacionales</h3>
+              <h3 class="text-sm font-bold text-[#0A3B7A] min-h-[2.75rem] flex items-center">Slide Decks Editables para Clases Conversacionales</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 Diapositivas listas para Zoom/Google Meet con temas de conversación y ejercicios visuales.
               </p>
@@ -746,12 +629,12 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
           <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img3.png" alt="ESL Printable Starter Pack" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/E8F3EE/065F46?text=Printables';">
+            <img src="./img3.png" alt="ESL Printable Starter Pack" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300">
           </div>
           <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
             <div class="space-y-2">
               <span class="px-2.5 py-0.5 bg-[#E8F3EE] text-[#1F8A65] text-[10px] font-extrabold rounded-full inline-block">PRINTABLES + WORKSHEETS</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">ESL Activity & Printable Starter Pack</h3>
+              <h3 class="text-sm font-bold text-[#0A3B7A] min-h-[2.75rem] flex items-center">ESL Activity & Printable Starter Pack</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 Fichas de vocabulario, actividades de conversación e imprimibles prácticos para tus clases.
               </p>
@@ -767,12 +650,12 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
           <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img6.png" alt="Teacher Dashboard Notion" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/FFFBEB/78350F?text=Teacher+Dashboard';">
+            <img src="./img6.png" alt="Teacher Dashboard Notion" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300">
           </div>
           <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
             <div class="space-y-2">
               <span class="px-2.5 py-0.5 bg-amber-50 text-amber-800 border border-amber-200 text-[10px] font-extrabold rounded-full inline-block">SISTEMA EN NOTION</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">Teacher’s All-in-One Dashboard</h3>
+              <h3 class="text-sm font-bold text-[#0A3B7A] min-h-[2.75rem] flex items-center">Teacher’s All-in-One Dashboard</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 Tu centro de control en Notion para organizar la agenda de tus alumnos, planificar tus clases y guardar tus mejores recursos.
               </p>
@@ -780,27 +663,6 @@
             <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
               <span class="text-lg font-extrabold text-[#0A3B7A]">12 €</span>
               <button data-add-item="Teacher’s All-in-One Dashboard" data-price="12" class="px-4 py-2 bg-[#0A3B7A] text-white text-xs font-bold rounded-full cursor-pointer hover:bg-[#082e60] transition-colors">
-                + Añadir
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
-          <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img3.png" alt="ESL Warmups and Fillers" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/FAF5FF/581C87?text=Warmups';">
-          </div>
-          <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
-            <div class="space-y-2">
-              <span class="px-2.5 py-0.5 bg-purple-50 text-purple-800 border border-purple-200 text-[10px] font-extrabold rounded-full inline-block">JUEGOS Y DINÁMICAS</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">ESL Warm-ups, Fillers & Icebreakers</h3>
-              <p class="text-xs text-slate-500 font-medium leading-relaxed">
-                Más de 50 dinámicas cortas de 5-10 minutos para romper el hielo y dinamizar tus sesiones.
-              </p>
-            </div>
-            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
-              <span class="text-lg font-extrabold text-[#0A3B7A]">10 €</span>
-              <button data-add-item="ESL Warm-ups, Fillers & Icebreakers" data-price="10" class="px-4 py-2 bg-[#0A3B7A] text-white text-xs font-bold rounded-full cursor-pointer hover:bg-[#082e60] transition-colors">
                 + Añadir
               </button>
             </div>
@@ -820,12 +682,12 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
           <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img3.png" alt="Bundle Cero a Conversación" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/E8F3EE/065F46?text=Bundle+Cero';">
+            <img src="./img3.png" alt="Bundle Cero a Conversación" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300">
           </div>
           <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
             <div class="space-y-2">
               <span class="px-2.5 py-0.5 bg-[#E8F3EE] text-[#1F8A65] text-[10px] font-extrabold rounded-full inline-block">BUNDLE DIGITAL</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">Pack "De Cero a Conversación"</h3>
+              <h3 class="text-sm font-bold text-[#0A3B7A] min-h-[2.75rem] flex items-center">Pack "De Cero a Conversación"</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 Incluye: Ruta 6 Meses + Kit Anti-Bloqueo + Second Brain en Notion + Mazo Anki.
               </p>
@@ -844,12 +706,12 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
           <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img4.png" alt="All In One Exam Pass" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/EFF6FF/1E3A8A?text=Exams+Bundle';">
+            <img src="./img4.png" alt="All In One Exam Pass" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300">
           </div>
           <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
             <div class="space-y-2">
               <span class="px-2.5 py-0.5 bg-blue-50 text-[#0A3B7A] text-[10px] font-extrabold rounded-full inline-block">BUNDLE EXÁMENES</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">All-In-One Exam Pass (IELTS + TOEFL + Cambridge)</h3>
+              <h3 class="text-sm font-bold text-[#0A3B7A] min-h-[2.75rem] flex items-center">All-In-One Exam Pass (IELTS + TOEFL + Cambridge)</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 Los 3 kits estratégicos de preparación para certificar tu nivel oficial en cualquier examen.
               </p>
@@ -868,12 +730,12 @@
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
           <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img5.png" alt="Bundle Career Booster" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/EEF2FF/312E81?text=Career+Bundle';">
+            <img src="./img5.png" alt="Bundle Career Booster" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300">
           </div>
           <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
             <div class="space-y-2">
               <span class="px-2.5 py-0.5 bg-indigo-50 text-[#0A3B7A] text-[10px] font-extrabold rounded-full inline-block">BUNDLE PROFESIONAL</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">Pack "Career Booster Remote Work"</h3>
+              <h3 class="text-sm font-bold text-[#0A3B7A] min-h-[2.75rem] flex items-center">Pack "Career Booster Remote Work"</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 Incluye: Tech Resume STAR Guide + Mastering Meetings + E-mails & Networking.
               </p>
@@ -887,71 +749,6 @@
                 + Añadir
               </button>
             </div>
-          </div>
-        </div>
-
-        <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
-          <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img3.png" alt="Ultimate Teacher Toolkit" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/FFF1F2/881337?text=Teachers+Bundle';">
-          </div>
-          <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
-            <div class="space-y-2">
-              <span class="px-2.5 py-0.5 bg-rose-50 text-rose-800 border border-rose-200 text-[10px] font-extrabold rounded-full inline-block">BUNDLE DOCENTE</span>
-              <h3 class="text-base font-bold text-[#0A3B7A]">Ultimate Teacher's Toolkit</h3>
-              <p class="text-xs text-slate-500 font-medium leading-relaxed">
-                Incluye: Slide Decks Canva/PPT + Starter Worksheets Pack + Notion Dashboard + Warm-ups.
-              </p>
-            </div>
-            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <span class="block text-[10px] text-slate-400 line-through font-semibold">51 €</span>
-                <span class="text-lg font-extrabold text-[#0A3B7A]">29 €</span>
-              </div>
-              <button data-add-item="Ultimate Teacher's Toolkit" data-price="29" class="px-4 py-2 bg-[#0A3B7A] text-white text-xs font-bold rounded-full cursor-pointer hover:bg-[#082e60] transition-colors">
-                + Añadir
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-white border-2 border-[#1F8A65] rounded-[24px] p-6 shadow-md flex flex-col justify-between space-y-4 relative overflow-hidden md:col-span-2 lg:col-span-3">
-          <div class="absolute top-4 right-4 bg-[#1F8A65] text-white text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
-            PROGRAMA ESTRELLA ⭐
-          </div>
-          <div class="space-y-3">
-            <span class="px-3 py-1 bg-[#E8F3EE] text-[#1F8A65] text-[10px] font-extrabold rounded-full inline-block">PROGRAMA COMPLETO</span>
-            <h3 class="text-2xl font-bold text-[#0A3B7A]">Corporate English Accelerator</h3>
-            <p class="text-xs md:text-sm text-slate-600 font-medium leading-relaxed max-w-2xl">
-              Simulación de reuniones, redacción ejecutiva sin traductores, corrección directa de pronunciación y acceso ilimitado.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-            <div>
-              <span class="block text-xs text-slate-400 line-through font-semibold">147 €</span>
-              <span class="text-2xl font-extrabold text-[#1F8A65]">73 € <span class="text-xs bg-rose-100 text-rose-700 px-2 py-0.5 rounded-full font-bold ml-1">-50%</span></span>
-            </div>
-            <button data-add-item="Corporate English Accelerator" data-price="73" class="px-6 py-3 bg-[#1F8A65] text-white text-xs font-extrabold rounded-full cursor-pointer shadow-md hover:bg-[#186e51] transition-colors">
-              Unirme Ahora 🚀
-            </button>
-          </div>
-        </div>
-
-        <div class="bg-white border-2 border-[#0A3B7A]/30 rounded-[24px] p-6 shadow-md flex flex-col justify-between space-y-4 md:col-span-2 lg:col-span-3">
-          <div class="space-y-3">
-            <span class="px-3 py-1 bg-indigo-50 text-[#0A3B7A] border border-indigo-200 text-[10px] font-extrabold rounded-full inline-block">SESIONES EN VIVO 1:1</span>
-            <h3 class="text-2xl font-bold text-[#0A3B7A]">Mentoría VIP Personalizada</h3>
-            <p class="text-xs md:text-sm text-slate-600 font-medium leading-relaxed max-w-2xl">
-              Acompañamiento individual por Zoom para preparar tu perfil y entrevistas reales con simulacros y soporte prioritario.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-            <div>
-              <span class="block text-[10px] text-amber-700 font-bold uppercase tracking-wider">SOLO 3 CUPOS / MES</span>
-              <span class="text-2xl font-extrabold text-[#0A3B7A]">149 €</span>
-            </div>
-            <button data-add-item="Mentoría VIP Personalizada" data-price="149" class="px-6 py-3 bg-[#0A3B7A] text-white text-xs font-extrabold rounded-full cursor-pointer shadow-md hover:bg-[#082e60] transition-colors">
-              Reservar VIP 👑
-            </button>
           </div>
         </div>
 
