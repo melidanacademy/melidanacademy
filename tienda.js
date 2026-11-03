@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('checkout-btn')?.addEventListener('click', () => {
     if (cart.length === 0) {
-      alert('Agrega al menos un producto antes de continuar.');
+      alert('Agrega al menos un producto antes de continuar con el pago.');
       return;
     }
     window.location.href = STRIPE_LINK;
