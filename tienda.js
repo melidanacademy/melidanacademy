@@ -9,11 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
     button.addEventListener('click', () => {
       const tabKey = button.getAttribute('data-tab');
 
-      tabContents.forEach(el => el.classList.add('hidden'));
-      tabButtons.forEach(el => el.classList.remove('active'));
-
-      document.getElementById(`sec-${tabKey}`)?.classList.remove('hidden');
+      tabButtons.forEach(btn => btn.classList.remove('active'));
       button.classList.add('active');
+
+      tabContents.forEach(content => content.classList.add('hidden'));
+      const activeContent = document.getElementById(`sec-${tabKey}`);
+      if (activeContent) {
+        activeContent.classList.remove('hidden');
+      }
     });
   });
 
@@ -85,10 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const originalText = btn.innerHTML;
       btn.innerHTML = '✓ ¡Añadido!';
-      btn.classList.add('bg-[#0A3B7A]');
       setTimeout(() => {
         btn.innerHTML = originalText;
-        btn.classList.remove('bg-[#0A3B7A]');
       }, 1200);
 
       updateCartUI();
