@@ -12,6 +12,10 @@
 </head>
 <body class="min-h-screen flex flex-col justify-between overflow-x-hidden bg-[#FAF8F5]">
 
+  <div class="bg-[#E8F3EE] text-[#1F8A65] text-xs font-bold py-2 text-center border-b border-[#1F8A65]/15">
+    ✨ Tip Cozy: Selecciona tus guías favoritas y organízalas a tu ritmo de estudio diario.
+  </div>
+
   <nav class="w-full bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 px-6 py-3.5 shadow-sm">
     <div class="max-w-6xl mx-auto flex justify-between items-center">
       <a href="./index.html" class="flex items-center space-x-2 text-[#0A3B7A] hover:text-[#1F8A65] transition-colors">
@@ -27,50 +31,58 @@
     </div>
   </nav>
 
-  <main class="w-full max-w-6xl mx-auto px-6 py-12 space-y-10">
+  <main class="w-full max-w-6xl mx-auto px-6 py-10 space-y-10">
     
     <div class="text-center space-y-3 max-w-2xl mx-auto">
       <span class="inline-block px-4 py-1.5 bg-[#E8F3EE] text-[#1F8A65] text-xs font-extrabold uppercase tracking-widest rounded-full border border-[#1F8A65]/20">
-        RECURSOS PRÁCTICOS DIRECTO AL GRANO
+        PAPELERÍA Y GUÍAS DIGITALES
       </span>
       <h1 class="text-3xl md:text-5xl font-bold text-[#0A3B7A] leading-tight tracking-tight italic">
         Todo lo que necesitas para soltar la lengua en inglés
       </h1>
       <p class="text-xs md:text-base text-slate-600 leading-relaxed font-medium max-w-xl mx-auto">
-        Explora guías tácticas, plantillas y sistemas diseñados para ayudarte a comunicar con confianza en cualquier situación.
+        Explora por categoría para descubrir nuestro catálogo de recursos diseñados con cariño.
       </p>
     </div>
 
-    <div class="flex flex-wrap justify-center gap-2 border-b border-slate-200 pb-4">
-      <button data-tab="cero" class="tab-btn active px-4 py-2 bg-white border border-slate-200 text-[#0A3B7A] text-xs font-bold rounded-full transition-all cursor-pointer">
-        🌱 Desde Cero
-      </button>
-      <button data-tab="vida" class="tab-btn px-4 py-2 bg-white border border-slate-200 text-[#0A3B7A] text-xs font-bold rounded-full transition-all cursor-pointer">
-        ✈️ Vida Cotidiana
-      </button>
-      <button data-tab="carrera" class="tab-btn px-4 py-2 bg-white border border-slate-200 text-[#0A3B7A] text-xs font-bold rounded-full transition-all cursor-pointer">
-        💼 Habilidades Laborales
-      </button>
-      <button data-tab="profesiones" class="tab-btn px-4 py-2 bg-white border border-slate-200 text-[#0A3B7A] text-xs font-bold rounded-full transition-all cursor-pointer">
-        🔬 Por Profesión
-      </button>
-      <button data-tab="examenes" class="tab-btn px-4 py-2 bg-white border border-slate-200 text-[#0A3B7A] text-xs font-bold rounded-full transition-all cursor-pointer">
-        🎓 Exámenes Oficiales
-      </button>
-      <button data-tab="profes" class="tab-btn px-4 py-2 bg-white border border-slate-200 text-[#0A3B7A] text-xs font-bold rounded-full transition-all cursor-pointer">
-        🍎 Para Profes
-      </button>
-      <button data-tab="programas" class="tab-btn px-4 py-2 bg-white border border-slate-200 text-[#0A3B7A] text-xs font-bold rounded-full transition-all cursor-pointer">
-        🎁 Bundles & Programas
-      </button>
+    <div class="space-y-3">
+      <p class="text-center text-xs font-bold text-slate-400 uppercase tracking-wider">Selecciona una categoría:</p>
+      <div class="flex flex-wrap justify-center gap-2.5 pb-2">
+        <button data-tab="cero" class="tab-btn active px-4 py-2 bg-white border border-slate-200 text-[#0A3B7A] text-xs font-bold rounded-full transition-all cursor-pointer shadow-xs hover:border-[#1F8A65]">
+          🌱 Desde Cero
+        </button>
+        <button data-tab="vida" class="tab-btn px-4 py-2 bg-white border border-slate-200 text-[#0A3B7A] text-xs font-bold rounded-full transition-all cursor-pointer shadow-xs hover:border-[#1F8A65]">
+          ✈️ Vida Cotidiana
+        </button>
+        <button data-tab="carrera" class="tab-btn px-4 py-2 bg-white border border-slate-200 text-[#0A3B7A] text-xs font-bold rounded-full transition-all cursor-pointer shadow-xs hover:border-[#1F8A65]">
+          💼 Trabajo & Carrera
+        </button>
+        <button data-tab="profesiones" class="tab-btn px-4 py-2 bg-white border border-slate-200 text-[#0A3B7A] text-xs font-bold rounded-full transition-all cursor-pointer shadow-xs hover:border-[#1F8A65]">
+          🔬 Por Profesión
+        </button>
+        <button data-tab="examenes" class="tab-btn px-4 py-2 bg-white border border-slate-200 text-[#0A3B7A] text-xs font-bold rounded-full transition-all cursor-pointer shadow-xs hover:border-[#1F8A65]">
+          🎓 Exámenes
+        </button>
+        <button data-tab="profes" class="tab-btn px-4 py-2 bg-white border border-slate-200 text-[#0A3B7A] text-xs font-bold rounded-full transition-all cursor-pointer shadow-xs hover:border-[#1F8A65]">
+          🍎 Para Profes
+        </button>
+        <button data-tab="programas" class="tab-btn px-4 py-2 bg-white border border-slate-200 text-[#0A3B7A] text-xs font-bold rounded-full transition-all cursor-pointer shadow-xs hover:border-[#1F8A65]">
+          🎁 Bundles
+        </button>
+      </div>
     </div>
 
-    <div id="sec-cero" class="tab-content">
+    <div id="sec-cero" class="tab-content space-y-4">
+      <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+        <h2 class="text-xl font-bold text-[#0A3B7A]">🌱 Para Empezar desde Cero</h2>
+        <span class="text-xs text-slate-400 font-medium">Básicos esenciales de estudio</span>
+      </div>
+
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
           <div class="w-full h-52 bg-[#F5F2EC] overflow-hidden flex items-center justify-center p-2">
-            <img src="./img4.png" alt="Aprende Inglés en 6 Meses" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/F5F2EC/0A3B7A?text=Guide+PDF';">
+            <img src="./img4.png" alt="Aprende Inglés en 6 Meses" class="w-full h-full object-cover rounded-xl group-hover:scale-102 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/F5F2EC/0A3B7A?text=Roadmap';">
           </div>
           <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
             <div class="space-y-2">
@@ -200,7 +212,12 @@
       </div>
     </div>
 
-    <div id="sec-vida" class="tab-content hidden">
+    <div id="sec-vida" class="tab-content hidden space-y-4">
+      <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+        <h2 class="text-xl font-bold text-[#0A3B7A]">✈️ Guías de Vida Cotidiana & Supervivencia</h2>
+        <span class="text-xs text-slate-400 font-medium">Situaciones reales del día a día</span>
+      </div>
+
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
@@ -332,7 +349,12 @@
       </div>
     </div>
 
-    <div id="sec-carrera" class="tab-content hidden">
+    <div id="sec-carrera" class="tab-content hidden space-y-4">
+      <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+        <h2 class="text-xl font-bold text-[#0A3B7A]">💼 Habilidades Laborales & Carrera</h2>
+        <span class="text-xs text-slate-400 font-medium">Empresas internacionales y trabajo remoto</span>
+      </div>
+
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
@@ -467,7 +489,12 @@
       </div>
     </div>
 
-    <div id="sec-profesiones" class="tab-content hidden">
+    <div id="sec-profesiones" class="tab-content hidden space-y-4">
+      <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+        <h2 class="text-xl font-bold text-[#0A3B7A]">🔬 Vocabulario Técnico por Profesión</h2>
+        <span class="text-xs text-slate-400 font-medium">Jerga técnica para tu sector</span>
+      </div>
+
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
@@ -599,7 +626,12 @@
       </div>
     </div>
 
-    <div id="sec-examenes" class="tab-content hidden">
+    <div id="sec-examenes" class="tab-content hidden space-y-4">
+      <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+        <h2 class="text-xl font-bold text-[#0A3B7A]">🎓 Preparación de Exámenes Oficiales</h2>
+        <span class="text-xs text-slate-400 font-medium">Estrategias y plantillas para certificar</span>
+      </div>
+
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
@@ -668,7 +700,12 @@
       </div>
     </div>
 
-    <div id="sec-profes" class="tab-content hidden">
+    <div id="sec-profes" class="tab-content hidden space-y-4">
+      <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+        <h2 class="text-xl font-bold text-[#0A3B7A]">🍎 Recursos para Profesores (ESL)</h2>
+        <span class="text-xs text-slate-400 font-medium">Materiales listos para tus clases</span>
+      </div>
+
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
@@ -758,7 +795,12 @@
       </div>
     </div>
 
-    <div id="sec-programas" class="tab-content hidden">
+    <div id="sec-programas" class="tab-content hidden space-y-4">
+      <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+        <h2 class="text-xl font-bold text-[#0A3B7A]">🎁 Bundles & Programas Completos</h2>
+        <span class="text-xs text-slate-400 font-medium">Ahorra en paquetes integrales</span>
+      </div>
+
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <div class="bg-white border border-slate-200/80 rounded-[24px] overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
