@@ -46,15 +46,15 @@ document.addEventListener('DOMContentLoaded', () => {
       total += itemTotal;
 
       const itemEl = document.createElement('div');
-      itemEl.className = 'flex justify-between items-center p-3 bg-white border border-slate-200 rounded-xl text-xs';
+      itemEl.className = 'flex justify-between items-center p-3 bg-white border border-slate-200 rounded-xl text-xs shadow-xs';
       itemEl.innerHTML = `
-        <div>
-          <h4 class="font-bold text-[#0A3B7A]">${item.title}</h4>
-          <span class="text-slate-400">${item.quantity} x ${item.price} €</span>
+        <div class="pr-2">
+          <h4 class="font-bold text-[#0A3B7A] leading-tight">${item.title}</h4>
+          <span class="text-slate-400 text-[11px]">${item.quantity} x ${item.price} €</span>
         </div>
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-3 shrink-0">
           <span class="font-bold text-[#1F8A65]">${itemTotal} €</span>
-          <button data-remove-item="${item.title}" class="text-slate-400 hover:text-red-500 font-bold cursor-pointer">✕</button>
+          <button data-remove-item="${item.title}" class="text-slate-400 hover:text-red-500 font-bold cursor-pointer transition-colors p-1">✕</button>
         </div>
       `;
       cartItemsContainer?.appendChild(itemEl);
@@ -82,6 +82,14 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         cart.push({ title, price, quantity: 1 });
       }
+
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '✓ ¡Añadido!';
+      btn.classList.add('bg-[#0A3B7A]');
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.classList.remove('bg-[#0A3B7A]');
+      }, 1200);
 
       updateCartUI();
       toggleCartDrawer();
