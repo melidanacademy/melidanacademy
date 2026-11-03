@@ -3,326 +3,784 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Melidan Academy | Domina el Inglés con Confianza</title>
+  <title>Melidan Academy | Inglés Profesional & Carrera Internacional</title>
   
+  <meta property="og:title" content="Melidan Academy | Sbloquea tu inglés y da el salto profesional">
+  <meta property="og:description" content="Supera entrevistas técnicas en inglés, toma la palabra en reuniones y postula con seguridad a multinacionales.">
+  <meta property="og:image" content="./img1.png">
+  <meta property="og:url" content="https://melissara99.github.io/melidanacademy/">
+  <meta property="og:type" content="website">
+
   <link rel="icon" type="image/png" href="./img1.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
-  <style>
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-    }
-  </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between bg-[#FAF8F5] text-slate-800 overflow-x-hidden">
+<body class="min-h-screen overflow-x-hidden bg-[#FAF8F5]">
 
-  <nav class="w-full bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50 px-6 py-3.5 shadow-sm">
-    <div class="max-w-6xl mx-auto flex items-center justify-between gap-4">
-      
-      <a href="./index.html" class="font-extrabold text-lg md:text-xl text-[#0A3B7A] tracking-wider shrink-0">
-        MELIDAN ACADEMY
+  <nav class="w-full bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 px-6 py-3.5 shadow-sm">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <a href="#" class="flex items-center space-x-2">
+        <span class="font-extrabold text-[#0A3B7A] text-sm tracking-wider">MELIDAN ACADEMY</span>
       </a>
 
-      <div class="flex items-center gap-1.5 bg-slate-100 p-1 rounded-full border border-slate-200 text-xs font-bold text-slate-600">
-        <a href="./index.html" class="px-2.5 py-1 bg-white text-[#0A3B7A] rounded-full shadow-xs flex items-center gap-1 hover:text-[#1F8A65] transition-colors">
-          <span>🇪🇸</span> <span>ES</span>
-        </a>
-        <a href="./pt/index.html" class="px-2.5 py-1 text-slate-500 rounded-full flex items-center gap-1 hover:bg-white/70 hover:text-[#0A3B7A] transition-colors">
-          <span>🇧🇷</span> <span>PT</span>
-        </a>
-        <a href="./it/index.html" class="px-2.5 py-1 text-slate-500 rounded-full flex items-center gap-1 hover:bg-white/70 hover:text-[#0A3B7A] transition-colors">
-          <span>🇮🇹</span> <span>IT</span>
-        </a>
+      <div class="flex items-center gap-4">
+        <div class="flex items-center gap-2 text-xs font-bold text-[#0A3B7A] bg-slate-100 px-3 py-1.5 rounded-full border border-slate-200">
+          <a href="./index.html" class="text-[#1F8A65] font-extrabold flex items-center gap-1">
+            <span>🇪🇸</span> <span>ES</span>
+          </a>
+          <span class="text-slate-300">|</span>
+          <a href="./pt/index.html" class="hover:text-[#1F8A65] transition-colors flex items-center gap-1 text-slate-500">
+            <span>🇧🇷</span> <span>PT</span>
+          </a>
+          <span class="text-slate-300">|</span>
+          <a href="./it/index.html" class="hover:text-[#1F8A65] transition-colors flex items-center gap-1 text-slate-500">
+            <span>🇮🇹</span> <span>IT</span>
+          </a>
+        </div>
+
+        <button id="menu-toggle" class="md:hidden text-[#0A3B7A] text-xl focus:outline-none cursor-pointer p-1">
+          <i class="fa-solid fa-bars" id="menu-icon"></i>
+        </button>
       </div>
 
-      <div class="hidden md:flex items-center space-x-6 text-xs font-bold text-[#0A3B7A]">
-        <a href="#programas" class="hover:text-[#1F8A65] transition-colors flex items-center gap-1">
-          <i class="fa-solid fa-graduation-cap text-xs"></i> <span>Programas</span>
-        </a>
-        <a href="#transformacion" class="hover:text-[#1F8A65] transition-colors flex items-center gap-1">
-          <i class="fa-solid fa-wand-magic-sparkles text-xs"></i> <span>Transformación</span>
-        </a>
-        <a href="#dudas" class="hover:text-[#1F8A65] transition-colors flex items-center gap-1">
-          <i class="fa-solid fa-comments text-xs"></i> <span>Dudas</span>
-        </a>
-        <a href="#shorts" class="hover:text-[#1F8A65] transition-colors flex items-center gap-1">
-          <i class="fa-solid fa-video text-xs"></i> <span>YouTube Shorts</span>
-        </a>
-        <a href="#faq" class="hover:text-[#1F8A65] transition-colors flex items-center gap-1">
-          <i class="fa-solid fa-circle-question text-xs"></i> <span>FAQ</span>
-        </a>
-        <a href="#testimonios" class="hover:text-[#1F8A65] transition-colors flex items-center gap-1">
-          <i class="fa-solid fa-star text-xs"></i> <span>Testimonios</span>
+      <div id="mobile-menu" class="hidden md:flex flex-col md:flex-row items-stretch md:items-center gap-1 md:gap-5 text-xs font-bold text-[#0A3B7A] absolute md:static top-full left-0 w-full md:w-auto bg-white md:bg-transparent border-b md:border-none border-slate-200 p-4 md:p-0 shadow-xl md:shadow-none transition-all">
+        <a href="#programa-estrellas" class="block md:inline-block py-3 px-3 md:py-0 md:px-0 rounded-lg md:rounded-none hover:bg-slate-50 md:hover:bg-transparent hover:text-[#1F8A65] transition-colors border-b md:border-b-0 border-slate-100">🎓 Programas</a>
+        <a href="#transformacion" class="block md:inline-block py-3 px-3 md:py-0 md:px-0 rounded-lg md:rounded-none hover:bg-slate-50 md:hover:bg-transparent hover:text-[#1F8A65] transition-colors border-b md:border-b-0 border-slate-100">✨ El Método</a>
+        <a href="#comentarios" class="block md:inline-block py-3 px-3 md:py-0 md:px-0 rounded-lg md:rounded-none hover:bg-slate-50 md:hover:bg-transparent hover:text-[#1F8A65] transition-colors border-b md:border-b-0 border-slate-100">💬 Dudas</a>
+        <a href="#youtube" class="block md:inline-block py-3 px-3 md:py-0 md:px-0 rounded-lg md:rounded-none hover:bg-slate-50 md:hover:bg-transparent hover:text-[#1F8A65] transition-colors border-b md:border-b-0 border-slate-100">📹 Shorts</a>
+        <a href="#faq" class="block md:inline-block py-3 px-3 md:py-0 md:px-0 rounded-lg md:rounded-none hover:bg-slate-50 md:hover:bg-transparent hover:text-[#1F8A65] transition-colors border-b md:border-b-0 border-slate-100">FAQ</a>
+        <a href="#testimonios" class="block md:inline-block py-3 px-3 md:py-0 md:px-0 rounded-lg md:rounded-none hover:bg-slate-50 md:hover:bg-transparent hover:text-[#1F8A65] transition-colors border-b md:border-b-0 border-slate-100">⭐ Testimonios</a>
+        
+        <a href="./tienda.html" class="flex items-center justify-center gap-2 w-full md:w-auto px-4 py-3 md:py-2 bg-[#E8F3EE] text-[#1F8A65] rounded-xl md:rounded-full hover:bg-[#d8ebd2] transition-all border border-[#1F8A65]/20 shadow-sm mt-3 md:mt-0">
+          <i class="fa-solid fa-cart-shopping text-xs"></i>
+          <span>Recursos Digitales</span>
         </a>
       </div>
-
-      <a href="./tienda.html" class="px-4 py-2 bg-[#E8F3EE] text-[#1F8A65] rounded-full hover:bg-[#d8ebd2] transition-all flex items-center gap-2 border border-[#1F8A65]/20 shadow-sm text-xs font-bold shrink-0">
-        <i class="fa-solid fa-cart-shopping text-xs"></i>
-        <span>Recursos Digitales</span>
-      </a>
-
     </div>
   </nav>
 
-  <main class="w-full space-y-20 py-10">
+  <section class="w-full bg-gradient-to-b from-[#FAF8F5] via-[#F3EAD8]/40 to-[#FAF8F5] px-6 py-12 md:py-20 flex justify-center relative">
+    <div class="absolute top-10 left-1/2 -translate-x-1/2 w-96 h-96 bg-[#1F8A65]/10 rounded-full blur-3xl pointer-events-none"></div>
 
-    <section class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <div class="space-y-6 text-left">
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-[#E8F3EE] text-[#1F8A65] text-xs font-extrabold rounded-full border border-[#1F8A65]/20">
-          <i class="fa-solid fa-location-dot"></i>
-          <span>Dublín, Irlanda IE</span>
+    <div class="w-full max-w-4xl flex flex-col items-center text-center space-y-6 relative z-10">
+      
+      <div class="relative">
+        <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white shadow-xl shadow-blue-950/10 p-1 bg-white">
+          <img 
+            id="profile-img"
+            src="./img1.png" 
+            alt="Mely Alanis" 
+            class="w-full h-full object-cover rounded-full"
+            decoding="async"
+          >
         </div>
-
-        <h1 class="text-4xl md:text-5xl font-extrabold text-[#0A3B7A] leading-tight tracking-tight italic">
-          El método práctico para dominar el inglés con confianza y soltura
-        </h1>
-
-        <p class="text-sm md:text-base text-slate-600 font-medium leading-relaxed">
-          Pasa de traducir todo en tu cabeza a comunicarte de forma natural en tu trabajo, entrevistas e interacciones del día a día.
-        </p>
-
-        <div class="flex flex-wrap gap-4 pt-2">
-          <a href="./tienda.html" class="px-7 py-3.5 bg-[#1F8A65] text-white text-xs font-extrabold rounded-full shadow-md hover:bg-[#186e51] transition-all flex items-center gap-2">
-            <span>Explorar Recursos Digitales</span>
-            <i class="fa-solid fa-arrow-right text-xs"></i>
-          </a>
-          <a href="#programas" class="px-7 py-3.5 bg-white text-[#0A3B7A] border border-slate-300 text-xs font-extrabold rounded-full shadow-xs hover:border-[#0A3B7A] transition-all">
-            Ver Programas
-          </a>
-        </div>
+        <span class="absolute -bottom-1 -right-1 bg-white px-3 py-1 rounded-full text-xs md:text-sm font-bold shadow-md border border-slate-200 text-[#0A3B7A] rotate-sticker-right flex items-center gap-1.5">
+          <i class="fa-solid fa-location-dot text-red-500"></i> Dublín, Irlanda 🇮🇪
+        </span>
       </div>
 
-      <div class="flex justify-center relative">
-        <div class="w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl relative z-10">
-          <img src="./img2.png" alt="Mely Alanis" class="w-full h-full object-cover">
-        </div>
-        <div class="absolute -bottom-4 bg-white px-5 py-2.5 rounded-full shadow-md border border-slate-200 z-20 flex items-center gap-2">
-          <i class="fa-solid fa-location-dot text-rose-500"></i>
-          <span class="text-xs font-bold text-[#0A3B7A]">Dublín, Irlanda IE</span>
-        </div>
-      </div>
-    </section>
-
-    <div class="w-full bg-[#E8F3EE] border-y border-[#1F8A65]/20 py-4 overflow-hidden">
-      <div class="max-w-6xl mx-auto px-6 flex flex-wrap justify-around items-center gap-6 text-[#1F8A65] font-extrabold text-xs tracking-wider uppercase">
-        <div class="flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Sin libros aburridos</div>
-        <div class="flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Inglés real y conversacional</div>
-        <div class="flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Plantillas de Notion & Anki</div>
-        <div class="flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Acceso Inmediato</div>
-      </div>
-    </div>
-
-    <section id="programas" class="max-w-6xl mx-auto px-6 space-y-8">
-      <div class="text-center space-y-2">
-        <h2 class="text-2xl md:text-3xl font-bold text-[#0A3B7A] italic">Programas Destacados</h2>
-        <p class="text-xs md:text-sm text-slate-500 font-medium">Elige la ruta que mejor se adapte a tus objetivos actuales</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="space-y-4 max-w-3xl">
+        <span class="inline-block px-4 py-1.5 bg-[#E8F3EE] text-[#1F8A65] text-xs font-extrabold uppercase tracking-widest rounded-full border border-[#1F8A65]/20">
+          MÉTODO ESTRATÉGICO & DIRECTO AL GRANO
+        </span>
         
-        <div class="bg-white border-2 border-[#1F8A65] rounded-[24px] p-8 shadow-sm flex flex-col justify-between space-y-6 relative overflow-hidden">
-          <div class="space-y-4">
-            <span class="px-3 py-1 bg-[#E8F3EE] text-[#1F8A65] text-[10px] font-extrabold rounded-full inline-block">PROGRAMA COMPLETO</span>
-            <h3 class="text-2xl font-bold text-[#0A3B7A]">Corporate English Accelerator</h3>
-            <p class="text-xs md:text-sm text-slate-600 font-medium leading-relaxed">
-              Simulación de reuniones, redacción ejecutiva sin traductores, corrección directa de pronunciación y acceso ilimitado.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-            <div>
-              <span class="block text-xs text-slate-400 line-through font-semibold">147 €</span>
-              <span class="text-2xl font-extrabold text-[#1F8A65]">73 €</span>
-            </div>
-            <a href="./tienda.html" class="px-6 py-3 bg-[#1F8A65] text-white text-xs font-extrabold rounded-full hover:bg-[#186e51] transition-colors flex items-center gap-2">
-              <span>Unirme Ahora</span>
-              <i class="fa-solid fa-rocket text-xs"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="bg-white border-2 border-[#0A3B7A]/30 rounded-[24px] p-8 shadow-sm flex flex-col justify-between space-y-6">
-          <div class="space-y-4">
-            <span class="px-3 py-1 bg-indigo-50 text-[#0A3B7A] border border-indigo-200 text-[10px] font-extrabold rounded-full inline-block">SESIONES EN VIVO 1:1</span>
-            <h3 class="text-2xl font-bold text-[#0A3B7A]">Mentoría VIP Personalizada</h3>
-            <p class="text-xs md:text-sm text-slate-600 font-medium leading-relaxed">
-              Acompañamiento individual por Zoom para preparar tu perfil y entrevistas reales con simulacros y soporte prioritario.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-            <div>
-              <span class="block text-[10px] text-amber-700 font-bold uppercase tracking-wider">3 CUPOS / MES</span>
-              <span class="text-2xl font-extrabold text-[#0A3B7A]">149 €</span>
-            </div>
-            <a href="./tienda.html" class="px-6 py-3 bg-[#0A3B7A] text-white text-xs font-extrabold rounded-full hover:bg-[#082e60] transition-colors flex items-center gap-2">
-              <span>Reservar VIP</span>
-              <i class="fa-solid fa-crown text-xs"></i>
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="transformacion" class="max-w-6xl mx-auto px-6 space-y-8">
-      <div class="text-center space-y-2">
-        <h2 class="text-2xl md:text-3xl font-bold text-[#0A3B7A] italic">Tu Transformación</h2>
-        <p class="text-xs md:text-sm text-slate-500 font-medium">De bloquearte en conversaciones a hablar con autoridad</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white p-6 rounded-[24px] border border-slate-200/80 shadow-xs space-y-3">
-          <div class="w-10 h-10 bg-[#E8F3EE] text-[#1F8A65] rounded-full flex items-center justify-center font-bold text-lg">1</div>
-          <h3 class="text-base font-bold text-[#0A3B7A]">Pierde la pena al hablar</h3>
-          <p class="text-xs text-slate-500 font-medium leading-relaxed">Elimina el miedo a cometer errores utilizando muletillas naturales y estructuras de respuesta rápida.</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-[24px] border border-slate-200/80 shadow-xs space-y-3">
-          <div class="w-10 h-10 bg-[#E8F3EE] text-[#1F8A65] rounded-full flex items-center justify-center font-bold text-lg">2</div>
-          <h3 class="text-base font-bold text-[#0A3B7A]">Estructura tus ideas</h3>
-          <p class="text-xs text-slate-500 font-medium leading-relaxed">Deja de traducir palabra por palabra. Aprende a pensar directo en inglés con técnicas de inmersión diaria.</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-[24px] border border-slate-200/80 shadow-xs space-y-3">
-          <div class="w-10 h-10 bg-[#E8F3EE] text-[#1F8A65] rounded-full flex items-center justify-center font-bold text-lg">3</div>
-          <h3 class="text-base font-bold text-[#0A3B7A]">Crece profesionalmente</h3>
-          <p class="text-xs text-slate-500 font-medium leading-relaxed">Accede a vacantes internacionales, supera entrevistas de trabajo y destaca en reuniones multiculturales.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="dudas" class="max-w-6xl mx-auto px-6 bg-white rounded-[32px] p-8 md:p-12 border border-slate-200/80 shadow-sm grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-      <div class="space-y-4">
-        <span class="px-3 py-1 bg-amber-50 text-amber-800 border border-amber-200 text-[10px] font-extrabold rounded-full inline-block">¿TIENES DUDAS SOBRE TU NIVEL?</span>
-        <h2 class="text-2xl md:text-3xl font-bold text-[#0A3B7A] italic">¿No sabes por dónde empezar?</h2>
-        <p class="text-xs md:text-sm text-slate-600 font-medium leading-relaxed">
-          Cuéntame tu situación actual y tu objetivo profesional o académico, y te recomendaré el recurso exacto que necesitas.
+        <h1 class="text-3xl md:text-5xl font-bold text-[#0A3B7A] leading-tight tracking-tight italic">
+          Basta de bloqueos al hablar inglés en el trabajo.
+        </h1>
+        
+        <p class="text-xs md:text-base text-slate-600 leading-relaxed font-medium pt-1 max-w-2xl mx-auto">
+          No necesitas gastar una fortuna en cursos aburridos ni mudarte al extranjero. Te enseño la estrategia exacta que usé para soltar la lengua, hacerme escuchar en reuniones y abrir puertas internacionales desde casa.
         </p>
-        <a href="https://wa.me/" target="_blank" class="px-6 py-3.5 bg-[#1F8A65] text-white text-xs font-extrabold rounded-full inline-flex items-center gap-2 shadow-sm hover:bg-[#186e51] transition-colors">
-          <i class="fa-brands fa-whatsapp text-sm"></i>
-          <span>Escribir por WhatsApp</span>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-2.5 pt-2">
+        <span class="px-4 py-2 bg-white text-[#0A3B7A] rounded-full text-xs md:text-sm font-bold border border-slate-200 shadow-sm rotate-sticker-left flex items-center gap-2">
+          <i class="fa-solid fa-gears text-[#1F8A65]"></i> Ingeniera Mecánica
+        </span>
+        <span class="px-4 py-2 bg-[#EBF2FA] text-[#0A3B7A] rounded-full text-xs md:text-sm font-bold border border-[#0A3B7A]/20 shadow-sm flex items-center gap-2">
+          <i class="fa-solid fa-graduation-cap text-[#0A3B7A]"></i> MSc @ Trinity College Dublin
+        </span>
+        <span class="px-4 py-2 bg-[#E8F3EE] text-[#1F8A65] rounded-full text-xs md:text-sm font-bold border border-[#1F8A65]/20 shadow-sm rotate-sticker-right flex items-center gap-2">
+          <i class="fa-solid fa-language text-[#1F8A65]"></i> Lingüista Aplicada
+        </span>
+      </div>
+
+      <div class="pt-4 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+        <a href="#programa-estrellas" class="px-8 py-3.5 bg-[#1F8A65] hover:bg-[#186e51] text-white font-extrabold text-sm rounded-full shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2 cursor-pointer">
+          Desbloquea Tu Inglés Ahora 🚀
+        </a>
+        <a href="./tienda.html" class="px-8 py-3.5 bg-white text-[#0A3B7A] hover:bg-slate-50 font-bold text-sm rounded-full border border-slate-300 shadow-sm transition-all text-center">
+          Ver Recursos y Guías 🛒
         </a>
       </div>
-      <div class="flex justify-center">
-        <img src="./img3.png" alt="Soporte y Dudas" class="w-64 h-64 object-cover rounded-2xl shadow-sm">
-      </div>
-    </section>
 
-    <section id="shorts" class="max-w-6xl mx-auto px-6 space-y-8">
+    </div>
+  </section>
+
+  <section class="w-full bg-[#E8F3EE]/50 border-y border-[#1F8A65]/20 px-6 py-12 md:py-20 flex justify-center">
+    <div class="w-full max-w-4xl space-y-10">
+      
       <div class="text-center space-y-2">
-        <h2 class="text-2xl md:text-3xl font-bold text-[#0A3B7A] italic">Aprende con YouTube Shorts</h2>
-        <p class="text-xs md:text-sm text-slate-500 font-medium">Tips rápidos y lecciones prácticas de 1 minuto</p>
+        <span class="text-xs font-extrabold text-[#1F8A65] uppercase tracking-widest bg-[#E8F3EE] px-3.5 py-1 rounded-full border border-[#1F8A65]/20">
+          ¿TE SUENA FAMILIAR?
+        </span>
+        <h2 class="text-2xl md:text-4xl font-bold text-[#0A3B7A] pt-2">
+          Sé exactamente dónde te sientes estancado porque yo también estuve ahí
+        </h2>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <div class="aspect-[9/16] bg-slate-200 rounded-2xl overflow-hidden shadow-sm">
-          <iframe class="w-full h-full" src="https://www.youtube.com/embed/shorts/" title="YouTube Short" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="aspect-[9/16] bg-slate-200 rounded-2xl overflow-hidden shadow-sm">
-          <iframe class="w-full h-full" src="https://www.youtube.com/embed/shorts/" title="YouTube Short" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="aspect-[9/16] bg-slate-200 rounded-2xl overflow-hidden shadow-sm sm:col-span-2 md:col-span-1">
-          <iframe class="w-full h-full" src="https://www.youtube.com/embed/shorts/" title="YouTube Short" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
-    </section>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-    <section id="faq" class="w-full bg-[#0A3B7A] py-16 px-6 text-white">
-      <div class="max-w-4xl mx-auto space-y-8">
+        <div class="p-6 bg-white border border-slate-200/80 rounded-2xl space-y-3 shadow-sm hover:shadow-md transition-shadow">
+          <div class="text-2xl">📈</div>
+          <h3 class="text-base font-bold text-[#0A3B7A]">Buscas un ascenso, pero el inglés te frena</h3>
+          <p class="text-xs text-slate-600 leading-relaxed font-medium">
+            En tu trabajo vales oro y conoces tu área como nadie, pero cuando llega el momento de levantar la mano para roles Senior o de liderazgo, el miedo a equivocarte te hace dar un paso atrás.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white border border-slate-200/80 rounded-2xl space-y-3 shadow-sm hover:shadow-md transition-shadow">
+          <div class="text-2xl">🌱</div>
+          <h3 class="text-base font-bold text-[#0A3B7A]">Cansado de perder tiempo con la típica gramática</h3>
+          <p class="text-xs text-slate-600 leading-relaxed font-medium">
+            Los cursos tradicionales sirven para las bases, pero si quieres hacer carrera necesitas vocabulario técnico, frases ejecutivas y aplicaciones reales.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white border border-slate-200/80 rounded-2xl space-y-3 shadow-sm hover:shadow-md transition-shadow">
+          <div class="text-2xl">🛑</div>
+          <h3 class="text-base font-bold text-[#0A3B7A]">Entiendes todo, pero te trabas al hablar</h3>
+          <p class="text-xs text-slate-600 leading-relaxed font-medium">
+            Lees documentación y entiendes correos sin problema. El verdadero obstáculo es cuando debes participar en Zoom o Teams y te quedas buscando las palabras en la mente.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white border border-slate-200/80 rounded-2xl space-y-3 shadow-sm hover:shadow-md transition-shadow">
+          <div class="text-2xl">✈️</div>
+          <h3 class="text-base font-bold text-[#0A3B7A]">Crees que la única salida es irte al extranjero</h3>
+          <p class="text-xs text-slate-600 leading-relaxed font-medium">
+            Piensas que para hablar bien debes vivir en un país angloparlante. Yo lo hice y te aseguro: la diferencia no la hace el país, sino el sistema de estudio diario.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="sobre-mi" class="w-full bg-[#FAF8F5] px-6 py-12 md:py-20 flex justify-center">
+    <div class="w-full max-w-4xl">
+      <div class="bg-white border border-slate-200/80 rounded-[32px] p-8 md:p-12 shadow-md flex flex-col md:flex-row items-center gap-8">
         
-        <div class="text-center space-y-2">
-          <h2 class="text-3xl md:text-4xl font-extrabold italic tracking-tight">Preguntas Frecuentes</h2>
-          <p class="text-xs md:text-sm text-slate-200 font-medium">Todo lo que necesitas saber antes de empezar</p>
+        <div class="w-36 h-36 md:w-48 md:h-48 rounded-2xl overflow-hidden border-2 border-[#1F8A65]/20 shadow-md flex-shrink-0">
+          <img 
+            src="./img2.jpg" 
+            alt="Mely Alanis en Dublín" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
+            onerror="this.onerror=null; this.src='./img1.png';"
+          >
         </div>
 
-        <div class="space-y-4 text-slate-800">
+        <div class="space-y-4 text-left">
+          <span class="inline-block px-3 py-1 bg-[#E8F3EE] text-[#1F8A65] text-[11px] font-bold uppercase tracking-wider rounded-full">
+            MI HISTORIA
+          </span>
+          <h2 class="text-2xl md:text-3xl font-bold text-[#0A3B7A]">¡Hola! Soy Mely Alanis 👋</h2>
+          <p class="text-xs md:text-sm text-slate-600 leading-relaxed font-medium">
+            Ingeniera, lingüista y estudiante de Maestría en el Trinity College Dublin. Salí de Latinoamérica para construir una carrera internacional y sé perfectamente lo valioso que es el tiempo cuando apuntas alto.
+          </p>
+          <p class="text-xs md:text-sm text-slate-600 leading-relaxed font-medium">
+            Creé Melidan Academy para <strong>ahorrarte años de intentos fallidos</strong>. Te comparto el método práctico y analítico que me abrió las puertas en Europa para que puedas soltarte sin frenar tu vida.
+          </p>
 
-          <details class="group bg-[#FAF8F5] rounded-2xl p-5 border border-white/20 transition-all cursor-pointer">
-            <summary class="flex justify-between items-center font-bold text-sm md:text-base text-[#0A3B7A] list-none">
-              <span>¿Qué nivel de inglés necesito para aprovechar las guías y recursos?</span>
-              <i class="fa-solid fa-plus text-xs group-open:rotate-45 transition-transform"></i>
-            </summary>
-            <p class="mt-3 text-xs md:text-sm text-slate-600 leading-relaxed font-medium">
-              ¡Tenemos opciones para todos los niveles! Si estás comenzando de cero o te da pena hablar, la sección <strong>🌱 Desde Cero</strong> y el <strong>Kit Anti-Bloqueo</strong> son ideales para ti. Si buscas escalar en tu carrera o certificar un examen, contamos con guías especializadas para nivel intermedio y avanzado.
-            </p>
-          </details>
-
-          <details class="group bg-[#FAF8F5] rounded-2xl p-5 border border-white/20 transition-all cursor-pointer">
-            <summary class="flex justify-between items-center font-bold text-sm md:text-base text-[#0A3B7A] list-none">
-              <span>¿Cómo y cuándo recibo mi material digital tras la compra?</span>
-              <i class="fa-solid fa-plus text-xs group-open:rotate-45 transition-transform"></i>
-            </summary>
-            <p class="mt-3 text-xs md:text-sm text-slate-600 leading-relaxed font-medium">
-              El acceso es <strong>inmediato e ilimitado</strong>. Al completar tu pago seguro por Stripe, recibirás un correo electrónico con los enlaces de descarga directa de tus PDFs, plantillas de Notion, mazos de Anki y audios MP3.
-            </p>
-          </details>
-
-          <details class="group bg-[#FAF8F5] rounded-2xl p-5 border border-white/20 transition-all cursor-pointer">
-            <summary class="flex justify-between items-center font-bold text-sm md:text-base text-[#0A3B7A] list-none">
-              <span>¿Cómo funcionan las plantillas de Notion y las Flashcards de Anki?</span>
-              <i class="fa-solid fa-plus text-xs group-open:rotate-45 transition-transform"></i>
-            </summary>
-            <p class="mt-3 text-xs md:text-sm text-slate-600 leading-relaxed font-medium">
-              Cada recurso incluye instrucciones súper sencillas de instalación paso a paso. Para Notion, solo debes hacer clic en "Duplicar" para agregarlo a tu cuenta gratuita. Para Anki, importas el archivo descargado directamente a la app en tu celular o computadora.
-            </p>
-          </details>
-
-          <details class="group bg-[#FAF8F5] rounded-2xl p-5 border border-white/20 transition-all cursor-pointer">
-            <summary class="flex justify-between items-center font-bold text-sm md:text-base text-[#0A3B7A] list-none">
-              <span>¿En qué consiste la Mentoría VIP 1:1 y el programa Accelerator?</span>
-              <i class="fa-solid fa-plus text-xs group-open:rotate-45 transition-transform"></i>
-            </summary>
-            <p class="mt-3 text-xs md:text-sm text-slate-600 leading-relaxed font-medium">
-              Son programas intensivos acompañados. La mentoría incluye sesiones personalizadas por Zoom para preparar entrevistas o presentaciones reales. El Accelerator combina simulaciones grupales de reuniones ejecutivas con corrección de pronunciación directa.
-            </p>
-          </details>
-
-          <details class="group bg-[#FAF8F5] rounded-2xl p-5 border border-white/20 transition-all cursor-pointer">
-            <summary class="flex justify-between items-center font-bold text-sm md:text-base text-[#0A3B7A] list-none">
-              <span>¿Qué métodos de pago están disponibles?</span>
-              <i class="fa-solid fa-plus text-xs group-open:rotate-45 transition-transform"></i>
-            </summary>
-            <p class="mt-3 text-xs md:text-sm text-slate-600 leading-relaxed font-medium">
-              Aceptamos todas las tarjetas de crédito y débito internacionales (Visa, Mastercard, Amex), Apple Pay y Google Pay a través de la plataforma cifrada y segura de <strong>Stripe</strong>.
-            </p>
-          </details>
-
+          <div class="pt-2 flex flex-wrap gap-2.5">
+            <span class="px-3.5 py-1.5 bg-[#EBF2FA] text-[#0A3B7A] rounded-xl text-xs font-bold border border-[#0A3B7A]/15 flex items-center gap-2">
+              <i class="fa-solid fa-graduation-cap text-[#0A3B7A]"></i> MSc @ Trinity College Dublin
+            </span>
+            <span class="px-3.5 py-1.5 bg-[#E8F3EE] text-[#1F8A65] rounded-xl text-xs font-bold border border-[#1F8A65]/20 flex items-center gap-2">
+              <i class="fa-solid fa-award text-[#1F8A65]"></i> Certificada IELTS C1
+            </span>
+          </div>
         </div>
 
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="testimonios" class="max-w-6xl mx-auto px-6 space-y-8">
+  <section id="programa-estrellas" class="w-full bg-[#0A3B7A] text-white px-6 py-16 md:py-24 flex justify-center relative overflow-hidden">
+    <div class="w-full max-w-6xl space-y-10 relative z-10">
+      
+      <div class="text-center space-y-3">
+        <span class="inline-block px-4 py-1.5 bg-[#E8F3EE] text-[#1F8A65] text-xs font-extrabold uppercase tracking-widest rounded-full">
+          RUTAS Y ACOMPAÑAMIENTO
+        </span>
+        <h2 class="text-3xl md:text-5xl font-bold text-white italic">
+          Elige el nivel de apoyo para dar el salto
+        </h2>
+        <p class="text-xs md:text-base text-blue-100/90 max-w-2xl mx-auto font-normal leading-relaxed">
+          Desde guías tácticas de aplicación rápida hasta programas de mentoria individual 1:1 en vivo.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch pt-4">
+
+        <div class="bg-white text-[#0F2537] rounded-[28px] p-7 shadow-lg flex flex-col justify-between space-y-6 border border-slate-200">
+          <div class="space-y-4">
+            <span class="inline-block px-3 py-1 bg-slate-100 text-slate-700 text-[10px] font-extrabold uppercase rounded-full">
+              GUÍA TÁCTICA EXPRESS
+            </span>
+            <h3 class="text-xl font-bold text-[#0A3B7A]">Tech Resume & STAR Guide</h3>
+            <p class="text-xs text-slate-600 font-medium leading-relaxed">
+              Enfocado al 100% para superar entrevistas y procesos en empresas internacionales.
+            </p>
+            <ul class="text-xs text-slate-600 space-y-3 font-medium pt-2">
+              <li class="flex items-start gap-2">
+                <span class="text-[#0A3B7A] font-bold">✓</span>
+                <span>Plantilla de CV optimizada para filtros ATS.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#0A3B7A] font-bold">✓</span>
+                <span>+100 verbos de acción para el sector Tech.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#0A3B7A] font-bold">✓</span>
+                <span>Guiones listos basados en el método STAR.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-5 border-t border-slate-100 flex items-center justify-between">
+            <div>
+              <span class="block text-[10px] text-slate-400 font-bold uppercase">Acceso Inmediato</span>
+              <span class="text-2xl font-extrabold text-[#0A3B7A]">18 €</span>
+            </div>
+            <button data-action="waitlist" data-product="Tech Resume & STAR Guide" data-price="18 €" class="px-5 py-2.5 bg-[#0A3B7A] hover:bg-[#082e60] text-white text-xs font-bold rounded-full transition-colors shadow-md cursor-pointer">
+              Obtener Guía 📄
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white text-[#0F2537] rounded-[28px] p-7 shadow-xl flex flex-col justify-between space-y-6 border-2 border-[#1F8A65] relative">
+          <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#1F8A65] text-white text-[10px] font-extrabold px-4 py-1 rounded-full uppercase tracking-wider shadow-sm">
+            EL MÁS SOLICITADO 🚀
+          </span>
+
+          <div class="space-y-4 pt-1">
+            <span class="inline-block px-3 py-1 bg-[#E8F3EE] text-[#1F8A65] text-[10px] font-extrabold uppercase rounded-full">
+              PROGRAMA COMPLETO
+            </span>
+            <h3 class="text-xl font-bold text-[#0A3B7A]">Corporate English Accelerator</h3>
+            <p class="text-xs text-slate-600 font-medium leading-relaxed">
+              El sistema paso a paso para expresarte en reuniones y entrevistas sin dudas ni trabas.
+            </p>
+            <ul class="text-xs text-slate-600 space-y-3 font-medium pt-2">
+              <li class="flex items-start gap-2">
+                <span class="text-[#1F8A65] font-extrabold">✓</span>
+                <span>Módulos prácticos con simulaciones reales.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#1F8A65] font-extrabold">✓</span>
+                <span>Redacción de e-mails de trabajo sin traductores.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#1F8A65] font-extrabold">✓</span>
+                <span>Retroalimentación directa para mejorar pronunciación.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#1F8A65] font-extrabold">✓</span>
+                <span>Acceso ilimitado a actualizaciones futuras.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-5 border-t border-slate-100 flex items-center justify-between">
+            <div>
+              <span class="block text-[10px] text-slate-400 font-bold uppercase line-through">147 €</span>
+              <div class="flex items-center gap-1.5">
+                <span class="text-2xl font-extrabold text-[#0A3B7A]">73 €</span>
+                <span class="text-[10px] font-extrabold text-[#1F8A65] bg-[#E8F3EE] px-2 py-0.5 rounded-full border border-[#1F8A65]/20">-50%</span>
+              </div>
+            </div>
+            <button data-action="waitlist" data-product="Corporate English Accelerator" data-price="73 €" class="px-5 py-2.5 bg-[#1F8A65] hover:bg-[#186e51] text-white text-xs font-bold rounded-full transition-colors shadow-md cursor-pointer">
+              Unirme Al Programa 🚀
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white text-[#0F2537] rounded-[28px] p-7 shadow-lg flex flex-col justify-between space-y-6 border border-slate-200 relative">
+          <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#0A3B7A] text-white text-[10px] font-extrabold px-4 py-1 rounded-full uppercase tracking-wider shadow-sm">
+            👑 MÁXIMO IMPACTO
+          </span>
+
+          <div class="space-y-4 pt-1">
+            <span class="inline-block px-3 py-1 bg-slate-100 text-slate-700 text-[10px] font-extrabold uppercase rounded-full">
+              SESIONES EN VIVO 1:1
+            </span>
+            <h3 class="text-xl font-bold text-[#0A3B7A]">Mentoría VIP Personalizada</h3>
+            <p class="text-xs text-slate-600 font-medium leading-relaxed">
+              Acompañamiento individual por Zoom para preparar tu perfil y entrevistas de trabajo reales.
+            </p>
+            <ul class="text-xs text-slate-600 space-y-3 font-medium pt-2">
+              <li class="flex items-start gap-2">
+                <span class="text-[#0A3B7A] font-bold">★</span>
+                <span>Sesiones 1:1 enfocadas en tus metas exactas.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#0A3B7A] font-bold">★</span>
+                <span>Revisión en vivo de CV, LinkedIn y correos.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#0A3B7A] font-bold">★</span>
+                <span>Simulacros de entrevista con correcciones al instante.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#0A3B7A] font-bold">★</span>
+                <span>Soporte prioritario por mensajería.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-5 border-t border-slate-100 flex items-center justify-between">
+            <div>
+              <span class="block text-[10px] text-[#1F8A65] font-bold uppercase">Solo 3 Cupos / Mes</span>
+              <span class="text-2xl font-extrabold text-[#0A3B7A]">149 €</span>
+            </div>
+            <button data-action="waitlist" data-product="Mentoría VIP 1:1" data-price="149 €" class="px-5 py-2.5 bg-[#0A3B7A] hover:bg-[#082e60] text-white text-xs font-bold rounded-full transition-colors shadow-md cursor-pointer">
+              Reservar VIP 👑
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="transformacion" class="w-full bg-[#FAF8F5] px-6 py-16 md:py-24 flex justify-center">
+    <div class="w-full max-w-5xl space-y-10">
+      
+      <div class="text-center space-y-3 max-w-2xl mx-auto">
+        <span class="text-xs font-extrabold text-[#1F8A65] uppercase tracking-widest bg-[#E8F3EE] px-4 py-1.5 rounded-full border border-[#1F8A65]/20">
+          TU TRANSFORMACIÓN
+        </span>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#0A3B7A]">
+          No es un curso más, es la inversión para tu crecimiento profesional
+        </h2>
+        <p class="text-xs md:text-sm text-slate-600 font-medium leading-relaxed">
+          Observa el cambio en tu rutina, en tu seguridad y en tus oportunidades cuando aplicas un método enfocado.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+        
+        <div class="bg-rose-50/60 border-2 border-rose-200/80 rounded-[32px] p-8 shadow-sm flex flex-col justify-between space-y-6">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="px-3.5 py-1.5 bg-rose-200/70 text-rose-800 text-xs font-extrabold rounded-full uppercase tracking-wider">
+                ❌ DÓNDE ESTÁS HOY
+              </span>
+              <span class="text-xl">🛑</span>
+            </div>
+            
+            <ul class="text-xs md:text-sm font-medium text-slate-700 space-y-4 leading-relaxed">
+              <li class="flex items-start gap-3">
+                <span class="text-rose-500 font-bold text-base leading-none">✕</span>
+                <span><strong>Crecimiento frenado:</strong> Dejas pasar ofertas remotas en USD / EUR por miedo al inglés.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-rose-500 font-bold text-base leading-none">✕</span>
+                <span><strong>Silencio en reuniones:</strong> Mantienes el micrófono apagado en Zoom por temor a trabarte.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-rose-500 font-bold text-base leading-none">✕</span>
+                <span><strong>Traducción mental:</strong> Intentas traducir palabra por palabra y pierdes el hilo de la idea.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-rose-500 font-bold text-base leading-none">✕</span>
+                <span><strong>CV descartado:</strong> Envías postulaciones que no superan los filtros automáticos de los reclutadores.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-4 border-t border-rose-200/60">
+            <p class="text-[11px] font-bold text-rose-700 italic">
+              "Sensación de rendir como Senior en lo técnico, pero sonar como Junior al expresarte en inglés."
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-[#E8F3EE] border-2 border-[#1F8A65] rounded-[32px] p-8 shadow-xl flex flex-col justify-between space-y-6 relative transform md:-translate-y-2">
+          <span class="absolute -top-3.5 right-6 bg-[#1F8A65] text-white text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+            MÉTODO ESTRATÉGICO 🚀
+          </span>
+
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="px-3.5 py-1.5 bg-[#1F8A65] text-white text-xs font-extrabold rounded-full uppercase tracking-wider">
+                ✨ TU NUEVA REALIDAD
+              </span>
+              <span class="text-xl">🏆</span>
+            </div>
+
+            <ul class="text-xs md:text-sm font-bold text-[#0A3B7A] space-y-4 leading-relaxed">
+              <li class="flex items-start gap-3">
+                <span class="text-[#1F8A65] font-extrabold text-base leading-none">✓</span>
+                <span><strong>Mejores ofertas:</strong> Te postulas con seguridad a vacantes internacionales con excelente remuneración.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-[#1F8A65] font-extrabold text-base leading-none">✓</span>
+                <span><strong>Presencia ejecutiva:</strong> Participas activamente, defiendes tu punto de vista y te haces escuchar.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-[#1F8A65] font-extrabold text-base leading-none">✓</span>
+                <span><strong>Fluidez natural:</strong> Respondes con soltura utilizando estructuras ágiles y la técnica STAR.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-[#1F8A65] font-extrabold text-base leading-none">✓</span>
+                <span><strong>Perfil atractivo:</strong> CV adaptado a ATS que despierta el interés directo de los reclutadores.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-4 border-t border-[#1F8A65]/30">
+            <p class="text-[11px] font-extrabold text-[#1F8A65] italic">
+              "La tranquilidad de desenvolverte como un profesional global que obtiene el reconocimiento adecuado."
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="comentarios" class="w-full bg-[#FAF8F5] px-6 py-12 md:py-16 flex justify-center border-t border-slate-200">
+    <div class="w-full max-w-4xl space-y-8">
+      
       <div class="text-center space-y-2">
-        <h2 class="text-2xl md:text-3xl font-bold text-[#0A3B7A] italic">Lo que dicen los alumnos</h2>
-        <p class="text-xs md:text-sm text-slate-500 font-medium">Historias reales de profesionales y estudiantes</p>
+        <span class="inline-block px-3.5 py-1 bg-[#E8F3EE] text-[#1F8A65] text-xs font-extrabold uppercase tracking-wider rounded-full border border-[#1F8A65]/20">
+          ¿TIENES PREGUNTAS?
+        </span>
+        <h2 class="text-2xl md:text-4xl font-bold text-[#0A3B7A]">Escríbeme directamente</h2>
+        <p class="text-xs md:text-sm text-slate-600 font-medium max-w-xl mx-auto">
+          ¿Dudas sobre cuál ruta se adapta mejor a tu meta? Escríbeme abajo y te responderé personalmente.
+        </p>
+      </div>
+
+      <div class="bg-white border border-slate-200 p-6 md:p-8 rounded-[28px] shadow-sm max-w-2xl mx-auto">
+        <form id="comment-form" class="space-y-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="comment-name" class="block text-xs font-bold text-[#0A3B7A] mb-1">Tu Nombre</label>
+              <input 
+                type="text" 
+                id="comment-name" 
+                placeholder="Ej. Melissa Alanis" 
+                required 
+                class="w-full px-4 py-3 bg-[#FAF8F5] border border-slate-200 rounded-xl text-xs text-[#0A3B7A] focus:outline-none focus:border-[#1F8A65]"
+              >
+            </div>
+            <div>
+              <label for="comment-program" class="block text-xs font-bold text-[#0A3B7A] mb-1">Interés</label>
+              <select 
+                id="comment-program" 
+                class="w-full px-4 py-3 bg-[#FAF8F5] border border-slate-200 rounded-xl text-xs text-[#0A3B7A] focus:outline-none focus:border-[#1F8A65]"
+              >
+                <option value="Corporate English Accelerator">Corporate English Accelerator (73 €)</option>
+                <option value="Tech Resume & STAR Guide">Tech Resume & STAR Guide (18 €)</option>
+                <option value="Mentoría VIP 1:1">Mentoría VIP 1:1 (149 €)</option>
+                <option value="General">Quiero conocer mi nivel actual</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="comment-text" class="block text-xs font-bold text-[#0A3B7A] mb-1">Tu consulta</label>
+            <textarea 
+              id="comment-text" 
+              rows="3" 
+              placeholder="Cuéntame sobre tu meta o lo que estás buscando..." 
+              required 
+              class="w-full px-4 py-3 bg-[#FAF8F5] border border-slate-200 rounded-xl text-xs text-[#0A3B7A] focus:outline-none focus:border-[#1F8A65]"
+            ></textarea>
+          </div>
+
+          <button 
+            type="submit" 
+            id="btn-submit-comment" 
+            class="w-full py-3.5 bg-[#1F8A65] hover:bg-[#186e51] text-white font-extrabold text-xs rounded-xl transition-colors shadow-md cursor-pointer"
+          >
+            Enviar Consulta 💬
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="youtube" class="w-full bg-[#EBF2FA] px-6 py-12 md:py-20 flex justify-center border-t border-[#0A3B7A]/15">
+    <div class="w-full max-w-6xl space-y-10 text-center">
+      
+      <div class="space-y-3 max-w-2xl mx-auto">
+        <span class="inline-block px-3.5 py-1 bg-white text-[#0A3B7A] text-xs font-extrabold uppercase tracking-wider rounded-full shadow-sm border border-[#0A3B7A]/10">
+          RECURSOS GRATUITOS
+        </span>
+        <h2 class="text-2xl md:text-4xl font-bold text-[#0A3B7A]">Aprende con mis Shorts</h2>
+        <p class="text-xs md:text-sm text-slate-600 font-medium leading-relaxed">
+          Consejos rápidos de inglés profesional, optimización de LinkedIn y respuestas clave para entrevistas en menos de un minuto.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center pt-2">
+        
+        <div class="w-full max-w-[280px] space-y-3">
+          <span class="inline-block text-[11px] font-extrabold text-[#0A3B7A] bg-white/80 px-3 py-1 rounded-full shadow-xs border border-slate-200">
+            💡 Estrategia de B1 a C1
+          </span>
+          <div class="w-full aspect-[9/16] rounded-[28px] overflow-hidden shadow-xl border-4 border-white bg-black transform hover:-translate-y-1 transition-transform">
+            <iframe 
+              class="w-full h-full"
+              src="https://www.youtube.com/embed/YpO5XATBzdI" 
+              title="De B1 a C1 en Inglés"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+        <div class="w-full max-w-[280px] space-y-3">
+          <span class="inline-block text-[11px] font-extrabold text-[#1F8A65] bg-white/80 px-3 py-1 rounded-full shadow-xs border border-slate-200">
+            📚 5 Usos del Verbo TAKE
+          </span>
+          <div class="w-full aspect-[9/16] rounded-[28px] overflow-hidden shadow-xl border-4 border-white bg-black transform hover:-translate-y-1 transition-transform">
+            <iframe 
+              class="w-full h-full"
+              src="https://www.youtube.com/embed/wm5AZ11LLGk" 
+              title="Cómo usar el verbo TAKE"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+        <div class="w-full max-w-[280px] space-y-3 sm:col-span-2 lg:col-span-1">
+          <span class="inline-block text-[11px] font-extrabold text-[#0A3B7A] bg-white/80 px-3 py-1 rounded-full shadow-xs border border-slate-200">
+            🗣️ Frases Útiles en el Trabajo
+          </span>
+          <div class="w-full aspect-[9/16] rounded-[28px] overflow-hidden shadow-xl border-4 border-white bg-black transform hover:-translate-y-1 transition-transform">
+            <iframe 
+              class="w-full h-full"
+              src="https://www.youtube.com/embed/Y69EMneAteE" 
+              title="4 frases en inglés para usar hoy"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-4">
+        <a href="https://www.youtube.com/@melidanacademy/shorts" target="_blank" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-extrabold text-xs px-7 py-3.5 rounded-full shadow-lg transition-all transform hover:-translate-y-0.5 cursor-pointer">
+          <i class="fa-brands fa-youtube text-base"></i>
+          <span>Ver Shorts en YouTube ↗</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="faq" class="w-full bg-[#0A3B7A] text-white px-6 py-16 flex justify-center">
+    <div class="w-full max-w-3xl">
+      
+      <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-10">Preguntas Frecuentes</h2>
+
+      <div class="space-y-4">
+        
+        <div class="faq-item bg-[#FAF8F5] text-[#0A3B7A] rounded-[24px] p-6 cursor-pointer" onclick="toggleFaq(this)">
+          <div class="flex justify-between items-center">
+            <span class="text-xs md:text-sm font-bold text-[#0A3B7A] pr-3">¿Qué nivel de inglés necesito para aprovechar los recursos?</span>
+            <span class="faq-icon text-lg font-bold text-[#0A3B7A] flex-shrink-0">+</span>
+          </div>
+          <div class="faq-answer hidden text-xs md:text-sm text-slate-600 font-medium leading-relaxed pt-3">
+            ¡Tenemos opciones para todos los niveles! Si estás comenzando de cero o te da pena hablar, la sección Desde Cero y el Kit Anti-Bloqueo son ideales. Si buscas escalar en tu carrera o certificar un examen, contamos con guías especializadas para nivel intermedio y avanzado.
+          </div>
+        </div>
+
+        <div class="faq-item bg-[#FAF8F5] text-[#0A3B7A] rounded-[24px] p-6 cursor-pointer" onclick="toggleFaq(this)">
+          <div class="flex justify-between items-center">
+            <span class="text-xs md:text-sm font-bold text-[#0A3B7A] pr-3">¿Cómo y cuándo recibo los materiales digitales?</span>
+            <span class="faq-icon text-lg font-bold text-[#0A3B7A] flex-shrink-0">+</span>
+          </div>
+          <div class="faq-answer hidden text-xs md:text-sm text-slate-600 font-medium leading-relaxed pt-3">
+            El acceso es inmediato e ilimitado. Tras completar tu pago seguro por Stripe, recibirás un correo electrónico automático con los enlaces directos de tus PDFs, plantillas de Notion, mazos de Anki o audios.
+          </div>
+        </div>
+
+        <div class="faq-item bg-[#FAF8F5] text-[#0A3B7A] rounded-[24px] p-6 cursor-pointer" onclick="toggleFaq(this)">
+          <div class="flex justify-between items-center">
+            <span class="text-xs md:text-sm font-bold text-[#0A3B7A] pr-3">¿Cómo agendo las sesiones de la Mentoría VIP 1:1?</span>
+            <span class="faq-icon text-lg font-bold text-[#0A3B7A] flex-shrink-0">+</span>
+          </div>
+          <div class="faq-answer hidden text-xs md:text-sm text-slate-600 font-medium leading-relaxed pt-3">
+            Al inscribirte, recibirás el enlace directo a mi calendario personal para seleccionar cómodamente los días y horarios que mejor se adapten a tu agenda para las reuniones en Zoom.
+          </div>
+        </div>
+
+        <div class="faq-item bg-[#FAF8F5] text-[#0A3B7A] rounded-[24px] p-6 cursor-pointer" onclick="toggleFaq(this)">
+          <div class="flex justify-between items-center">
+            <span class="text-xs md:text-sm font-bold text-[#0A3B7A] pr-3">¿Cómo funcionan las plantillas de Notion y mazos de Anki?</span>
+            <span class="faq-icon text-lg font-bold text-[#0A3B7A] flex-shrink-0">+</span>
+          </div>
+          <div class="faq-answer hidden text-xs md:text-sm text-slate-600 font-medium leading-relaxed pt-3">
+            Cada recurso incluye guías sencillas paso a paso. En Notion solo das clic a "Duplicar" en tu cuenta gratuita. En Anki, importas el archivo descargado directo a la aplicación de tu computadora o celular.
+          </div>
+        </div>
+
+        <div class="faq-item bg-[#FAF8F5] text-[#0A3B7A] rounded-[24px] p-6 cursor-pointer" onclick="toggleFaq(this)">
+          <div class="flex justify-between items-center">
+            <span class="text-xs md:text-sm font-bold text-[#0A3B7A] pr-3">¿Qué métodos de pago están disponibles?</span>
+            <span class="faq-icon text-lg font-bold text-[#0A3B7A] flex-shrink-0">+</span>
+          </div>
+          <div class="faq-answer hidden text-xs md:text-sm text-slate-600 font-medium leading-relaxed pt-3">
+            Aceptamos todas las tarjetas de crédito y débito internacionales (Visa, Mastercard, Amex), Apple Pay y Google Pay mediante la infraestructura cifrada de Stripe.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="testimonios" class="w-full bg-[#E8F3EE]/60 border-t border-[#1F8A65]/20 px-6 py-16 md:py-24 flex justify-center">
+    <div class="w-full max-w-5xl space-y-12">
+      
+      <div class="text-center space-y-3 max-w-2xl mx-auto">
+        <span class="inline-block px-4 py-1.5 bg-[#E8F3EE] text-[#1F8A65] text-xs font-extrabold uppercase tracking-widest rounded-full border border-[#1F8A65]/20">
+          RESULTADOS REALES
+        </span>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#0A3B7A]">
+          Quienes decidieron soltarse y avanzar
+        </h2>
+        <p class="text-xs md:text-sm text-slate-600 font-medium leading-relaxed">
+          Historias de profesionales que superaron el temor a hablar y alcanzaron metas clave.
+        </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white p-6 rounded-[24px] border border-slate-200/80 shadow-xs space-y-4">
-          <div class="text-amber-400 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          <p class="text-xs text-slate-600 font-medium leading-relaxed">"La guía de entrevistas y el método STAR me dieron la estructura perfecta para pasar las entrevistas de un puesto remoto. ¡100% recomendado!"</p>
-          <div class="text-xs font-bold text-[#0A3B7A]">— Laura M., Software Engineer</div>
+
+        <div class="bg-white border border-slate-200/80 rounded-[28px] p-6 shadow-sm flex flex-col justify-between space-y-4 relative hover:shadow-md transition-shadow">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex text-amber-400 text-xs space-x-1">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="px-2.5 py-0.5 bg-[#E8F3EE] text-[#1F8A65] text-[10px] font-extrabold rounded-full">
+                PROGRAMA COMPLETO
+              </span>
+            </div>
+
+            <p class="text-xs text-slate-600 font-medium leading-relaxed italic">
+              "En menos de un mes superé la pena en las reuniones con el equipo internacional. En vez de quedarme callado, ahora participo y propongo soluciones."
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-slate-100 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-[#0A3B7A] text-white flex items-center justify-center font-bold text-xs">
+              CR
+            </div>
+            <div>
+              <h3 class="text-xs font-bold text-[#0A3B7A]">Carlos R.</h3>
+              <span class="text-[10px] text-slate-400 font-medium block">Software Engineer</span>
+            </div>
+          </div>
         </div>
 
-        <div class="bg-white p-6 rounded-[24px] border border-slate-200/80 shadow-xs space-y-4">
-          <div class="text-amber-400 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          <p class="text-xs text-slate-600 font-medium leading-relaxed">"El Second Brain en Notion me ayudó a organizar mi vocabulario diario sin sentirme abrumado. Por fin tengo un sistema claro."</p>
-          <div class="text-xs font-bold text-[#0A3B7A]">— Carlos R., Arquitecto</div>
+        <div class="bg-white border border-slate-200/80 rounded-[28px] p-6 shadow-sm flex flex-col justify-between space-y-4 relative hover:shadow-md transition-shadow">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex text-amber-400 text-xs space-x-1">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="px-2.5 py-0.5 bg-slate-100 text-slate-700 text-[10px] font-extrabold rounded-full">
+                TECH RESUME GUIDE
+              </span>
+            </div>
+
+            <p class="text-xs text-slate-600 font-medium leading-relaxed italic">
+              "El modelo de CV marcó toda la diferencia. Tras actualizar mi perfil me contactó una reclutadora y superé la entrevista sin trabarme."
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-slate-100 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-[#1F8A65] text-white flex items-center justify-center font-bold text-xs">
+              AM
+            </div>
+            <div>
+              <h3 class="text-xs font-bold text-[#0A3B7A]">Andrea M.</h3>
+              <span class="text-[10px] text-slate-400 font-medium block">Data Analyst</span>
+            </div>
+          </div>
         </div>
 
-        <div class="bg-white p-6 rounded-[24px] border border-slate-200/80 shadow-xs space-y-4">
-          <div class="text-amber-400 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          <p class="text-xs text-slate-600 font-medium leading-relaxed">"Perdí el miedo a intervenir en las reuniones en inglés con mi equipo internacional. Las muletillas y frases clave valen oro."</p>
-          <div class="text-xs font-bold text-[#0A3B7A]">— Andrea S., Marketing Lead</div>
+        <div class="bg-white border border-slate-200/80 rounded-[28px] p-6 shadow-sm flex flex-col justify-between space-y-4 relative hover:shadow-md transition-shadow">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex text-amber-400 text-xs space-x-1">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="px-2.5 py-0.5 bg-amber-50 text-amber-800 border border-amber-200 text-[10px] font-extrabold rounded-full">
+                MENTORÍA VIP 1:1
+              </span>
+            </div>
+
+            <p class="text-xs text-slate-600 font-medium leading-relaxed italic">
+              "Las simulaciones 1:1 con Mely fueron claves. Me indicó con exactitud dónde corregir. Aseguré mi oferta remota en USD con un incremento significativo."
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-slate-100 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-[#0A3B7A] text-white flex items-center justify-center font-bold text-xs">
+              DG
+            </div>
+            <div>
+              <h3 class="text-xs font-bold text-[#0A3B7A]">Diego G.</h3>
+              <span class="text-[10px] text-slate-400 font-medium block">Product Manager</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="bg-white border border-[#1F8A65]/30 rounded-[24px] p-6 text-center space-y-3 shadow-sm max-w-xl mx-auto">
+        <h3 class="text-sm font-bold text-[#0A3B7A]">¿Listo para dar el siguiente paso?</h3>
+        <p class="text-xs text-slate-600 font-medium">Elige la opción que buscas y empieza a desarrollar tu fluidez desde hoy.</p>
+        <div class="pt-1 flex justify-center gap-3">
+          <a href="#programa-estrellas" class="px-5 py-2.5 bg-[#1F8A65] hover:bg-[#186e51] text-white font-extrabold text-xs rounded-full transition-all">Ver Programas 🚀</a>
+          <a href="./tienda.html" class="px-5 py-2.5 bg-[#FAF8F5] hover:bg-slate-100 text-[#0A3B7A] border border-slate-200 font-bold text-xs rounded-full transition-all">Ver Tienda de Guías 🛒</a>
         </div>
       </div>
-    </section>
 
-  </main>
+    </div>
+  </section>
 
   <footer class="bg-[#FAF8F5] py-10 text-center space-y-4 border-t border-slate-200">
     <div class="flex justify-center space-x-8 text-[#0A3B7A] text-2xl">
@@ -330,8 +788,108 @@
       <a href="https://instagram.com/melidanacademy" target="_blank" class="hover:text-[#1F8A65] transition-colors"><i class="fa-brands fa-instagram"></i></a>
       <a href="https://www.youtube.com/@melidanacademy/shorts" target="_blank" class="hover:text-[#1F8A65] transition-colors"><i class="fa-brands fa-youtube"></i></a>
     </div>
+    
+    <div class="flex justify-center space-x-6 text-xs text-slate-500 font-medium">
+      <button data-modal="modal-terms" class="hover:text-[#0A3B7A] underline cursor-pointer">Términos y Condiciones</button>
+      <span>•</span>
+      <button data-modal="modal-terms" class="hover:text-[#0A3B7A] underline cursor-pointer">Política de Privacidad</button>
+    </div>
+
     <p class="text-xs font-semibold text-slate-400">© 2026 Melidan Academy · Todos los derechos reservados</p>
   </footer>
 
+  <div id="modal-waitlist" class="hidden fixed inset-0 bg-[#0A3B7A]/60 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+    <div class="bg-[#FAF8F5] border border-slate-200 p-8 rounded-[32px] max-w-md w-full relative text-center shadow-2xl">
+      <button data-close-modal="modal-waitlist" class="absolute top-6 right-6 text-[#0A3B7A] font-bold text-lg hover:opacity-75 transition-opacity cursor-pointer">✕</button>
+
+      <span class="inline-block px-3.5 py-1 bg-[#E8F3EE] text-[#1F8A65] text-xs font-extrabold rounded-full mb-3 border border-[#1F8A65]/20">
+        🎓 PROGRAMA OFICIAL
+      </span>
+      
+      <h3 class="text-xl font-bold text-[#0A3B7A] mb-1" id="waitlist-product-name">Corporate English Accelerator</h3>
+      <p class="text-xs text-slate-600 mb-6 font-medium">Ingresa tu correo para apartar tu lugar al precio promocional de <strong id="waitlist-price-tag" class="text-[#1F8A65] font-bold">73 €</strong>.</p>
+
+      <form id="waitlist-form" class="space-y-3.5 text-left">
+        <input 
+          type="email" 
+          name="email" 
+          placeholder="tu.correo@ejemplo.com" 
+          required 
+          class="w-full px-5 py-3.5 bg-white border border-slate-300 rounded-full text-xs text-[#0A3B7A] placeholder-slate-400 font-medium focus:outline-none focus:border-[#1F8A65]"
+        >
+        <button 
+          type="submit" 
+          id="btn-submit-waitlist"
+          class="w-full py-3.5 bg-[#1F8A65] hover:bg-[#186e51] text-white font-bold text-xs rounded-full transition-colors shadow-md cursor-pointer"
+        >
+          Apartar Mi Lugar 🚀
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div id="modal-terms" class="hidden fixed inset-0 bg-[#0A3B7A]/60 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+    <div class="bg-[#FAF8F5] border border-slate-200 p-8 rounded-[32px] max-w-lg w-full relative text-left shadow-2xl max-h-[85vh] overflow-y-auto">
+      <button data-close-modal="modal-terms" class="absolute top-6 right-6 text-[#0A3B7A] font-bold text-lg hover:opacity-75 transition-opacity cursor-pointer">✕</button>
+
+      <span class="inline-block px-3 py-1 bg-slate-100 text-[#0A3B7A] text-xs font-extrabold rounded-full mb-3">AVISO LEGAL</span>
+      <h3 class="text-xl font-bold text-[#0A3B7A] mb-4">Términos y Condiciones</h3>
+      
+      <div class="text-xs text-slate-600 font-medium space-y-3 leading-relaxed">
+        <p><strong>1. Uso de Materiales:</strong> Todos los cursos, guías y plantillas son para uso personal. Queda prohibida la reventa o distribución no autorizada.</p>
+        <p><strong>2. Entrega Digital:</strong> La descarga de productos digitales es inmediata mediante el enlace enviado tras completar la transacción con Stripe.</p>
+        <p><strong>3. Mentoría VIP:</strong> La programación de sesiones 1:1 se gestiona por correo electrónico tras confirmar la inscripción.</p>
+        <p><strong>4. Privacidad:</strong> Los datos recopilados se utilizan únicamente para el envío de materiales y comunicaciones oficiales de Melidan Academy.</p>
+      </div>
+
+      <div class="mt-6 text-center">
+        <button data-close-modal="modal-terms" class="px-6 py-2.5 bg-[#0A3B7A] text-white text-xs font-bold rounded-full cursor-pointer hover:bg-[#082e60]">
+          Entendido
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        if (mobileMenu.classList.contains('hidden')) {
+          menuIcon.classList.remove('fa-xmark');
+          menuIcon.classList.add('fa-bars');
+        } else {
+          menuIcon.classList.remove('fa-bars');
+          menuIcon.classList.add('fa-xmark');
+        }
+      });
+
+      const navLinks = mobileMenu.querySelectorAll('a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuIcon.classList.remove('fa-xmark');
+          menuIcon.classList.add('fa-bars');
+        });
+      });
+    }
+
+    function toggleFaq(element) {
+      const answer = element.querySelector('.faq-answer');
+      const icon = element.querySelector('.faq-icon');
+      if (answer.classList.contains('hidden')) {
+        answer.classList.remove('hidden');
+        icon.textContent = '−';
+      } else {
+        answer.classList.add('hidden');
+        icon.textContent = '+';
+      }
+    }
+  </script>
+
+  <script src="./main.js"></script>
 </body>
 </html>
