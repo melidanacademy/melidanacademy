@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja de Recursos Digitais | Melidan Academy</title>
+  
+  <link rel="icon" type="image/png" href="../img1.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="min-h-screen flex flex-col justify-between overflow-x-hidden bg-[#FAF8F5]">
+
+  <nav class="w-full bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 px-6 py-3.5 shadow-sm">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <a href="./index.html" class="flex items-center space-x-2 text-[#0A3B7A] hover:text-[#1F8A65] transition-colors">
+        <i class="fa-solid fa-arrow-left text-xs"></i>
+        <span class="font-extrabold text-xs tracking-wider">VOLTAR À MELIDAN ACADEMY</span>
+      </a>
+      
+      <div class="flex items-center gap-4">
+        <div class="flex items-center gap-1.5 text-xs font-bold text-[#0A3B7A] bg-slate-100 px-3 py-1.5 rounded-full border border-slate-200">
+          <a href="../es/tienda.html" class="hover:text-[#1F8A65] transition-colors">ES</a>
+          <span class="text-slate-300">|</span>
+          <a href="../pt/tienda.html" class="text-[#1F8A65] font-extrabold">PT</a>
+          <span class="text-slate-300">|</span>
+          <a href="../it/tienda.html" class="hover:text-[#1F8A65] transition-colors">IT</a>
+        </div>
+
+        <button id="cart-toggle-btn" class="px-4 py-2 bg-[#E8F3EE] text-[#1F8A65] rounded-full hover:bg-[#d8ebd2] transition-all flex items-center gap-2 border border-[#1F8A65]/20 shadow-sm text-xs font-bold cursor-pointer">
+          <i class="fa-solid fa-cart-shopping text-xs"></i>
+          <span>Seu Carrinho</span>
+          <span id="cart-count" class="bg-[#1F8A65] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="w-full max-w-5xl mx-auto px-6 py-12 space-y-10">
+    
+    <div class="text-center space-y-3 max-w-2xl mx-auto">
+      <span class="inline-block px-4 py-1.5 bg-[#E8F3EE] text-[#1F8A65] text-xs font-extrabold uppercase tracking-widest rounded-full border border-[#1F8A65]/20">
+        RECURSOS PRÁTICOS DIRETO AO PONTO
+      </span>
+      <h1 class="text-3xl md:text-5xl font-bold text-[#0A3B7A] leading-tight tracking-tight italic">
+        Tudo o que você precisa para destravar seu inglês
+      </h1>
+      <p class="text-xs md:text-base text-slate-600 leading-relaxed font-medium max-w-xl mx-auto">
+        Quer você esteja começando do zero ou buscando dar o salto para um trabalho remoto em dólares, aqui você encontra guias táticos e sem enrolação.
+      </p>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-2 border-b border-slate-200 pb-4">
+      <button data-tab="cero" id="tab-cero" class="tab-btn active px-5 py-2.5 bg-white border border-slate-200 text-[#0A3B7A] text-xs font-bold rounded-full transition-all cursor-pointer shadow-xs">
+        🌱 Para Começar do Zero
+      </button>
+      <button data-tab="estrella" id="tab-estrella" class="tab-btn px-5 py-2.5 bg-white border border-slate-200 text-[#0A3B7A] text-xs font-bold rounded-full transition-all cursor-pointer shadow-xs">
+        💼 Carreira & Entrevistas
+      </button>
+      <button data-tab="bundles" id="tab-bundles" class="tab-btn px-5 py-2.5 bg-white border border-slate-200 text-[#0A3B7A] text-xs font-bold rounded-full transition-all cursor-pointer shadow-xs">
+        🎁 Combos com Desconto
+      </button>
+    </div>
+
+    <div id="sec-cero" class="tab-content">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <div class="bg-white border border-slate-200/80 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <span class="px-3 py-1 bg-[#E8F3EE] text-[#1F8A65] text-[10px] font-extrabold rounded-full inline-block">GUIA + ROADMAP EM PDF</span>
+            <h3 class="text-lg font-bold text-[#0A3B7A]">Aprenda Inglês em 6 Meses: O Guia Exato</h3>
+            <p class="text-xs text-slate-600 font-medium leading-relaxed">
+              O passo a passo para ir do zero a ter conversas fluentes. Sem livros chatos de gramática, focado 100% no inglês real falado hoje.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <div>
+              <span class="block text-[10px] text-slate-400 line-through font-semibold">25 €</span>
+              <span class="text-xl font-extrabold text-[#1F8A65]">12 €</span>
+            </div>
+            <button data-add-item="Aprenda Inglês em 6 Meses: O Guia Exato" data-price="12" class="px-5 py-2.5 bg-[#1F8A65] hover:bg-[#186e51] text-white text-xs font-bold rounded-full transition-colors cursor-pointer shadow-sm">
+              + Adicionar ao Carrinho
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200/80 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <span class="px-3 py-1 bg-amber-50 text-amber-800 border border-amber-200 text-[10px] font-extrabold rounded-full inline-block">EBOOK + ÁUDIOS</span>
+            <h3 class="text-lg font-bold text-[#0A3B7A]">Kit Anti-Bloqueio: Perca a Vergonha de Falar</h3>
+            <p class="text-xs text-slate-600 font-medium leading-relaxed">
+              Sente vergonha ou trava ao falar? Aprenda técnicas psicológicas e conectores chave para se soltar sem medo de errar.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xl font-extrabold text-[#0A3B7A]">10 €</span>
+            <button data-add-item="Kit Anti-Bloqueio: Perca a Vergonha de Falar" data-price="10" class="px-5 py-2.5 bg-[#0A3B7A] hover:bg-[#082e60] text-white text-xs font-bold rounded-full transition-colors cursor-pointer">
+              + Adicionar ao Carrinho
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200/80 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <span class="px-3 py-1 bg-rose-50 text-rose-800 border border-rose-200 text-[10px] font-extrabold rounded-full inline-block">PLANNER NO NOTION / PDF</span>
+            <h3 class="text-lg font-bold text-[#0A3B7A]">Planner de Imersão Diária em Casa</h3>
+            <p class="text-xs text-slate-600 font-medium leading-relaxed">
+              Transforme sua rotina para se cercar de inglês todos os dias sem sair do seu país. Projetado para 15 min por dia.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xl font-extrabold text-[#0A3B7A]">14 €</span>
+            <button data-add-item="Planner de Imersão Diária em Casa" data-price="14" class="px-5 py-2.5 bg-[#0A3B7A] hover:bg-[#082e60] text-white text-xs font-bold rounded-full transition-colors cursor-pointer">
+              + Adicionar ao Carrinho
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200/80 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <span class="px-3 py-1 bg-purple-50 text-purple-800 border border-purple-200 text-[10px] font-extrabold rounded-full inline-block">FLASHCARDS ANKI + ÁUDIO</span>
+            <h3 class="text-lg font-bold text-[#0A3B7A]">Baralho 1.000 Palavras Chave Diárias</h3>
+            <p class="text-xs text-slate-600 font-medium leading-relaxed">
+              As 1.000 palavras mais usadas na vida real com pronúncia exata para nunca mais esquecê-las.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xl font-extrabold text-[#0A3B7A]">11 €</span>
+            <button data-add-item="Baralho 1.000 Palavras Chave Diárias" data-price="11" class="px-5 py-2.5 bg-[#0A3B7A] hover:bg-[#082e60] text-white text-xs font-bold rounded-full transition-colors cursor-pointer">
+              + Adicionar ao Carrinho
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="sec-estrella" class="tab-content hidden">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <div class="bg-white border-2 border-[#1F8A65]/40 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <span class="px-3 py-1 bg-[#E8F3EE] text-[#1F8A65] text-[10px] font-extrabold rounded-full inline-block">EBOOK + GUIA TÁTICO</span>
+            <h3 class="text-lg font-bold text-[#0A3B7A]">Tech Resume + Guia STAR</h3>
+            <p class="text-xs text-slate-600 font-medium leading-relaxed">
+              Passe nos filtros automáticos ATS e responda a entrevistas técnicas com o método STAR. Inclui +100 verbos de ação.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <div>
+              <span class="block text-[10px] text-slate-400 line-through font-semibold">37 €</span>
+              <span class="text-xl font-extrabold text-[#1F8A65]">18 €</span>
+            </div>
+            <button data-add-item="Tech Resume + Guia STAR" data-price="18" class="px-5 py-2.5 bg-[#1F8A65] hover:bg-[#186e51] text-white text-xs font-bold rounded-full transition-colors cursor-pointer shadow-sm">
+              + Adicionar ao Carrinho
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200/80 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <span class="px-3 py-1 bg-indigo-50 text-indigo-800 border border-indigo-200 text-[10px] font-extrabold rounded-full inline-block">SWIPE FILE</span>
+            <h3 class="text-lg font-bold text-[#0A3B7A]">30+ Modelos de E-mail Corporativo</h3>
+            <p class="text-xs text-slate-600 font-medium leading-relaxed">
+              Copie e cole modelos profissionais para pedir aumento, fazer acompanhamento de vagas ou comunicar-se com seu chefe.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xl font-extrabold text-[#0A3B7A]">22 €</span>
+            <button data-add-item="30+ Modelos de E-mail Corporativo" data-price="22" class="px-5 py-2.5 bg-[#0A3B7A] hover:bg-[#082e60] text-white text-xs font-bold rounded-full transition-colors cursor-pointer">
+              + Adicionar ao Carrinho
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200/80 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <span class="px-3 py-1 bg-blue-50 text-blue-800 border border-blue-200 text-[10px] font-extrabold rounded-full inline-block">MODELO NOTION</span>
+            <h3 class="text-lg font-bold text-[#0A3B7A]">Job Tracker Pro</h3>
+            <p class="text-xs text-slate-600 font-medium leading-relaxed">
+              Organize suas candidaturas, entrevistas agendadas e salários oferecidos em um painel simples e visual.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xl font-extrabold text-[#0A3B7A]">8 €</span>
+            <button data-add-item="Job Tracker Pro" data-price="8" class="px-5 py-2.5 bg-[#0A3B7A] hover:bg-[#082e60] text-white text-xs font-bold rounded-full transition-colors cursor-pointer">
+              + Adicionar ao Carrinho
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200/80 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <span class="px-3 py-1 bg-purple-50 text-purple-800 border border-purple-200 text-[10px] font-extrabold rounded-full inline-block">PROMPTS IA</span>
+            <h3 class="text-lg font-bold text-[#0A3B7A]">AI Interview Pack (ChatGPT & Claude)</h3>
+            <p class="text-xs text-slate-600 font-medium leading-relaxed">
+              Os prompts exatos para transformar o ChatGPT em seu recrutador particular e praticar sua pronúncia de graça.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xl font-extrabold text-[#0A3B7A]">12 €</span>
+            <button data-add-item="AI Interview Pack" data-price="12" class="px-5 py-2.5 bg-[#0A3B7A] hover:bg-[#082e60] text-white text-xs font-bold rounded-full transition-colors cursor-pointer">
+              + Adicionar ao Carrinho
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="sec-bundles" class="tab-content hidden">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <div class="bg-white border border-slate-200/80 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <span class="px-3 py-1 bg-[#E8F3EE] text-[#1F8A65] text-[10px] font-extrabold rounded-full inline-block">ECONOMIZE 40%</span>
+            <h3 class="text-lg font-bold text-[#0A3B7A]">Combo Profissional Completo</h3>
+            <p class="text-xs text-slate-600 font-medium leading-relaxed">
+              O combo definitivo para conseguir trabalho remoto: Tech Resume Guia STAR + 30 Modelos de E-mail + Job Tracker Pro no Notion.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <div>
+              <span class="block text-[10px] text-slate-400 line-through font-semibold">68 €</span>
+              <span class="text-xl font-extrabold text-[#1F8A65]">36 €</span>
+            </div>
+            <button data-add-item="Combo Profissional Completo" data-price="36" class="px-5 py-2.5 bg-[#1F8A65] hover:bg-[#186e51] text-white text-xs font-bold rounded-full transition-colors cursor-pointer">
+              + Adicionar ao Carrinho
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200/80 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <span class="px-3 py-1 bg-blue-50 text-[#0A3B7A] text-[10px] font-extrabold rounded-full inline-block">SISTEMA ZERO AO FLUENTE</span>
+            <h3 class="text-lg font-bold text-[#0A3B7A]">Combo Zero ao Fluente</h3>
+            <p class="text-xs text-slate-600 font-medium leading-relaxed">
+              Tudo para aprender de casa: Guia de 6 Meses + Kit Anti-Bloqueio + Planner de Imersão + Baralho de 1.000 Palavras Chave.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <div>
+              <span class="block text-[10px] text-slate-400 line-through font-semibold">47 €</span>
+              <span class="text-xl font-extrabold text-[#0A3B7A]">29 €</span>
+            </div>
+            <button data-add-item="Combo Zero ao Fluente" data-price="29" class="px-5 py-2.5 bg-[#0A3B7A] hover:bg-[#082e60] text-white text-xs font-bold rounded-full transition-colors cursor-pointer">
+              + Adicionar ao Carrinho
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="bg-[#FAF8F5] py-10 text-center space-y-4 border-t border-slate-200">
+    <div class="flex justify-center space-x-8 text-[#0A3B7A] text-2xl">
+      <a href="https://tiktok.com/@melidanacademy" target="_blank" class="hover:text-[#1F8A65] transition-colors"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="https://instagram.com/melidanacademy" target="_blank" class="hover:text-[#1F8A65] transition-colors"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.youtube.com/@melidanacademy/shorts" target="_blank" class="hover:text-[#1F8A65] transition-colors"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+    <p class="text-xs font-semibold text-slate-400">© 2026 Melidan Academy · Todos os direitos reservados</p>
+  </footer>
+
+  <div id="cart-drawer" class="fixed inset-0 bg-[#0A3B7A]/40 backdrop-blur-sm z-50 hidden transition-opacity">
+    <div class="fixed right-0 top-0 h-full w-full max-w-sm bg-[#FAF8F5] shadow-xl p-6 flex flex-col justify-between">
+      
+      <div>
+        <div class="flex justify-between items-center pb-4 border-b border-slate-200">
+          <h3 class="text-base font-bold text-[#0A3B7A] flex items-center gap-2">
+            <i class="fa-solid fa-cart-shopping text-[#1F8A65]"></i>
+            <span>Seu Carrinho</span>
+          </h3>
+          <button id="cart-close-btn" class="text-slate-400 hover:text-slate-600 font-bold text-base cursor-pointer">✕</button>
+        </div>
+
+        <div id="cart-items" class="py-4 space-y-3 max-h-[60vh] overflow-y-auto">
+          <p class="text-xs text-slate-400 text-center py-8">Seu carrinho está vazio.</p>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-200 pt-4 space-y-4">
+        <div class="flex justify-between items-center text-sm font-bold text-[#0A3B7A]">
+          <span>Total:</span>
+          <span id="cart-total" class="text-lg font-extrabold text-[#1F8A65]">0 €</span>
+        </div>
+
+        <button id="checkout-btn" class="w-full py-3.5 bg-[#1F8A65] hover:bg-[#186e51] text-white font-extrabold text-xs rounded-full shadow-sm transition-all cursor-pointer">
+          Ir para o Pagamento agora🚀
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../tienda.js"></script>
+</body>
+</html>
