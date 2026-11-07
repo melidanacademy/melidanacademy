@@ -3,18 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Melidan Academy | Inglés Técnico & Desarrollo Profesional</title>
   
-  <meta property="og:title" content="Melidan Academy | Lleva tu carrera al siguiente nivel">
-  <meta property="og:description" content="Supera tus entrevistas técnicas en inglés, destaca en tus reuniones y postula con confianza a multinacionales.">
-  <meta property="og:image" content="./img1.png">
-  <meta property="og:url" content="https://melissara99.github.io/melidanacademy/">
+  <title>Melidan Academy | Inglés Corporativo Estratégico</title>
+  <meta name="title" content="Melidan Academy | Inglés Corporativo Estratégico">
+  <meta name="description" content="Domina el inglés corporativo, supera entrevistas técnicas y accede a oportunidades internacionales sin salir de casa.">
+
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://melidanacademy.github.io/melidanacademy/">
+  <meta property="og:title" content="Melidan Academy | Inglés Corporativo Estratégico">
+  <meta property="og:description" content="El inglés que frena tu carrera profesional termina hoy. Estrategias tácticas para ingenieros y perfiles tech.">
+  <meta property="og:image" content="https://melidanacademy.github.io/melidanacademy/img_preview.png">
 
   <link rel="icon" type="image/png" href="./img1.png">
+  
+  <link rel="preload" as="image" href="./img1.png">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="./styles.css">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 </head>
 <body class="min-h-screen overflow-x-hidden">
 
@@ -26,16 +40,16 @@
 
       <div class="flex items-center gap-4">
         <div class="flex items-center gap-1.5 text-xs font-bold text-[#0A3B7A] bg-slate-100 px-3 py-1.5 rounded-full border border-slate-200">
-          <a href="./index.html" class="text-[#1F8A65] font-extrabold flex items-center gap-1">
-            <span>🇲🇽</span> <span>ES</span>
+          <a href="./index.html" class="text-[#1F8A65] font-extrabold flex items-center gap-1" aria-label="Cambiar idioma a Español">
+            <span aria-hidden="true">🇲🇽</span> <span>ES</span>
           </a>
           <span class="text-slate-300">|</span>
-          <a href="./pt/index.html" class="hover:text-[#1F8A65] transition-colors flex items-center gap-1 text-slate-500">
-            <span>🇧🇷</span> <span>PT</span>
+          <a href="./pt/index.html" class="hover:text-[#1F8A65] transition-colors flex items-center gap-1 text-slate-500" aria-label="Mudar idioma para Português">
+            <span aria-hidden="true">🇧🇷</span> <span>PT</span>
           </a>
           <span class="text-slate-300">|</span>
-          <a href="./it/index.html" class="hover:text-[#1F8A65] transition-colors flex items-center gap-1 text-slate-500">
-            <span>🇮🇹</span> <span>IT</span>
+          <a href="./it/index.html" class="hover:text-[#1F8A65] transition-colors flex items-center gap-1 text-slate-500" aria-label="Cambia lingua in Italiano">
+            <span aria-hidden="true">🇮🇹</span> <span>IT</span>
           </a>
         </div>
 
@@ -180,6 +194,8 @@
             class="w-full h-full object-cover"
             loading="lazy"
             decoding="async"
+            width="192"
+            height="192"
             onerror="this.onerror=null; this.src='./img1.png';"
           >
         </div>
@@ -361,7 +377,6 @@
 
   <section id="transformacion" class="w-full bg-[#FAF8F5] px-6 py-16 md:py-24 flex justify-center">
     <div class="w-full max-w-5xl space-y-10">
-      
       <div class="text-center space-y-3 max-w-2xl mx-auto">
         <span class="text-xs font-extrabold text-[#1F8A65] uppercase tracking-widest bg-[#E8F3EE] px-4 py-1.5 rounded-full border border-[#1F8A65]/20">
           TU TRANSFORMACIÓN PROFESIONAL
@@ -375,7 +390,6 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-        
         <div class="bg-rose-50/60 border-2 border-rose-200/80 rounded-[32px] p-8 shadow-sm flex flex-col justify-between space-y-6">
           <div>
             <div class="flex items-center justify-between mb-6">
@@ -453,7 +467,6 @@
         </div>
 
       </div>
-
     </div>
   </section>
 
@@ -475,20 +488,11 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label for="comment-name" class="block text-xs font-bold text-[#0A3B7A] mb-1">Tu Nombre</label>
-              <input 
-                type="text" 
-                id="comment-name" 
-                placeholder="Ej. Melissa Alanis" 
-                required 
-                class="w-full px-4 py-3 bg-[#FAF8F5] border border-slate-200 rounded-xl text-xs text-[#0A3B7A] focus:outline-none focus:border-[#1F8A65]"
-              >
+              <input type="text" id="comment-name" placeholder="Ej. Melissa Alanis" required class="w-full px-4 py-3 bg-[#FAF8F5] border border-slate-200 rounded-xl text-xs text-[#0A3B7A] focus:outline-none focus:border-[#1F8A65]">
             </div>
             <div>
               <label for="comment-program" class="block text-xs font-bold text-[#0A3B7A] mb-1">Programa o Recurso de Interés</label>
-              <select 
-                id="comment-program" 
-                class="w-full px-4 py-3 bg-[#FAF8F5] border border-slate-200 rounded-xl text-xs text-[#0A3B7A] focus:outline-none focus:border-[#1F8A65]"
-              >
+              <select id="comment-program" class="w-full px-4 py-3 bg-[#FAF8F5] border border-slate-200 rounded-xl text-xs text-[#0A3B7A] focus:outline-none focus:border-[#1F8A65]">
                 <option value="Corporate English Accelerator">Corporate English Accelerator (73 €)</option>
                 <option value="Tech Resume & STAR Guide">Tech Resume & STAR Guide (18 €)</option>
                 <option value="Mentoría VIP 1:1">Mentoría VIP 1:1 (149 €)</option>
@@ -496,23 +500,11 @@
               </select>
             </div>
           </div>
-
           <div>
             <label for="comment-text" class="block text-xs font-bold text-[#0A3B7A] mb-1">Escribe tu pregunta o duda</label>
-            <textarea 
-              id="comment-text" 
-              rows="3" 
-              placeholder="Cuéntame sobre tu caso o tus dudas para ayudarte a elegir el mejor camino..." 
-              required 
-              class="w-full px-4 py-3 bg-[#FAF8F5] border border-slate-200 rounded-xl text-xs text-[#0A3B7A] focus:outline-none focus:border-[#1F8A65]"
-            ></textarea>
+            <textarea id="comment-text" rows="3" placeholder="Cuéntame sobre tu caso o tus dudas para ayudarte a elegir el mejor camino..." required class="w-full px-4 py-3 bg-[#FAF8F5] border border-slate-200 rounded-xl text-xs text-[#0A3B7A] focus:outline-none focus:border-[#1F8A65]"></textarea>
           </div>
-
-          <button 
-            type="submit" 
-            id="btn-submit-comment" 
-            class="w-full py-3.5 bg-[#1F8A65] hover:bg-[#186e51] text-white font-extrabold text-xs rounded-xl transition-colors shadow-md cursor-pointer"
-          >
+          <button type="submit" id="btn-submit-comment" class="w-full py-3.5 bg-[#1F8A65] hover:bg-[#186e51] text-white font-extrabold text-xs rounded-xl transition-colors shadow-md cursor-pointer">
             Enviar Pregunta 💬
           </button>
         </form>
@@ -535,59 +527,30 @@
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center pt-2">
-        
         <div class="w-full max-w-[280px] space-y-3">
-          <span class="inline-block text-[11px] font-extrabold text-[#0A3B7A] bg-white/80 px-3 py-1 rounded-full shadow-xs border border-slate-200">
-            💡 Estrategia B1 a C1
-          </span>
+          <span class="inline-block text-[11px] font-extrabold text-[#0A3B7A] bg-white/80 px-3 py-1 rounded-full shadow-xs border border-slate-200">💡 Estrategia B1 a C1</span>
           <div class="w-full aspect-[9/16] rounded-[28px] overflow-hidden shadow-xl border-4 border-white bg-black transform hover:-translate-y-1 transition-transform">
-            <iframe 
-              class="w-full h-full"
-              src="https://www.youtube.com/embed/YpO5XATBzdI" 
-              title="Pasar de B1 a C1 en Inglés - IELTS"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowfullscreen>
-            </iframe>
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/YpO5XATBzdI" title="Pasar de B1 a C1 en Inglés - IELTS" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
 
         <div class="w-full max-w-[280px] space-y-3">
-          <span class="inline-block text-[11px] font-extrabold text-[#1F8A65] bg-white/80 px-3 py-1 rounded-full shadow-xs border border-slate-200">
-            📚 5 Usos del Verbo TAKE
-          </span>
+          <span class="inline-block text-[11px] font-extrabold text-[#1F8A65] bg-white/80 px-3 py-1 rounded-full shadow-xs border border-slate-200">📚 5 Usos del Verbo TAKE</span>
           <div class="w-full aspect-[9/16] rounded-[28px] overflow-hidden shadow-xl border-4 border-white bg-black transform hover:-translate-y-1 transition-transform">
-            <iframe 
-              class="w-full h-full"
-              src="https://www.youtube.com/embed/wm5AZ11LLGk" 
-              title="5 significados del verbo TAKE"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowfullscreen>
-            </iframe>
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/wm5AZ11LLGk" title="5 significados del verbo TAKE" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
 
         <div class="w-full max-w-[280px] space-y-3 sm:col-span-2 lg:col-span-1">
-          <span class="inline-block text-[11px] font-extrabold text-[#0A3B7A] bg-white/80 px-3 py-1 rounded-full shadow-xs border border-slate-200">
-            🗣️ 4 Frases Útiles esta Semana
-          </span>
+          <span class="inline-block text-[11px] font-extrabold text-[#0A3B7A] bg-white/80 px-3 py-1 rounded-full shadow-xs border border-slate-200">🗣️ 4 Frases Útiles esta Semana</span>
           <div class="w-full aspect-[9/16] rounded-[28px] overflow-hidden shadow-xl border-4 border-white bg-black transform hover:-translate-y-1 transition-transform">
-            <iframe 
-              class="w-full h-full"
-              src="https://www.youtube.com/embed/Y69EMneAteE" 
-              title="4 frases en inglés que realmente usarás"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowfullscreen>
-            </iframe>
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/Y69EMneAteE" title="4 frases en inglés que realmente usarás" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
-
       </div>
 
       <div class="pt-4">
-        <a href="https://www.youtube.com/@melidanacademy/shorts" target="_blank" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-extrabold text-xs px-7 py-3.5 rounded-full shadow-lg transition-all transform hover:-translate-y-0.5 cursor-pointer">
+        <a href="https://www.youtube.com/@melidanacademy/shorts" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-extrabold text-xs px-7 py-3.5 rounded-full shadow-lg transition-all transform hover:-translate-y-0.5 cursor-pointer">
           <i class="fa-brands fa-youtube text-base"></i>
           <span>Ver todos los Shorts en @melidanacademy ↗</span>
         </a>
@@ -598,11 +561,9 @@
 
   <section id="faq" class="w-full bg-[#0A3B7A] text-white px-6 py-16 flex justify-center">
     <div class="w-full max-w-3xl">
-      
       <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-10">Preguntas Frecuentes</h2>
-
+      
       <div class="space-y-4">
-        
         <div class="faq-item bg-[#FAF8F5] text-[#0A3B7A] rounded-[24px] p-6 cursor-pointer" onclick="toggleFaq(this)">
           <div class="flex justify-between items-center">
             <span class="text-xs md:text-sm font-bold text-[#0A3B7A] pr-3">¿Qué nivel de inglés necesito para aprovechar los recursos?</span>
@@ -652,9 +613,7 @@
             Aceptamos tarjetas de crédito y débito internacionales (Visa, Mastercard, Amex), Apple Pay, Google Pay y PayPal a través de la plataforma segura de Stripe.
           </div>
         </div>
-
       </div>
-
     </div>
   </section>
 
@@ -674,31 +633,20 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
         <div class="bg-white border border-slate-200/80 rounded-[28px] p-6 shadow-sm flex flex-col justify-between space-y-4 relative hover:shadow-md transition-shadow">
           <div class="space-y-3">
             <div class="flex items-center justify-between">
               <div class="flex text-amber-400 text-xs space-x-1">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
-              <span class="px-2.5 py-0.5 bg-[#E8F3EE] text-[#1F8A65] text-[10px] font-extrabold rounded-full">
-                PROGRAMA COMPLETO
-              </span>
+              <span class="px-2.5 py-0.5 bg-[#E8F3EE] text-[#1F8A65] text-[10px] font-extrabold rounded-full">PROGRAMA COMPLETO</span>
             </div>
-
             <p class="text-xs text-slate-600 font-medium leading-relaxed italic">
               "En menos de 3 semanas en el programa perdí el miedo a participar en las reuniones diarias con el equipo de EE. UU. Pasé de quedarme en silencio a proponer ideas con seguridad."
             </p>
           </div>
-
           <div class="pt-4 border-t border-slate-100 flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-[#0A3B7A] text-white flex items-center justify-center font-bold text-xs">
-              CR
-            </div>
+            <div class="w-10 h-10 rounded-full bg-[#0A3B7A] text-white flex items-center justify-center font-bold text-xs">CR</div>
             <div>
               <h3 class="text-xs font-bold text-[#0A3B7A]">Carlos R.</h3>
               <span class="text-[10px] text-slate-400 font-medium block">Software Engineer · México 🇲🇽</span>
@@ -710,26 +658,16 @@
           <div class="space-y-3">
             <div class="flex items-center justify-between">
               <div class="flex text-amber-400 text-xs space-x-1">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
-              <span class="px-2.5 py-0.5 bg-slate-100 text-slate-700 text-[10px] font-extrabold rounded-full">
-                TECH RESUME GUIDE
-              </span>
+              <span class="px-2.5 py-0.5 bg-slate-100 text-slate-700 text-[10px] font-extrabold rounded-full">TECH RESUME GUIDE</span>
             </div>
-
             <p class="text-xs text-slate-600 font-medium leading-relaxed italic">
               "La plantilla de CV con verbos de acción me cambió todo. A los 5 días de actualizar mi LinkedIn me contactó un reclutador y pasé el filtro técnico sin trabarme."
             </p>
           </div>
-
           <div class="pt-4 border-t border-slate-100 flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-[#1F8A65] text-white flex items-center justify-center font-bold text-xs">
-              AM
-            </div>
+            <div class="w-10 h-10 rounded-full bg-[#1F8A65] text-white flex items-center justify-center font-bold text-xs">AM</div>
             <div>
               <h3 class="text-xs font-bold text-[#0A3B7A]">Andrea M.</h3>
               <span class="text-[10px] text-slate-400 font-medium block">Data Analyst · Colombia 🇨🇴</span>
@@ -741,33 +679,22 @@
           <div class="space-y-3">
             <div class="flex items-center justify-between">
               <div class="flex text-amber-400 text-xs space-x-1">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
-              <span class="px-2.5 py-0.5 bg-amber-50 text-amber-800 border border-amber-200 text-[10px] font-extrabold rounded-full">
-                MENTORÍA VIP 1:1
-              </span>
+              <span class="px-2.5 py-0.5 bg-amber-50 text-amber-800 border border-amber-200 text-[10px] font-extrabold rounded-full">MENTORÍA VIP 1:1</span>
             </div>
-
             <p class="text-xs text-slate-600 font-medium leading-relaxed italic">
               "Los simulacros en vivo con Mely valieron cada centavo. Me dio feedback exacto sobre mi pronunciación y las muletillas. Cerré mi oferta en USD con un aumento salarial del 35%."
             </p>
           </div>
-
           <div class="pt-4 border-t border-slate-100 flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-[#0A3B7A] text-white flex items-center justify-center font-bold text-xs">
-              DG
-            </div>
+            <div class="w-10 h-10 rounded-full bg-[#0A3B7A] text-white flex items-center justify-center font-bold text-xs">DG</div>
             <div>
               <h3 class="text-xs font-bold text-[#0A3B7A]">Diego G.</h3>
               <span class="text-[10px] text-slate-400 font-medium block">Product Manager · Chile 🇨🇱</span>
             </div>
           </div>
         </div>
-
       </div>
 
       <div class="bg-white border border-[#1F8A65]/30 rounded-[24px] p-6 text-center space-y-3 shadow-sm max-w-xl mx-auto">
@@ -782,20 +709,23 @@
     </div>
   </section>
 
-  <footer class="bg-[#FAF8F5] py-10 text-center space-y-4 border-t border-slate-200">
-    <div class="flex justify-center space-x-8 text-[#0A3B7A] text-2xl">
-      <a href="https://tiktok.com/@melidanacademy" target="_blank" class="hover:text-[#1F8A65] transition-colors"><i class="fa-brands fa-tiktok"></i></a>
-      <a href="https://instagram.com/melidanacademy" target="_blank" class="hover:text-[#1F8A65] transition-colors"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://www.youtube.com/@melidanacademy/shorts" target="_blank" class="hover:text-[#1F8A65] transition-colors"><i class="fa-brands fa-youtube"></i></a>
+  <footer class="relative bg-gradient-to-b from-[#E8F3EE]/30 via-[#FAF8F5] to-[#F3EAD8] py-14 text-center space-y-8 border-t border-[#1F8A65]/15 overflow-hidden shadow-[inset_0_15px_30px_-15px_rgba(0,0,0,0.05)]">
+    
+    <div class="absolute -bottom-32 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-t from-[#1F8A65]/10 to-transparent rounded-full blur-3xl pointer-events-none z-0"></div>
+
+    <div class="relative z-10 flex justify-center space-x-8 text-[#0A3B7A] text-2xl">
+      <a href="https://tiktok.com/@melidanacademy" target="_blank" rel="noopener noreferrer" class="hover:text-[#1F8A65] transition-colors"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="https://instagram.com/melidanacademy" target="_blank" rel="noopener noreferrer" class="hover:text-[#1F8A65] transition-colors"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.youtube.com/@melidanacademy/shorts" target="_blank" rel="noopener noreferrer" class="hover:text-[#1F8A65] transition-colors"><i class="fa-brands fa-youtube"></i></a>
     </div>
     
-    <div class="flex justify-center space-x-6 text-xs text-slate-500 font-medium">
+    <div class="relative z-10 flex justify-center space-x-6 text-xs text-slate-500 font-medium">
       <button data-modal="modal-terms" class="hover:text-[#0A3B7A] underline cursor-pointer">Términos y Condiciones</button>
       <span>•</span>
       <button data-modal="modal-terms" class="hover:text-[#0A3B7A] underline cursor-pointer">Política de Privacidad</button>
     </div>
 
-    <p class="text-xs font-semibold text-slate-400">© 2026 Melidan Academy · Todos los derechos reservados</p>
+    <p class="relative z-10 text-xs font-semibold text-slate-500/80">© 2026 Melidan Academy · Todos los derechos reservados</p>
   </footer>
 
   <div id="modal-waitlist" class="hidden fixed inset-0 bg-[#0A3B7A]/60 backdrop-blur-sm flex items-center justify-center p-4 z-50">
