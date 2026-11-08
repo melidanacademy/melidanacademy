@@ -48,7 +48,6 @@
   </nav>
 
   <main class="w-full max-w-6xl mx-auto px-6 py-12 md:py-16 space-y-14 relative z-10">
-    
     <div class="text-center space-y-4 max-w-3xl mx-auto relative">
       <span class="inline-block px-5 py-1.5 bg-white text-[#1F8A65] text-xs font-extrabold uppercase tracking-widest rounded-full border border-slate-200 shadow-sm">
         RECURSOS DIRECTO AL GRANO
@@ -71,12 +70,10 @@
           <svg class="w-5 h-5 stroke-[#0f294a]" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
           <span class="text-[11px] font-bold text-[#0f294a]">Todos</span>
         </button>
-
         <button data-tab="carrera" class="tab-btn p-3 bg-white border border-slate-200 rounded-[20px] flex flex-col items-center text-center space-y-1.5 transition-all cursor-pointer shadow-sm">
           <svg class="w-5 h-5 stroke-[#0f294a]" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
           <span class="text-[11px] font-bold text-[#0f294a]">Carrera</span>
         </button>
-
         <button data-tab="cero" class="tab-btn p-3 bg-white border border-slate-200 rounded-[20px] flex flex-col items-center text-center space-y-1.5 transition-all cursor-pointer shadow-sm">
           <svg class="w-5 h-5 stroke-[#0f294a]" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
           <span class="text-[11px] font-bold text-[#0f294a]">Desde Cero</span>
@@ -84,6 +81,80 @@
       </div>
     </div>
 
+    <!-- SECCIÓN: CARRERA Y ENTREVISTAS -->
+    <div id="sec-carrera" class="tab-content space-y-6">
+      <div class="flex items-center justify-between border-b border-slate-200 pb-2">
+        <h2 class="text-xl font-extrabold text-[#0f294a]">💼 Carrera, Entrevistas y Perfiles Tech</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between">
+          <div class="w-full h-48 bg-gradient-to-br from-[#EBF2FA] to-white flex items-center justify-center p-4 border-b-2 border-slate-100 cursor-pointer" onclick="openProductModal('Tech Resume & STAR Guide', 'Guía para superar filtros ATS y entrevistas técnicas.', ['Plantilla ATS', '+100 verbos de acción', 'Scripts metodología STAR'], '24', './image_210d48ff.jpg')">
+            <img src="./image_210d48ff.jpg" alt="Tech Resume" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between bg-white">
+            <div class="space-y-3">
+              <h3 class="text-base font-bold text-[#0f294a]">Tech Resume & STAR Guide</h3>
+              <p class="text-xs text-slate-500 font-medium">Guía experta para superar filtros ATS y entrevistas técnicas internacionales.</p>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xl font-extrabold text-[#0f294a]">$24 USD</span>
+              <button data-add-item="Tech Resume & STAR Guide" data-price="24" class="w-10 h-10 flex items-center justify-center bg-[#0f294a] text-white rounded-full cursor-pointer"><i class="fa-solid fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between">
+          <div class="w-full h-48 bg-gradient-to-br from-[#E8F3EE] to-white flex items-center justify-center p-4 border-b-2 border-slate-100 cursor-pointer" onclick="openProductModal('Simulador de Entrevistas en Inglés', 'Preguntas frecuentes y respuestas modelo en vídeo y PDF.', ['+50 preguntas clave', 'Respuestas modelo', 'Tips de lenguaje corporal'], '19', './image_29938b1d.jpg')">
+            <img src="./image_29938b1d.jpg" alt="Simulador" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between bg-white">
+            <div class="space-y-3">
+              <h3 class="text-base font-bold text-[#0f294a]">Simulador de Entrevistas en Inglés</h3>
+              <p class="text-xs text-slate-500 font-medium">Preguntas frecuentes de reclutadores globales y respuestas modelo.</p>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xl font-extrabold text-[#0f294a]">$19 USD</span>
+              <button data-add-item="Simulador de Entrevistas en Inglés" data-price="19" class="w-10 h-10 flex items-center justify-center bg-[#0f294a] text-white rounded-full cursor-pointer"><i class="fa-solid fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between">
+          <div class="w-full h-48 bg-gradient-to-br from-[#FEF3C7] to-white flex items-center justify-center p-4 border-b-2 border-slate-100 cursor-pointer" onclick="openProductModal('Vocabulario Técnico para Ingenieros y Tech', 'Glosario especializado por ramas industriales y de software.', ['Terminología industrial', 'Frases para reuniones', 'Glosario descargable'], '15', './image_1c9b6b70.jpg')">
+            <img src="./image_1c9b6b70.jpg" alt="Vocabulario" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between bg-white">
+            <div class="space-y-3">
+              <h3 class="text-base font-bold text-[#0f294a]">Vocabulario Técnico para Ingenieros y Tech</h3>
+              <p class="text-xs text-slate-500 font-medium">Glosario especializado para destacar en juntas y reportes técnicos.</p>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xl font-extrabold text-[#0f294a]">$15 USD</span>
+              <button data-add-item="Vocabulario Técnico para Ingenieros y Tech" data-price="15" class="w-10 h-10 flex items-center justify-center bg-[#0f294a] text-white rounded-full cursor-pointer"><i class="fa-solid fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between">
+          <div class="w-full h-48 bg-gradient-to-br from-[#FCE7F3] to-white flex items-center justify-center p-4 border-b-2 border-slate-100 cursor-pointer" onclick="openProductModal('Kit de Correos Ejecutivos y Slack', 'Plantillas listas para negociar, liderar y reportar avances.', ['+40 plantillas de email', 'Mensajes para Slack', 'Tono corporativo asertivo'], '15', './image_f0881f1e.jpg')">
+            <img src="./image_f0881f1e.jpg" alt="Kit Correos" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between bg-white">
+            <div class="space-y-3">
+              <h3 class="text-base font-bold text-[#0f294a]">Kit de Correos Ejecutivos y Slack</h3>
+              <p class="text-xs text-slate-500 font-medium">Plantillas profesionales para negociar, liderar y reportar avances sin traductores.</p>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xl font-extrabold text-[#0f294a]">$15 USD</span>
+              <button data-add-item="Kit de Correos Ejecutivos y Slack" data-price="15" class="w-10 h-10 flex items-center justify-center bg-[#0f294a] text-white rounded-full cursor-pointer"><i class="fa-solid fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECCIÓN: DESDE CERO -->
     <div id="sec-cero" class="tab-content space-y-6">
       <div class="flex items-center justify-between border-b border-slate-200 pb-2">
         <h2 class="text-xl font-extrabold text-[#0f294a]">🌱 Para Empezar desde Cero</h2>
@@ -104,9 +175,7 @@
                 <span class="block text-[10px] text-slate-400 line-through font-bold">$25 USD</span>
                 <span class="text-xl font-extrabold text-[#1F8A65]">$14 USD</span>
               </div>
-              <button data-add-item="Aprende Inglés en 6 Meses: La Ruta Exacta" data-price="14" class="w-10 h-10 flex items-center justify-center bg-[#0f294a] text-white rounded-full cursor-pointer">
-                <i class="fa-solid fa-plus"></i>
-              </button>
+              <button data-add-item="Aprende Inglés en 6 Meses: La Ruta Exacta" data-price="14" class="w-10 h-10 flex items-center justify-center bg-[#0f294a] text-white rounded-full cursor-pointer"><i class="fa-solid fa-plus"></i></button>
             </div>
           </div>
         </div>
@@ -122,9 +191,39 @@
             </div>
             <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
               <span class="text-xl font-extrabold text-[#0f294a]">$12 USD</span>
-              <button data-add-item="Kit Anti-Bloqueo: Pierde la Pena a Hablar" data-price="12" class="w-10 h-10 flex items-center justify-center bg-[#0f294a] text-white rounded-full cursor-pointer">
-                <i class="fa-solid fa-plus"></i>
-              </button>
+              <button data-add-item="Kit Anti-Bloqueo: Pierde la Pena a Hablar" data-price="12" class="w-10 h-10 flex items-center justify-center bg-[#0f294a] text-white rounded-full cursor-pointer"><i class="fa-solid fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between">
+          <div class="w-full h-48 bg-gradient-to-br from-[#FFF1F2] to-white flex items-center justify-center p-4 border-b-2 border-slate-100 cursor-pointer" onclick="openProductModal('Diario de Escritura Guiada (30 Days)', '30 preguntas para empezar a pensar en inglés sin traducir.', ['Workbook PDF de 30 días', 'Plantilla digital Notion', 'Ejercicios diarios'], '12', './image_811eb4f6.jpg')">
+            <img src="./image_811eb4f6.jpg" alt="Diario de Escritura Guiada" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between bg-white">
+            <div class="space-y-3">
+              <h3 class="text-base font-bold text-[#0f294a]">Diario de Escritura Guiada (30 Days)</h3>
+              <p class="text-xs text-slate-500 font-medium">30 preguntas diseñadas para empezar a pensar en inglés sin traducir.</p>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xl font-extrabold text-[#0f294a]">$12 USD</span>
+              <button data-add-item="Diario de Escritura Guiada (30 Days)" data-price="12" class="w-10 h-10 flex items-center justify-center bg-[#0f294a] text-white rounded-full cursor-pointer"><i class="fa-solid fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between">
+          <div class="w-full h-48 bg-gradient-to-br from-[#FAF5FF] to-white flex items-center justify-center p-4 border-b-2 border-slate-100 cursor-pointer" onclick="openProductModal('Mazo 1,000 Palabras Clave Diarias', 'Las 1,000 palabras más útiles con repetición espaciada.', ['Mazo Anki (.apkg)', 'Audio nativo', 'Frecuencia corporativa'], '12', './image_3ff69326.jpg')">
+            <img src="./image_3ff69326.jpg" alt="Mazo Palabras" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between bg-white">
+            <div class="space-y-3">
+              <h3 class="text-base font-bold text-[#0f294a]">Mazo 1,000 Palabras Clave Diarias</h3>
+              <p class="text-xs text-slate-500 font-medium">Las 1,000 palabras más útiles de la vida real con repetición espaciada.</p>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xl font-extrabold text-[#0f294a]">$12 USD</span>
+              <button data-add-item="Mazo 1,000 Palabras Clave Diarias" data-price="12" class="w-10 h-10 flex items-center justify-center bg-[#0f294a] text-white rounded-full cursor-pointer"><i class="fa-solid fa-plus"></i></button>
             </div>
           </div>
         </div>
@@ -198,6 +297,29 @@
     function closeProductModal() {
       document.getElementById('product-modal').classList.add('hidden');
     }
+
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const tab = btn.getAttribute('data-tab');
+        tabContents.forEach(content => {
+          if (tab === 'todos') {
+            content.classList.remove('hidden');
+          } else {
+            if (content.id === 'sec-' + tab) {
+              content.classList.remove('hidden');
+            } else {
+              content.classList.add('hidden');
+            }
+          }
+        });
+      });
+    });
   </script>
 </body>
 </html>
