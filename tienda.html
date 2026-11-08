@@ -20,6 +20,9 @@
     .tab-btn.active span {
       color: #ffffff !important;
     }
+    .tab-btn.active svg {
+      stroke: #ffffff !important;
+    }
   </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between overflow-x-hidden bg-gradient-to-b from-[#FAF8F5] to-white">
@@ -31,6 +34,11 @@
         <span class="font-extrabold text-[10px] tracking-widest uppercase">Volver</span>
       </a>
       
+      <a href="./index.html" class="flex items-center space-x-1">
+        <span class="font-extrabold text-[#0A3B7A] text-base tracking-wider">MELIDAN ACADEMY</span>
+        <span class="w-2 h-2 rounded-full bg-[#1F8A65] inline-block mb-2"></span>
+      </a>
+
       <button id="cart-toggle-btn" class="px-5 py-2.5 bg-[#E8F3EE] text-[#1F8A65] rounded-full hover:bg-[#1F8A65] hover:text-white transition-all flex items-center gap-2 border border-[#1F8A65]/20 shadow-sm text-xs font-bold cursor-pointer group">
         <i class="fa-solid fa-cart-shopping text-xs"></i>
         <span>Carrito</span>
@@ -61,68 +69,105 @@
       </div>
       
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
-        <button data-tab="cero" class="tab-btn active p-4 bg-white border border-slate-200 rounded-[20px] flex flex-col items-center text-center space-y-2 transition-all cursor-pointer shadow-sm hover:shadow-md">
-          <span class="text-2xl transition-transform">🌱</span>
+        <button data-tab="carrera" class="tab-btn active p-4 bg-white border border-slate-200 rounded-[20px] flex flex-col items-center text-center space-y-2 transition-all cursor-pointer shadow-sm hover:shadow-md">
+          <svg class="w-6 h-6 stroke-[#0A3B7A] transition-transform" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <span class="text-xs font-bold text-[#0A3B7A]">Carrera & Work</span>
+        </button>
+
+        <button data-tab="cero" class="tab-btn p-4 bg-white border border-slate-200 rounded-[20px] flex flex-col items-center text-center space-y-2 transition-all cursor-pointer shadow-sm hover:shadow-md hover:-translate-y-1">
+          <svg class="w-6 h-6 stroke-[#0A3B7A] transition-transform" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
           <span class="text-xs font-bold text-[#0A3B7A]">Desde Cero</span>
         </button>
 
         <button data-tab="vida" class="tab-btn p-4 bg-white border border-slate-200 rounded-[20px] flex flex-col items-center text-center space-y-2 transition-all cursor-pointer shadow-sm hover:shadow-md hover:-translate-y-1">
-          <span class="text-2xl transition-transform">✈️</span>
+          <svg class="w-6 h-6 stroke-[#0A3B7A] transition-transform" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           <span class="text-xs font-bold text-[#0A3B7A]">Vida Cotidiana</span>
         </button>
 
-        <button data-tab="carrera" class="tab-btn p-4 bg-white border border-slate-200 rounded-[20px] flex flex-col items-center text-center space-y-2 transition-all cursor-pointer shadow-sm hover:shadow-md hover:-translate-y-1">
-          <span class="text-2xl transition-transform">💼</span>
-          <span class="text-xs font-bold text-[#0A3B7A]">Carrera & Work</span>
-        </button>
-
         <button data-tab="profesiones" class="tab-btn p-4 bg-white border border-slate-200 rounded-[20px] flex flex-col items-center text-center space-y-2 transition-all cursor-pointer shadow-sm hover:shadow-md hover:-translate-y-1">
-          <span class="text-2xl transition-transform">🔬</span>
+          <svg class="w-6 h-6 stroke-[#0A3B7A] transition-transform" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
           <span class="text-xs font-bold text-[#0A3B7A]">Por Profesión</span>
         </button>
 
         <button data-tab="examenes" class="tab-btn p-4 bg-white border border-slate-200 rounded-[20px] flex flex-col items-center text-center space-y-2 transition-all cursor-pointer shadow-sm hover:shadow-md hover:-translate-y-1">
-          <span class="text-2xl transition-transform">🎓</span>
+          <svg class="w-6 h-6 stroke-[#0A3B7A] transition-transform" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0.01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0.01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>
           <span class="text-xs font-bold text-[#0A3B7A]">Exámenes</span>
         </button>
 
         <button data-tab="profes" class="tab-btn p-4 bg-white border border-slate-200 rounded-[20px] flex flex-col items-center text-center space-y-2 transition-all cursor-pointer shadow-sm hover:shadow-md hover:-translate-y-1">
-          <span class="text-2xl transition-transform">🍎</span>
+          <svg class="w-6 h-6 stroke-[#0A3B7A] transition-transform" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
           <span class="text-xs font-bold text-[#0A3B7A]">Para Profes</span>
         </button>
 
         <button data-tab="programas" class="tab-btn p-4 bg-white border border-slate-200 rounded-[20px] flex flex-col items-center text-center space-y-2 transition-all cursor-pointer shadow-sm hover:shadow-md hover:-translate-y-1">
-          <span class="text-2xl transition-transform">🎁</span>
+          <svg class="w-6 h-6 stroke-[#0A3B7A] transition-transform" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
           <span class="text-xs font-bold text-[#0A3B7A]">Bundles</span>
         </button>
       </div>
     </div>
 
-    <div id="sec-cero" class="tab-content space-y-6">
+    <div id="sec-carrera" class="tab-content space-y-6">
       <div class="flex items-center justify-between border-b border-slate-200 pb-2">
-        <h2 class="text-xl font-extrabold text-[#0A3B7A]">🌱 Para Empezar desde Cero</h2>
+        <h2 class="text-xl font-extrabold text-[#0A3B7A] flex items-center gap-2">
+          <svg class="w-5 h-5 stroke-[#1F8A65]" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <span>Carrera & Work</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-[0_10px_35px_rgb(0,0,0,0.08)] hover:shadow-[0_20px_45px_-15px_rgba(10,59,122,0.15)] transition-all flex flex-col justify-between group transform hover:-translate-y-1">
+          <div class="w-full h-48 bg-gradient-to-br from-[#E8F3EE] to-white flex items-center justify-center p-4 border-b-2 border-slate-100 overflow-hidden cursor-pointer" onclick="openProductModal('Tech Resume & STAR Guide', 'Guía completa orientada a ingenieros y perfiles tech para superar procesos internacionales.', ['Plantilla de CV optimizada para filtros ATS', '+100 verbos de acción técnicos en inglés', 'Scripts paso a paso bajo metodología STAR'], '24', './image_8eb7ae4a.jpg')">
+            <img src="./image_8eb7ae4a.jpg" alt="Tech Resume & STAR Guide" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between bg-white">
+            <div class="space-y-3">
+              <span class="px-3 py-1 bg-[#E8F3EE] text-[#1F8A65] text-[9px] font-extrabold rounded-full tracking-widest uppercase border border-[#1F8A65]/20">PDF GUIDE</span>
+              <h3 class="text-base font-bold text-[#0A3B7A] leading-snug cursor-pointer hover:text-[#1F8A65] transition-colors" onclick="openProductModal('Tech Resume & STAR Guide', 'Guía completa orientada a ingenieros y perfiles tech para superar procesos internacionales.', ['Plantilla de CV optimizada para filtros ATS', '+100 verbos de acción técnicos en inglés', 'Scripts paso a paso bajo metodología STAR'], '24', './image_8eb7ae4a.jpg')">Tech Resume & STAR Guide</h3>
+              <p class="text-xs text-slate-500 font-medium leading-relaxed">
+                Supera filtros ATS y destaca en entrevistas técnicas con metodología STAR.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <span class="text-xl font-extrabold text-[#1F8A65]">$24 USD</span>
+              </div>
+              <button data-add-item="Tech Resume & STAR Guide" data-price="24" class="w-10 h-10 flex items-center justify-center bg-[#0A3B7A] text-white rounded-full cursor-pointer hover:bg-[#082e60] transition-colors shadow-md">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="sec-cero" class="tab-content hidden space-y-6">
+      <div class="flex items-center justify-between border-b border-slate-200 pb-2">
+        <h2 class="text-xl font-extrabold text-[#0A3B7A] flex items-center gap-2">
+          <svg class="w-5 h-5 stroke-[#1F8A65]" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          <span>Para Empezar desde Cero</span>
+        </h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         
         <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-[0_10px_35px_rgb(0,0,0,0.08)] hover:shadow-[0_20px_45px_-15px_rgba(10,59,122,0.15)] transition-all flex flex-col justify-between group transform hover:-translate-y-1">
-          <div class="w-full h-48 bg-gradient-to-br from-[#F3F0EA] to-white flex items-center justify-center p-4 border-b-2 border-slate-100 overflow-hidden">
+          <div class="w-full h-48 bg-gradient-to-br from-[#F3F0EA] to-white flex items-center justify-center p-4 border-b-2 border-slate-100 overflow-hidden cursor-pointer" onclick="openProductModal('Aprende Inglés en 6 Meses: La Ruta Exacta', 'El mapa paso a paso para pasar de cero a hablar con fluidez sin libros aburridos.', ['Ruta estructurada de 24 semanas', 'Ejercicios prácticos diarios de agilidad mental', 'Acceso a recursos complementarios en PDF'], '14', './image_53330abd.jpg')">
             <img src="./image_53330abd.jpg" alt="Aprende Inglés en 6 Meses" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           </div>
           <div class="p-6 space-y-4 flex-1 flex flex-col justify-between bg-white">
             <div class="space-y-3">
               <span class="px-3 py-1 bg-[#E8F3EE] text-[#1F8A65] text-[9px] font-extrabold rounded-full tracking-widest uppercase border border-[#1F8A65]/20">PDF GUIDE</span>
-              <h3 class="text-base font-bold text-[#0A3B7A] leading-snug">Aprende Inglés en 6 Meses: La Ruta Exacta</h3>
+              <h3 class="text-base font-bold text-[#0A3B7A] leading-snug cursor-pointer hover:text-[#1F8A65] transition-colors" onclick="openProductModal('Aprende Inglés en 6 Meses: La Ruta Exacta', 'El mapa paso a paso para pasar de cero a hablar con fluidez sin libros aburridos.', ['Ruta estructurada de 24 semanas', 'Ejercicios prácticos diarios de agilidad mental', 'Acceso a recursos complementarios en PDF'], '14', './image_53330abd.jpg')">Aprende Inglés en 6 Meses: La Ruta Exacta</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 El mapa paso a paso para pasar de cero a hablar con fluidez sin libros aburridos.
               </p>
             </div>
             <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
               <div>
-                <span class="block text-[10px] text-slate-400 line-through font-bold">25 €</span>
-                <span class="text-xl font-extrabold text-[#1F8A65]">12 €</span>
+                <span class="block text-[10px] text-slate-400 line-through font-bold">$25 USD</span>
+                <span class="text-xl font-extrabold text-[#1F8A65]">$14 USD</span>
               </div>
-              <button data-add-item="Aprende Inglés en 6 Meses: La Ruta Exacta" data-price="12" class="w-10 h-10 flex items-center justify-center bg-[#0A3B7A] text-white rounded-full cursor-pointer hover:bg-[#082e60] transition-colors shadow-md">
+              <button data-add-item="Aprende Inglés en 6 Meses: La Ruta Exacta" data-price="14" class="w-10 h-10 flex items-center justify-center bg-[#0A3B7A] text-white rounded-full cursor-pointer hover:bg-[#082e60] transition-colors shadow-md">
                 <i class="fa-solid fa-plus"></i>
               </button>
             </div>
@@ -130,20 +175,20 @@
         </div>
 
         <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-[0_10px_35px_rgb(0,0,0,0.08)] hover:shadow-[0_20px_45px_-15px_rgba(10,59,122,0.15)] transition-all flex flex-col justify-between group transform hover:-translate-y-1">
-          <div class="w-full h-48 bg-gradient-to-br from-[#FFFBEB] to-white flex items-center justify-center p-4 border-b-2 border-slate-100 overflow-hidden">
+          <div class="w-full h-48 bg-gradient-to-br from-[#FFFBEB] to-white flex items-center justify-center p-4 border-b-2 border-slate-100 overflow-hidden cursor-pointer" onclick="openProductModal('Kit Anti-Bloqueo: Pierde la Pena a Hablar', 'Técnicas psicológicas y muletillas clave para expresarte sin trabarte.', ['Ebook interactivo de técnicas de confianza', 'Audios de entrenamiento fonético', 'Guía rápida de frases de respaldo'], '12', './image_8eb7ae4a.jpg')">
             <img src="./image_8eb7ae4a.jpg" alt="Kit Anti-Bloqueo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           </div>
           <div class="p-6 space-y-4 flex-1 flex flex-col justify-between bg-white">
             <div class="space-y-3">
               <span class="px-3 py-1 bg-amber-50 text-amber-700 text-[9px] font-extrabold rounded-full tracking-widest uppercase border border-amber-200">EBOOK + AUDIO</span>
-              <h3 class="text-base font-bold text-[#0A3B7A] leading-snug">Kit Anti-Bloqueo: Pierde la Pena a Hablar</h3>
+              <h3 class="text-base font-bold text-[#0A3B7A] leading-snug cursor-pointer hover:text-[#1F8A65] transition-colors" onclick="openProductModal('Kit Anti-Bloqueo: Pierde la Pena a Hablar', 'Técnicas psicológicas y muletillas clave para expresarte sin trabarte.', ['Ebook interactivo de técnicas de confianza', 'Audios de entrenamiento fonético', 'Guía rápida de frases de respaldo'], '12', './image_8eb7ae4a.jpg')">Kit Anti-Bloqueo: Pierde la Pena a Hablar</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 Técnicas psicológicas y muletillas clave para expresarte sin trabarte.
               </p>
             </div>
             <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-              <span class="text-xl font-extrabold text-[#0A3B7A]">10 €</span>
-              <button data-add-item="Kit Anti-Bloqueo: Pierde la Pena a Hablar" data-price="10" class="w-10 h-10 flex items-center justify-center bg-[#0A3B7A] text-white rounded-full cursor-pointer hover:bg-[#082e60] transition-colors shadow-md">
+              <span class="text-xl font-extrabold text-[#0A3B7A]">$12 USD</span>
+              <button data-add-item="Kit Anti-Bloqueo: Pierde la Pena a Hablar" data-price="12" class="w-10 h-10 flex items-center justify-center bg-[#0A3B7A] text-white rounded-full cursor-pointer hover:bg-[#082e60] transition-colors shadow-md">
                 <i class="fa-solid fa-plus"></i>
               </button>
             </div>
@@ -151,20 +196,20 @@
         </div>
 
         <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-[0_10px_35px_rgb(0,0,0,0.08)] hover:shadow-[0_20px_45px_-15px_rgba(10,59,122,0.15)] transition-all flex flex-col justify-between group transform hover:-translate-y-1">
-          <div class="w-full h-48 bg-gradient-to-br from-[#FFF1F2] to-white flex items-center justify-center p-4 border-b-2 border-slate-100 overflow-hidden">
+          <div class="w-full h-48 bg-gradient-to-br from-[#FFF1F2] to-white flex items-center justify-center p-4 border-b-2 border-slate-100 overflow-hidden cursor-pointer" onclick="openProductModal('Diario de Escritura Guiada (30 Days)', '30 preguntas diseñadas para empezar a pensar en inglés sin traducir.', ['Workbook PDF de 30 días de journaling', 'Plantilla digital compatible con Notion', 'Ejercicios de asociación mental directa'], '12', './image_811eb4f6.jpg')">
             <img src="./image_811eb4f6.jpg" alt="Diario de Escritura Guiada" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           </div>
           <div class="p-6 space-y-4 flex-1 flex flex-col justify-between bg-white">
             <div class="space-y-3">
               <span class="px-3 py-1 bg-rose-50 text-rose-700 text-[9px] font-extrabold rounded-full tracking-widest uppercase border border-rose-200">WORKBOOK PDF</span>
-              <h3 class="text-base font-bold text-[#0A3B7A] leading-snug">Diario de Escritura Guiada (30 Days)</h3>
+              <h3 class="text-base font-bold text-[#0A3B7A] leading-snug cursor-pointer hover:text-[#1F8A65] transition-colors" onclick="openProductModal('Diario de Escritura Guiada (30 Days)', '30 preguntas diseñadas para empezar a pensar en inglés sin traducir.', ['Workbook PDF de 30 días de journaling', 'Plantilla digital compatible with Notion', 'Ejercicios de asociación mental directa'], '12', './image_811eb4f6.jpg')">Diario de Escritura Guiada (30 Days)</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 30 preguntas diseñadas para empezar a pensar en inglés sin traducir.
               </p>
             </div>
             <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-              <span class="text-xl font-extrabold text-[#0A3B7A]">10 €</span>
-              <button data-add-item="Diario de Escritura Guiada (30 Days Journaling)" data-price="10" class="w-10 h-10 flex items-center justify-center bg-[#0A3B7A] text-white rounded-full cursor-pointer hover:bg-[#082e60] transition-colors shadow-md">
+              <span class="text-xl font-extrabold text-[#0A3B7A]">$12 USD</span>
+              <button data-add-item="Diario de Escritura Guiada (30 Days Journaling)" data-price="12" class="w-10 h-10 flex items-center justify-center bg-[#0A3B7A] text-white rounded-full cursor-pointer hover:bg-[#082e60] transition-colors shadow-md">
                 <i class="fa-solid fa-plus"></i>
               </button>
             </div>
@@ -172,20 +217,20 @@
         </div>
 
         <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-[0_10px_35px_rgb(0,0,0,0.08)] hover:shadow-[0_20px_45px_-15px_rgba(10,59,122,0.15)] transition-all flex flex-col justify-between group transform hover:-translate-y-1">
-          <div class="w-full h-48 bg-gradient-to-br from-[#FAF5FF] to-white flex items-center justify-center p-4 border-b-2 border-slate-100 overflow-hidden">
+          <div class="w-full h-48 bg-gradient-to-br from-[#FAF5FF] to-white flex items-center justify-center p-4 border-b-2 border-slate-100 overflow-hidden cursor-pointer" onclick="openProductModal('Mazo 1,000 Palabras Clave Diarias', 'Las 1,000 palabras más útiles de la vida real con repetición espaciada.', ['Mazo compatible con Anki (.apkg)', 'Audio nativo para cada tarjeta', 'Clasificación por frecuencia corporativa'], '12', './image_3ff69326.jpg')">
             <img src="./image_3ff69326.jpg" alt="Mazo 1,000 Palabras Clave Diarias" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           </div>
           <div class="p-6 space-y-4 flex-1 flex flex-col justify-between bg-white">
             <div class="space-y-3">
               <span class="px-3 py-1 bg-purple-50 text-purple-700 text-[9px] font-extrabold rounded-full tracking-widest uppercase border border-purple-200">FLASHCARDS</span>
-              <h3 class="text-base font-bold text-[#0A3B7A] leading-snug">Mazo 1,000 Palabras Clave Diarias</h3>
+              <h3 class="text-base font-bold text-[#0A3B7A] leading-snug cursor-pointer hover:text-[#1F8A65] transition-colors" onclick="openProductModal('Mazo 1,000 Palabras Clave Diarias', 'Las 1,000 palabras más útiles de la vida real con repetición espaciada.', ['Mazo compatible con Anki (.apkg)', 'Audio nativo para cada tarjeta', 'Clasificación por frecuencia corporativa'], '12', './image_3ff69326.jpg')">Mazo 1,000 Palabras Clave Diarias</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
                 Las 1,000 palabras más útiles de la vida real con repetición espaciada.
               </p>
             </div>
             <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-              <span class="text-xl font-extrabold text-[#0A3B7A]">11 €</span>
-              <button data-add-item="Mazo 1,000 Palabras Clave Diarias" data-price="11" class="w-10 h-10 flex items-center justify-center bg-[#0A3B7A] text-white rounded-full cursor-pointer hover:bg-[#082e60] transition-colors shadow-md">
+              <span class="text-xl font-extrabold text-[#0A3B7A]">$12 USD</span>
+              <button data-add-item="Mazo 1,000 Palabras Clave Diarias" data-price="12" class="w-10 h-10 flex items-center justify-center bg-[#0A3B7A] text-white rounded-full cursor-pointer hover:bg-[#082e60] transition-colors shadow-md">
                 <i class="fa-solid fa-plus"></i>
               </button>
             </div>
@@ -193,11 +238,36 @@
         </div>
 
       </div>
+
+      <div class="bg-white border-2 border-[#1F8A65]/40 rounded-[32px] p-6 sm:p-8 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden mt-8">
+        <div class="absolute top-4 right-6 bg-[#1F8A65] text-white text-[10px] font-extrabold px-3.5 py-1 rounded-full uppercase tracking-wider shadow-sm">
+          AHORRA 32% ⭐
+        </div>
+        <div class="space-y-2 text-left">
+          <span class="px-3 py-1 bg-[#E8F3EE] text-[#1F8A65] text-[9px] font-extrabold rounded-full tracking-widest uppercase border border-[#1F8A65]/20">BUNDLE COMPLETO</span>
+          <h3 class="text-xl md:text-2xl font-bold text-[#0A3B7A]">Pack Completo Desde Cero</h3>
+          <p class="text-xs md:text-sm text-slate-600 font-medium leading-relaxed max-w-xl">
+            Llévate los 4 recursos juntos (Ruta de 6 Meses, Kit Anti-Bloqueo, Diario Guiado y Mazo de Flashcards) con un descuento especial.
+          </p>
+        </div>
+        <div class="flex items-center gap-6 flex-shrink-0">
+          <div class="text-right">
+            <span class="block text-xs text-slate-400 line-through font-bold">$50 USD</span>
+            <span class="text-2xl md:text-3xl font-extrabold text-[#1F8A65]">$34 USD</span>
+          </div>
+          <button data-add-item="Pack Completo Desde Cero" data-price="34" class="px-6 py-3.5 bg-[#1F8A65] hover:bg-[#186e51] text-white text-xs font-extrabold rounded-full transition-all shadow-md cursor-pointer flex items-center gap-2">
+            <span>Añadir Pack Completo</span> <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+      </div>
     </div>
 
     <div id="sec-vida" class="tab-content hidden space-y-6">
       <div class="flex items-center justify-between border-b border-slate-200 pb-2">
-        <h2 class="text-xl font-extrabold text-[#0A3B7A]">✈️ Guías de Vida Cotidiana</h2>
+        <h2 class="text-xl font-extrabold text-[#0A3B7A] flex items-center gap-2">
+          <svg class="w-5 h-5 stroke-[#1F8A65]" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span>Guías de Vida Cotidiana</span>
+        </h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         
@@ -252,66 +322,12 @@
       </div>
     </div>
 
-    <div id="sec-carrera" class="tab-content hidden space-y-6">
-      <div class="flex items-center justify-between border-b border-slate-200 pb-2">
-        <h2 class="text-xl font-extrabold text-[#0A3B7A]">💼 Carrera & Work</h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        
-        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between opacity-60 grayscale-[40%]">
-          <div class="w-full h-48 bg-[#E8F3EE] flex items-center justify-center p-4 border-b-2 border-slate-100">
-            <span class="text-3xl font-extrabold text-[#1F8A65]">Resume</span>
-          </div>
-          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
-            <div class="space-y-3">
-              <h3 class="text-base font-bold text-[#0A3B7A]">Tech Resume & STAR Guide</h3>
-            </div>
-            <button disabled class="w-full py-3 bg-slate-100 text-slate-500 text-[10px] font-extrabold rounded-xl cursor-not-allowed uppercase tracking-wider">Próximamente (1 Dic)</button>
-          </div>
-        </div>
-
-        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between opacity-60 grayscale-[40%]">
-          <div class="w-full h-48 bg-[#FFFBEB] flex items-center justify-center p-4 border-b-2 border-slate-100">
-            <span class="text-3xl font-extrabold text-[#B45309]">Interviews</span>
-          </div>
-          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
-            <div class="space-y-3">
-              <h3 class="text-base font-bold text-[#0A3B7A]">Entrevistas en Inglés Sin Miedo</h3>
-            </div>
-            <button disabled class="w-full py-3 bg-slate-100 text-slate-500 text-[10px] font-extrabold rounded-xl cursor-not-allowed uppercase tracking-wider">Próximamente (1 Dic)</button>
-          </div>
-        </div>
-
-        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between opacity-60 grayscale-[40%]">
-          <div class="w-full h-48 bg-[#EEF2FF] flex items-center justify-center p-4 border-b-2 border-slate-100">
-            <span class="text-3xl font-extrabold text-[#4338CA]">Meetings</span>
-          </div>
-          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
-            <div class="space-y-3">
-              <h3 class="text-base font-bold text-[#0A3B7A]">Mastering Business Meetings</h3>
-            </div>
-            <button disabled class="w-full py-3 bg-slate-100 text-slate-500 text-[10px] font-extrabold rounded-xl cursor-not-allowed uppercase tracking-wider">Próximamente (1 Dic)</button>
-          </div>
-        </div>
-
-        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between opacity-60 grayscale-[40%]">
-          <div class="w-full h-48 bg-[#ECFEFF] flex items-center justify-center p-4 border-b-2 border-slate-100">
-            <span class="text-3xl font-extrabold text-[#0E7490]">Emails</span>
-          </div>
-          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
-            <div class="space-y-3">
-              <h3 class="text-base font-bold text-[#0A3B7A]">E-mails Profesionales & Slack</h3>
-            </div>
-            <button disabled class="w-full py-3 bg-slate-100 text-slate-500 text-[10px] font-extrabold rounded-xl cursor-not-allowed uppercase tracking-wider">Próximamente (1 Dic)</button>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
     <div id="sec-profesiones" class="tab-content hidden space-y-6">
       <div class="flex items-center justify-between border-b border-slate-200 pb-2">
-        <h2 class="text-xl font-extrabold text-[#0A3B7A]">🔬 Por Profesión</h2>
+        <h2 class="text-xl font-extrabold text-[#0A3B7A] flex items-center gap-2">
+          <svg class="w-5 h-5 stroke-[#1F8A65]" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+          <span>Por Profesión</span>
+        </h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         
@@ -368,7 +384,10 @@
 
     <div id="sec-examenes" class="tab-content hidden space-y-6">
       <div class="flex items-center justify-between border-b border-slate-200 pb-2">
-        <h2 class="text-xl font-extrabold text-[#0A3B7A]">🎓 Exámenes Oficiales</h2>
+        <h2 class="text-xl font-extrabold text-[#0A3B7A] flex items-center gap-2">
+          <svg class="w-5 h-5 stroke-[#1F8A65]" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0.01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0.01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>
+          <span>Exámenes Oficiales</span>
+        </h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         
@@ -413,7 +432,10 @@
 
     <div id="sec-profes" class="tab-content hidden space-y-6">
       <div class="flex items-center justify-between border-b border-slate-200 pb-2">
-        <h2 class="text-xl font-extrabold text-[#0A3B7A]">🍎 Para Profes</h2>
+        <h2 class="text-xl font-extrabold text-[#0A3B7A] flex items-center gap-2">
+          <svg class="w-5 h-5 stroke-[#1F8A65]" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          <span>Para Profes</span>
+        </h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         
@@ -446,7 +468,10 @@
 
     <div id="sec-programas" class="tab-content hidden space-y-6">
       <div class="flex items-center justify-between border-b border-slate-200 pb-2">
-        <h2 class="text-xl font-extrabold text-[#0A3B7A]">🎁 Bundles Completos</h2>
+        <h2 class="text-xl font-extrabold text-[#0A3B7A] flex items-center gap-2">
+          <svg class="w-5 h-5 stroke-[#1F8A65]" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+          <span>Bundles Completos</span>
+        </h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         
@@ -498,7 +523,7 @@
           </div>
           <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
             <div>
-              <span class="text-2xl font-extrabold text-[#1F8A65] opacity-60">73 €</span>
+              <span class="text-2xl font-extrabold text-[#1F8A65] opacity-60">$99 USD</span>
             </div>
             <button disabled class="px-8 py-4 bg-slate-100 text-slate-500 text-xs font-extrabold rounded-full cursor-not-allowed shadow-none uppercase tracking-wider">
               Próximamente (1 Dic)
@@ -510,6 +535,34 @@
     </div>
 
   </main>
+
+  <div id="product-modal" class="fixed inset-0 bg-[#0A3B7A]/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 hidden">
+    <div class="bg-[#FAF8F5] border border-slate-200 p-8 rounded-[32px] max-w-md w-full relative text-left shadow-2xl space-y-6">
+      <button onclick="closeProductModal()" class="absolute top-6 right-6 text-[#0A3B7A] font-bold text-lg hover:opacity-75 transition-opacity cursor-pointer">✕</button>
+      
+      <div class="w-full h-48 rounded-2xl overflow-hidden border border-slate-200 bg-white">
+        <img id="modal-img" src="" alt="Vista previa" class="w-full h-full object-cover">
+      </div>
+
+      <div class="space-y-2">
+        <h3 id="modal-title" class="text-xl font-bold text-[#0A3B7A]">Título del Recurso</h3>
+        <p id="modal-desc" class="text-xs text-slate-600 font-medium leading-relaxed">Descripción breve...</p>
+      </div>
+
+      <div class="space-y-2">
+        <span class="text-[11px] font-extrabold text-[#1F8A65] uppercase tracking-wider">¿Qué incluye exactamente?</span>
+        <ul id="modal-bullets" class="text-xs text-slate-600 space-y-2 font-medium">
+        </ul>
+      </div>
+
+      <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
+        <span id="modal-price" class="text-2xl font-extrabold text-[#0A3B7A]">$0 USD</span>
+        <button id="modal-add-btn" class="px-6 py-3 bg-[#1F8A65] hover:bg-[#186e51] text-white text-xs font-bold rounded-full transition-colors shadow-md cursor-pointer">
+          Añadir al Carrito 🛒
+        </button>
+      </div>
+    </div>
+  </div>
 
   <footer class="bg-white py-12 text-center space-y-6 border-t border-slate-100 mt-auto">
     <div class="flex justify-center space-x-10 text-[#0A3B7A] text-3xl">
@@ -537,7 +590,7 @@
       <div class="border-t border-slate-100 pt-6 space-y-6">
         <div class="flex justify-between items-center text-sm font-bold text-[#0A3B7A]">
           <span class="uppercase tracking-wider">Total:</span>
-          <span id="cart-total" class="text-2xl font-extrabold text-[#1F8A65]">0 €</span>
+          <span id="cart-total" class="text-2xl font-extrabold text-[#1F8A65]">$0 USD</span>
         </div>
         <button id="checkout-btn" class="w-full py-4 bg-[#1F8A65] text-white font-extrabold text-sm rounded-full shadow-[0_8px_20px_-6px_rgba(31,138,101,0.4)] cursor-pointer hover:bg-[#186e51] hover:-translate-y-0.5 transition-all transform">
           Proceder al Pago 🚀
@@ -545,6 +598,40 @@
       </div>
     </div>
   </div>
+
+  <script>
+    function openProductModal(title, desc, bullets, price, img) {
+      document.getElementById('modal-title').textContent = title;
+      document.getElementById('modal-desc').textContent = desc;
+      document.getElementById('modal-price').textContent = '$' + price + ' USD';
+      document.getElementById('modal-img').src = img;
+      
+      const bulletsList = document.getElementById('modal-bullets');
+      bulletsList.innerHTML = '';
+      bullets.forEach(b => {
+        const li = document.createElement('li');
+        li.className = 'flex items-start gap-2';
+        li.innerHTML = '<span class="text-[#1F8A65] font-bold">✓</span> <span>' + b + '</span>';
+        bulletsList.appendChild(li);
+      });
+
+      const addBtn = document.getElementById('modal-add-btn');
+      addBtn.setAttribute('data-add-item', title);
+      addBtn.setAttribute('data-price', price);
+      addBtn.onclick = function() {
+        if (window.addToCart) {
+          window.addToCart(title, parseFloat(price));
+        }
+        closeProductModal();
+      };
+
+      document.getElementById('product-modal').classList.remove('hidden');
+    }
+
+    function closeProductModal() {
+      document.getElementById('product-modal').classList.add('hidden');
+    }
+  </script>
 
   <script src="./tienda.js"></script>
 </body>
