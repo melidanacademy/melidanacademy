@@ -11,17 +11,14 @@
   <link rel="stylesheet" href="./styles.css">
   <style>
     .tab-btn.active {
-      background-color: #0f294a !important;
+      background-color: #0A3B7A !important;
       color: #ffffff !important;
-      border-color: #0f294a !important;
-      box-shadow: 0 10px 15px -3px rgba(15, 41, 74, 0.3);
+      border-color: #0A3B7A !important;
+      box-shadow: 0 10px 15px -3px rgba(10, 59, 122, 0.3);
       transform: translateY(-2px);
     }
     .tab-btn.active span {
       color: #ffffff !important;
-    }
-    .tab-btn.active svg {
-      stroke: #ffffff !important;
     }
   </style>
 </head>
@@ -29,16 +26,11 @@
 
   <nav class="w-full bg-white/95 backdrop-blur-xl border-b border-slate-200 sticky top-0 z-40 px-6 py-3.5 shadow-sm">
     <div class="max-w-6xl mx-auto flex justify-between items-center">
-      <a href="./index.html" class="flex items-center space-x-2 text-[#0f294a] hover:text-[#1F8A65] transition-colors bg-slate-50 px-4 py-2 rounded-full border border-slate-200 shadow-inner">
+      <a href="./index.html" class="flex items-center space-x-2 text-[#0A3B7A] hover:text-[#1F8A65] transition-colors bg-slate-50 px-4 py-2 rounded-full border border-slate-200 shadow-inner">
         <i class="fa-solid fa-arrow-left text-xs"></i>
         <span class="font-extrabold text-[10px] tracking-widest uppercase">Volver</span>
       </a>
       
-      <a href="./index.html" class="flex items-center space-x-1">
-        <span class="font-extrabold text-[#0f294a] text-base tracking-wider">MELIDAN ACADEMY</span>
-        <span class="w-2 h-2 rounded-full bg-[#10b981] inline-block mb-2"></span>
-      </a>
-
       <button id="cart-toggle-btn" class="px-5 py-2.5 bg-[#E8F3EE] text-[#1F8A65] rounded-full hover:bg-[#1F8A65] hover:text-white transition-all flex items-center gap-2 border border-[#1F8A65]/20 shadow-sm text-xs font-bold cursor-pointer group">
         <i class="fa-solid fa-cart-shopping text-xs"></i>
         <span>Carrito</span>
@@ -48,11 +40,14 @@
   </nav>
 
   <main class="w-full max-w-6xl mx-auto px-6 py-12 md:py-16 space-y-14 relative z-10">
+    
     <div class="text-center space-y-4 max-w-3xl mx-auto relative">
+      <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-64 h-64 bg-[#1F8A65]/5 rounded-full blur-3xl pointer-events-none -z-10"></div>
+      
       <span class="inline-block px-5 py-1.5 bg-white text-[#1F8A65] text-xs font-extrabold uppercase tracking-widest rounded-full border border-slate-200 shadow-sm">
         RECURSOS DIRECTO AL GRANO
       </span>
-      <h1 class="text-4xl md:text-5xl font-extrabold text-[#0f294a] leading-tight tracking-tight italic drop-shadow-sm">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-[#0A3B7A] leading-tight tracking-tight italic drop-shadow-sm">
         Todo lo que necesitas para soltar la lengua en inglés
       </h1>
       <p class="text-sm md:text-base text-slate-600 leading-relaxed font-medium max-w-xl mx-auto">
@@ -62,264 +57,495 @@
 
     <div class="space-y-6">
       <div class="flex items-center justify-between border-b border-slate-200 pb-2">
-        <h2 class="text-xs font-extrabold text-[#0f294a] uppercase tracking-widest">¿Qué estás buscando hoy?</h2>
+        <h2 class="text-xs font-extrabold text-[#0A3B7A] uppercase tracking-widest">¿Qué estás buscando hoy?</h2>
       </div>
       
-      <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3">
-        <button data-tab="todos" class="tab-btn active p-3 bg-white border border-slate-200 rounded-[20px] flex flex-col items-center text-center space-y-1.5 transition-all cursor-pointer shadow-sm">
-          <svg class="w-5 h-5 stroke-[#0f294a]" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
-          <span class="text-[11px] font-bold text-[#0f294a]">Todos</span>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
+        <button data-tab="cero" class="tab-btn active p-4 bg-white border border-slate-200 rounded-[20px] flex flex-col items-center text-center space-y-2 transition-all cursor-pointer shadow-sm hover:shadow-md">
+          <span class="text-2xl transition-transform">🌱</span>
+          <span class="text-xs font-bold text-[#0A3B7A]">Desde Cero</span>
         </button>
-        <button data-tab="carrera" class="tab-btn p-3 bg-white border border-slate-200 rounded-[20px] flex flex-col items-center text-center space-y-1.5 transition-all cursor-pointer shadow-sm">
-          <svg class="w-5 h-5 stroke-[#0f294a]" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-          <span class="text-[11px] font-bold text-[#0f294a]">Carrera</span>
+
+        <button data-tab="vida" class="tab-btn p-4 bg-white border border-slate-200 rounded-[20px] flex flex-col items-center text-center space-y-2 transition-all cursor-pointer shadow-sm hover:shadow-md hover:-translate-y-1">
+          <span class="text-2xl transition-transform">✈️</span>
+          <span class="text-xs font-bold text-[#0A3B7A]">Vida Cotidiana</span>
         </button>
-        <button data-tab="cero" class="tab-btn p-3 bg-white border border-slate-200 rounded-[20px] flex flex-col items-center text-center space-y-1.5 transition-all cursor-pointer shadow-sm">
-          <svg class="w-5 h-5 stroke-[#0f294a]" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
-          <span class="text-[11px] font-bold text-[#0f294a]">Desde Cero</span>
+
+        <button data-tab="carrera" class="tab-btn p-4 bg-white border border-slate-200 rounded-[20px] flex flex-col items-center text-center space-y-2 transition-all cursor-pointer shadow-sm hover:shadow-md hover:-translate-y-1">
+          <span class="text-2xl transition-transform">💼</span>
+          <span class="text-xs font-bold text-[#0A3B7A]">Carrera & Work</span>
+        </button>
+
+        <button data-tab="profesiones" class="tab-btn p-4 bg-white border border-slate-200 rounded-[20px] flex flex-col items-center text-center space-y-2 transition-all cursor-pointer shadow-sm hover:shadow-md hover:-translate-y-1">
+          <span class="text-2xl transition-transform">🔬</span>
+          <span class="text-xs font-bold text-[#0A3B7A]">Por Profesión</span>
+        </button>
+
+        <button data-tab="examenes" class="tab-btn p-4 bg-white border border-slate-200 rounded-[20px] flex flex-col items-center text-center space-y-2 transition-all cursor-pointer shadow-sm hover:shadow-md hover:-translate-y-1">
+          <span class="text-2xl transition-transform">🎓</span>
+          <span class="text-xs font-bold text-[#0A3B7A]">Exámenes</span>
+        </button>
+
+        <button data-tab="profes" class="tab-btn p-4 bg-white border border-slate-200 rounded-[20px] flex flex-col items-center text-center space-y-2 transition-all cursor-pointer shadow-sm hover:shadow-md hover:-translate-y-1">
+          <span class="text-2xl transition-transform">🍎</span>
+          <span class="text-xs font-bold text-[#0A3B7A]">Para Profes</span>
+        </button>
+
+        <button data-tab="programas" class="tab-btn p-4 bg-white border border-slate-200 rounded-[20px] flex flex-col items-center text-center space-y-2 transition-all cursor-pointer shadow-sm hover:shadow-md hover:-translate-y-1">
+          <span class="text-2xl transition-transform">🎁</span>
+          <span class="text-xs font-bold text-[#0A3B7A]">Bundles</span>
         </button>
       </div>
     </div>
 
-    <!-- SECCIÓN: CARRERA Y ENTREVISTAS -->
-    <div id="sec-carrera" class="tab-content space-y-6">
-      <div class="flex items-center justify-between border-b border-slate-200 pb-2">
-        <h2 class="text-xl font-extrabold text-[#0f294a]">💼 Carrera, Entrevistas y Perfiles Tech</h2>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between">
-          <div class="w-full h-48 bg-gradient-to-br from-[#EBF2FA] to-white flex items-center justify-center p-4 border-b-2 border-slate-100 cursor-pointer" onclick="openProductModal('Tech Resume & STAR Guide', 'Guía para superar filtros ATS y entrevistas técnicas.', ['Plantilla ATS', '+100 verbos de acción', 'Scripts metodología STAR'], '24', './image_210d48ff.jpg')">
-            <img src="./image_210d48ff.jpg" alt="Tech Resume" class="w-full h-full object-cover">
-          </div>
-          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between bg-white">
-            <div class="space-y-3">
-              <h3 class="text-base font-bold text-[#0f294a]">Tech Resume & STAR Guide</h3>
-              <p class="text-xs text-slate-500 font-medium">Guía experta para superar filtros ATS y entrevistas técnicas internacionales.</p>
-            </div>
-            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-              <span class="text-xl font-extrabold text-[#0f294a]">$24 USD</span>
-              <button data-add-item="Tech Resume & STAR Guide" data-price="24" class="w-10 h-10 flex items-center justify-center bg-[#0f294a] text-white rounded-full cursor-pointer"><i class="fa-solid fa-plus"></i></button>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between">
-          <div class="w-full h-48 bg-gradient-to-br from-[#E8F3EE] to-white flex items-center justify-center p-4 border-b-2 border-slate-100 cursor-pointer" onclick="openProductModal('Simulador de Entrevistas en Inglés', 'Preguntas frecuentes y respuestas modelo en vídeo y PDF.', ['+50 preguntas clave', 'Respuestas modelo', 'Tips de lenguaje corporal'], '19', './image_29938b1d.jpg')">
-            <img src="./image_29938b1d.jpg" alt="Simulador" class="w-full h-full object-cover">
-          </div>
-          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between bg-white">
-            <div class="space-y-3">
-              <h3 class="text-base font-bold text-[#0f294a]">Simulador de Entrevistas en Inglés</h3>
-              <p class="text-xs text-slate-500 font-medium">Preguntas frecuentes de reclutadores globales y respuestas modelo.</p>
-            </div>
-            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-              <span class="text-xl font-extrabold text-[#0f294a]">$19 USD</span>
-              <button data-add-item="Simulador de Entrevistas en Inglés" data-price="19" class="w-10 h-10 flex items-center justify-center bg-[#0f294a] text-white rounded-full cursor-pointer"><i class="fa-solid fa-plus"></i></button>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between">
-          <div class="w-full h-48 bg-gradient-to-br from-[#FEF3C7] to-white flex items-center justify-center p-4 border-b-2 border-slate-100 cursor-pointer" onclick="openProductModal('Vocabulario Técnico para Ingenieros y Tech', 'Glosario especializado por ramas industriales y de software.', ['Terminología industrial', 'Frases para reuniones', 'Glosario descargable'], '15', './image_1c9b6b70.jpg')">
-            <img src="./image_1c9b6b70.jpg" alt="Vocabulario" class="w-full h-full object-cover">
-          </div>
-          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between bg-white">
-            <div class="space-y-3">
-              <h3 class="text-base font-bold text-[#0f294a]">Vocabulario Técnico para Ingenieros y Tech</h3>
-              <p class="text-xs text-slate-500 font-medium">Glosario especializado para destacar en juntas y reportes técnicos.</p>
-            </div>
-            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-              <span class="text-xl font-extrabold text-[#0f294a]">$15 USD</span>
-              <button data-add-item="Vocabulario Técnico para Ingenieros y Tech" data-price="15" class="w-10 h-10 flex items-center justify-center bg-[#0f294a] text-white rounded-full cursor-pointer"><i class="fa-solid fa-plus"></i></button>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between">
-          <div class="w-full h-48 bg-gradient-to-br from-[#FCE7F3] to-white flex items-center justify-center p-4 border-b-2 border-slate-100 cursor-pointer" onclick="openProductModal('Kit de Correos Ejecutivos y Slack', 'Plantillas listas para negociar, liderar y reportar avances.', ['+40 plantillas de email', 'Mensajes para Slack', 'Tono corporativo asertivo'], '15', './image_f0881f1e.jpg')">
-            <img src="./image_f0881f1e.jpg" alt="Kit Correos" class="w-full h-full object-cover">
-          </div>
-          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between bg-white">
-            <div class="space-y-3">
-              <h3 class="text-base font-bold text-[#0f294a]">Kit de Correos Ejecutivos y Slack</h3>
-              <p class="text-xs text-slate-500 font-medium">Plantillas profesionales para negociar, liderar y reportar avances sin traductores.</p>
-            </div>
-            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-              <span class="text-xl font-extrabold text-[#0f294a]">$15 USD</span>
-              <button data-add-item="Kit de Correos Ejecutivos y Slack" data-price="15" class="w-10 h-10 flex items-center justify-center bg-[#0f294a] text-white rounded-full cursor-pointer"><i class="fa-solid fa-plus"></i></button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SECCIÓN: DESDE CERO -->
     <div id="sec-cero" class="tab-content space-y-6">
       <div class="flex items-center justify-between border-b border-slate-200 pb-2">
-        <h2 class="text-xl font-extrabold text-[#0f294a]">🌱 Para Empezar desde Cero</h2>
+        <h2 class="text-xl font-extrabold text-[#0A3B7A]">🌱 Para Empezar desde Cero</h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between">
-          <div class="w-full h-48 bg-gradient-to-br from-[#F3F0EA] to-white flex items-center justify-center p-4 border-b-2 border-slate-100 cursor-pointer" onclick="openProductModal('Aprende Inglés en 6 Meses: La Ruta Exacta', 'El mapa paso a paso para pasar de cero a hablar con fluidez.', ['Ruta de 24 semanas', 'Ejercicios prácticos', 'PDFs complementarios'], '14', './image_53330abd.jpg')">
-            <img src="./image_53330abd.jpg" alt="Aprende Inglés en 6 Meses" class="w-full h-full object-cover">
+        
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-[0_10px_35px_rgb(0,0,0,0.08)] hover:shadow-[0_20px_45px_-15px_rgba(10,59,122,0.15)] transition-all flex flex-col justify-between group transform hover:-translate-y-1">
+          <div class="w-full h-48 bg-gradient-to-br from-[#F3F0EA] to-white flex items-center justify-center p-4 border-b-2 border-slate-100">
+            <span class="text-3xl font-extrabold text-[#0A3B7A] tracking-tight drop-shadow-sm">Roadmap</span>
           </div>
           <div class="p-6 space-y-4 flex-1 flex flex-col justify-between bg-white">
             <div class="space-y-3">
-              <h3 class="text-base font-bold text-[#0f294a]">Aprende Inglés en 6 Meses: La Ruta Exacta</h3>
-              <p class="text-xs text-slate-500 font-medium">El mapa paso a paso para pasar de cero a hablar con fluidez.</p>
+              <span class="px-3 py-1 bg-[#E8F3EE] text-[#1F8A65] text-[9px] font-extrabold rounded-full tracking-widest uppercase border border-[#1F8A65]/20">PDF GUIDE</span>
+              <h3 class="text-base font-bold text-[#0A3B7A] leading-snug">Aprende Inglés en 6 Meses: La Ruta Exacta</h3>
+              <p class="text-xs text-slate-500 font-medium leading-relaxed">
+                El mapa paso a paso para pasar de cero a hablar con fluidez sin libros aburridos.
+              </p>
             </div>
             <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
               <div>
-                <span class="block text-[10px] text-slate-400 line-through font-bold">$25 USD</span>
-                <span class="text-xl font-extrabold text-[#1F8A65]">$14 USD</span>
+                <span class="block text-[10px] text-slate-400 line-through font-bold">25 €</span>
+                <span class="text-xl font-extrabold text-[#1F8A65]">12 €</span>
               </div>
-              <button data-add-item="Aprende Inglés en 6 Meses: La Ruta Exacta" data-price="14" class="w-10 h-10 flex items-center justify-center bg-[#0f294a] text-white rounded-full cursor-pointer"><i class="fa-solid fa-plus"></i></button>
+              <button data-add-item="Aprende Inglés en 6 Meses: La Ruta Exacta" data-price="12" class="w-10 h-10 flex items-center justify-center bg-[#0A3B7A] text-white rounded-full cursor-pointer hover:bg-[#082e60] transition-colors shadow-md">
+                <i class="fa-solid fa-plus"></i>
+              </button>
             </div>
           </div>
         </div>
 
-        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between">
-          <div class="w-full h-48 bg-gradient-to-br from-[#FFFBEB] to-white flex items-center justify-center p-4 border-b-2 border-slate-100 cursor-pointer" onclick="openProductModal('Kit Anti-Bloqueo: Pierde la Pena a Hablar', 'Técnicas psicológicas y muletillas clave.', ['Ebook de confianza', 'Audios fonéticos', 'Frases de respaldo'], '12', './image_8eb7ae4a.jpg')">
-            <img src="./image_8eb7ae4a.jpg" alt="Kit Anti-Bloqueo" class="w-full h-full object-cover">
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-[0_10px_35px_rgb(0,0,0,0.08)] hover:shadow-[0_20px_45px_-15px_rgba(10,59,122,0.15)] transition-all flex flex-col justify-between group transform hover:-translate-y-1">
+          <div class="w-full h-48 bg-gradient-to-br from-[#FFFBEB] to-white flex items-center justify-center p-4 border-b-2 border-slate-100">
+            <span class="text-3xl font-extrabold text-[#92400E] tracking-tight drop-shadow-sm">Ebook</span>
           </div>
           <div class="p-6 space-y-4 flex-1 flex flex-col justify-between bg-white">
             <div class="space-y-3">
-              <h3 class="text-base font-bold text-[#0f294a]">Kit Anti-Bloqueo: Pierde la Pena a Hablar</h3>
-              <p class="text-xs text-slate-500 font-medium">Técnicas psicológicas y muletillas clave para expresarte sin trabarte.</p>
+              <span class="px-3 py-1 bg-amber-50 text-amber-700 text-[9px] font-extrabold rounded-full tracking-widest uppercase border border-amber-200">EBOOK + AUDIO</span>
+              <h3 class="text-base font-bold text-[#0A3B7A] leading-snug">Kit Anti-Bloqueo: Pierde la Pena a Hablar</h3>
+              <p class="text-xs text-slate-500 font-medium leading-relaxed">
+                Técnicas psicológicas y muletillas clave para expresarte sin trabarte.
+              </p>
             </div>
             <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-              <span class="text-xl font-extrabold text-[#0f294a]">$12 USD</span>
-              <button data-add-item="Kit Anti-Bloqueo: Pierde la Pena a Hablar" data-price="12" class="w-10 h-10 flex items-center justify-center bg-[#0f294a] text-white rounded-full cursor-pointer"><i class="fa-solid fa-plus"></i></button>
+              <span class="text-xl font-extrabold text-[#0A3B7A]">10 €</span>
+              <button data-add-item="Kit Anti-Bloqueo: Pierde la Pena a Hablar" data-price="10" class="w-10 h-10 flex items-center justify-center bg-[#0A3B7A] text-white rounded-full cursor-pointer hover:bg-[#082e60] transition-colors shadow-md">
+                <i class="fa-solid fa-plus"></i>
+              </button>
             </div>
           </div>
         </div>
 
-        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between">
-          <div class="w-full h-48 bg-gradient-to-br from-[#FFF1F2] to-white flex items-center justify-center p-4 border-b-2 border-slate-100 cursor-pointer" onclick="openProductModal('Diario de Escritura Guiada (30 Days)', '30 preguntas para empezar a pensar en inglés sin traducir.', ['Workbook PDF de 30 días', 'Plantilla digital Notion', 'Ejercicios diarios'], '12', './image_811eb4f6.jpg')">
-            <img src="./image_811eb4f6.jpg" alt="Diario de Escritura Guiada" class="w-full h-full object-cover">
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-[0_10px_35px_rgb(0,0,0,0.08)] hover:shadow-[0_20px_45px_-15px_rgba(10,59,122,0.15)] transition-all flex flex-col justify-between group transform hover:-translate-y-1">
+          <div class="w-full h-48 bg-gradient-to-br from-[#FFF1F2] to-white flex items-center justify-center p-4 border-b-2 border-slate-100">
+            <span class="text-3xl font-extrabold text-[#9F1239] tracking-tight drop-shadow-sm">Journal</span>
           </div>
           <div class="p-6 space-y-4 flex-1 flex flex-col justify-between bg-white">
             <div class="space-y-3">
-              <h3 class="text-base font-bold text-[#0f294a]">Diario de Escritura Guiada (30 Days)</h3>
-              <p class="text-xs text-slate-500 font-medium">30 preguntas diseñadas para empezar a pensar en inglés sin traducir.</p>
+              <span class="px-3 py-1 bg-rose-50 text-rose-700 text-[9px] font-extrabold rounded-full tracking-widest uppercase border border-rose-200">WORKBOOK PDF</span>
+              <h3 class="text-base font-bold text-[#0A3B7A] leading-snug">Diario de Escritura Guiada (30 Days)</h3>
+              <p class="text-xs text-slate-500 font-medium leading-relaxed">
+                30 preguntas diseñadas para empezar a pensar en inglés sin traducir.
+              </p>
             </div>
             <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-              <span class="text-xl font-extrabold text-[#0f294a]">$12 USD</span>
-              <button data-add-item="Diario de Escritura Guiada (30 Days)" data-price="12" class="w-10 h-10 flex items-center justify-center bg-[#0f294a] text-white rounded-full cursor-pointer"><i class="fa-solid fa-plus"></i></button>
+              <span class="text-xl font-extrabold text-[#0A3B7A]">10 €</span>
+              <button data-add-item="Diario de Escritura Guiada (30 Days Journaling)" data-price="10" class="w-10 h-10 flex items-center justify-center bg-[#0A3B7A] text-white rounded-full cursor-pointer hover:bg-[#082e60] transition-colors shadow-md">
+                <i class="fa-solid fa-plus"></i>
+              </button>
             </div>
           </div>
         </div>
 
-        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between">
-          <div class="w-full h-48 bg-gradient-to-br from-[#FAF5FF] to-white flex items-center justify-center p-4 border-b-2 border-slate-100 cursor-pointer" onclick="openProductModal('Mazo 1,000 Palabras Clave Diarias', 'Las 1,000 palabras más útiles con repetición espaciada.', ['Mazo Anki (.apkg)', 'Audio nativo', 'Frecuencia corporativa'], '12', './image_3ff69326.jpg')">
-            <img src="./image_3ff69326.jpg" alt="Mazo Palabras" class="w-full h-full object-cover">
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-[0_10px_35px_rgb(0,0,0,0.08)] hover:shadow-[0_20px_45px_-15px_rgba(10,59,122,0.15)] transition-all flex flex-col justify-between group transform hover:-translate-y-1">
+          <div class="w-full h-48 bg-gradient-to-br from-[#FAF5FF] to-white flex items-center justify-center p-4 border-b-2 border-slate-100">
+            <span class="text-3xl font-extrabold text-[#6B21A8] tracking-tight drop-shadow-sm">Anki</span>
           </div>
           <div class="p-6 space-y-4 flex-1 flex flex-col justify-between bg-white">
             <div class="space-y-3">
-              <h3 class="text-base font-bold text-[#0f294a]">Mazo 1,000 Palabras Clave Diarias</h3>
-              <p class="text-xs text-slate-500 font-medium">Las 1,000 palabras más útiles de la vida real con repetición espaciada.</p>
+              <span class="px-3 py-1 bg-purple-50 text-purple-700 text-[9px] font-extrabold rounded-full tracking-widest uppercase border border-purple-200">FLASHCARDS</span>
+              <h3 class="text-base font-bold text-[#0A3B7A] leading-snug">Mazo 1,000 Palabras Clave Diarias</h3>
+              <p class="text-xs text-slate-500 font-medium leading-relaxed">
+                Las 1,000 palabras más útiles de la vida real con repetición espaciada.
+              </p>
             </div>
             <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-              <span class="text-xl font-extrabold text-[#0f294a]">$12 USD</span>
-              <button data-add-item="Mazo 1,000 Palabras Clave Diarias" data-price="12" class="w-10 h-10 flex items-center justify-center bg-[#0f294a] text-white rounded-full cursor-pointer"><i class="fa-solid fa-plus"></i></button>
+              <span class="text-xl font-extrabold text-[#0A3B7A]">11 €</span>
+              <button data-add-item="Mazo 1,000 Palabras Clave Diarias" data-price="11" class="w-10 h-10 flex items-center justify-center bg-[#0A3B7A] text-white rounded-full cursor-pointer hover:bg-[#082e60] transition-colors shadow-md">
+                <i class="fa-solid fa-plus"></i>
+              </button>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="bg-white border-2 border-[#1F8A65]/40 rounded-[32px] p-6 sm:p-8 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden mt-8">
-        <div class="space-y-2 text-left">
-          <span class="px-3 py-1 bg-[#E8F3EE] text-[#1F8A65] text-[9px] font-extrabold rounded-full uppercase">BUNDLE COMPLETO</span>
-          <h3 class="text-xl md:text-2xl font-bold text-[#0f294a]">Pack Completo Desde Cero</h3>
-          <p class="text-xs md:text-sm text-slate-600 font-medium max-w-xl">Llévate los 4 recursos juntos con un descuento especial.</p>
-        </div>
-        <div class="flex items-center gap-6 flex-shrink-0">
-          <div class="text-right">
-            <span class="block text-xs text-slate-400 line-through font-bold">$50 USD</span>
-            <span class="text-2xl md:text-3xl font-extrabold text-[#1F8A65]">$34 USD</span>
-          </div>
-          <button data-add-item="Pack Completo Desde Cero" data-price="34" class="px-6 py-3.5 bg-[#1F8A65] hover:bg-[#186e51] text-white text-xs font-extrabold rounded-full transition-all cursor-pointer">
-            Añadir Pack Completo +
-          </button>
-        </div>
       </div>
     </div>
+
+    <div id="sec-vida" class="tab-content hidden space-y-6">
+      <div class="flex items-center justify-between border-b border-slate-200 pb-2">
+        <h2 class="text-xl font-extrabold text-[#0A3B7A]">✈️ Guías de Vida Cotidiana</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between opacity-60 grayscale-[40%]">
+          <div class="w-full h-48 bg-[#EFF6FF] flex items-center justify-center p-4 border-b-2 border-slate-100">
+            <span class="text-3xl font-extrabold text-[#1E40AF]">Travel</span>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-3">
+              <h3 class="text-base font-bold text-[#0A3B7A]">Kit Supervivencia: Viajes & Aduanas</h3>
+            </div>
+            <button disabled class="w-full py-3 bg-slate-100 text-slate-500 text-[10px] font-extrabold rounded-xl cursor-not-allowed uppercase tracking-wider">Próximamente (1 Dic)</button>
+          </div>
+        </div>
+
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between opacity-60 grayscale-[40%]">
+          <div class="w-full h-48 bg-[#FDF2F8] flex items-center justify-center p-4 border-b-2 border-slate-100">
+            <span class="text-3xl font-extrabold text-[#9D174D]">Beauty</span>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-3">
+              <h3 class="text-base font-bold text-[#0A3B7A]">Peluquería & Cuidado Personal</h3>
+            </div>
+            <button disabled class="w-full py-3 bg-slate-100 text-slate-500 text-[10px] font-extrabold rounded-xl cursor-not-allowed uppercase tracking-wider">Próximamente (1 Dic)</button>
+          </div>
+        </div>
+
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between opacity-60 grayscale-[40%]">
+          <div class="w-full h-48 bg-[#FFF7ED] flex items-center justify-center p-4 border-b-2 border-slate-100">
+            <span class="text-3xl font-extrabold text-[#C2410C]">Food</span>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-3">
+              <h3 class="text-base font-bold text-[#0A3B7A]">Supermercado & Restaurantes</h3>
+            </div>
+            <button disabled class="w-full py-3 bg-slate-100 text-slate-500 text-[10px] font-extrabold rounded-xl cursor-not-allowed uppercase tracking-wider">Próximamente (1 Dic)</button>
+          </div>
+        </div>
+
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between opacity-60 grayscale-[40%]">
+          <div class="w-full h-48 bg-[#ECFDF5] flex items-center justify-center p-4 border-b-2 border-slate-100">
+            <span class="text-3xl font-extrabold text-[#047857]">Home</span>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-3">
+              <h3 class="text-base font-bold text-[#0A3B7A]">Alquiler & Trámites</h3>
+            </div>
+            <button disabled class="w-full py-3 bg-slate-100 text-slate-500 text-[10px] font-extrabold rounded-xl cursor-not-allowed uppercase tracking-wider">Próximamente (1 Dic)</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="sec-carrera" class="tab-content hidden space-y-6">
+      <div class="flex items-center justify-between border-b border-slate-200 pb-2">
+        <h2 class="text-xl font-extrabold text-[#0A3B7A]">💼 Carrera & Work</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between opacity-60 grayscale-[40%]">
+          <div class="w-full h-48 bg-[#E8F3EE] flex items-center justify-center p-4 border-b-2 border-slate-100">
+            <span class="text-3xl font-extrabold text-[#1F8A65]">Resume</span>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-3">
+              <h3 class="text-base font-bold text-[#0A3B7A]">Tech Resume & STAR Guide</h3>
+            </div>
+            <button disabled class="w-full py-3 bg-slate-100 text-slate-500 text-[10px] font-extrabold rounded-xl cursor-not-allowed uppercase tracking-wider">Próximamente (1 Dic)</button>
+          </div>
+        </div>
+
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between opacity-60 grayscale-[40%]">
+          <div class="w-full h-48 bg-[#FFFBEB] flex items-center justify-center p-4 border-b-2 border-slate-100">
+            <span class="text-3xl font-extrabold text-[#B45309]">Interviews</span>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-3">
+              <h3 class="text-base font-bold text-[#0A3B7A]">Entrevistas en Inglés Sin Miedo</h3>
+            </div>
+            <button disabled class="w-full py-3 bg-slate-100 text-slate-500 text-[10px] font-extrabold rounded-xl cursor-not-allowed uppercase tracking-wider">Próximamente (1 Dic)</button>
+          </div>
+        </div>
+
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between opacity-60 grayscale-[40%]">
+          <div class="w-full h-48 bg-[#EEF2FF] flex items-center justify-center p-4 border-b-2 border-slate-100">
+            <span class="text-3xl font-extrabold text-[#4338CA]">Meetings</span>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-3">
+              <h3 class="text-base font-bold text-[#0A3B7A]">Mastering Business Meetings</h3>
+            </div>
+            <button disabled class="w-full py-3 bg-slate-100 text-slate-500 text-[10px] font-extrabold rounded-xl cursor-not-allowed uppercase tracking-wider">Próximamente (1 Dic)</button>
+          </div>
+        </div>
+
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between opacity-60 grayscale-[40%]">
+          <div class="w-full h-48 bg-[#ECFEFF] flex items-center justify-center p-4 border-b-2 border-slate-100">
+            <span class="text-3xl font-extrabold text-[#0E7490]">Emails</span>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-3">
+              <h3 class="text-base font-bold text-[#0A3B7A]">E-mails Profesionales & Slack</h3>
+            </div>
+            <button disabled class="w-full py-3 bg-slate-100 text-slate-500 text-[10px] font-extrabold rounded-xl cursor-not-allowed uppercase tracking-wider">Próximamente (1 Dic)</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="sec-profesiones" class="tab-content hidden space-y-6">
+      <div class="flex items-center justify-between border-b border-slate-200 pb-2">
+        <h2 class="text-xl font-extrabold text-[#0A3B7A]">🔬 Por Profesión</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between opacity-60 grayscale-[40%]">
+          <div class="w-full h-48 bg-[#EFF6FF] flex items-center justify-center p-4 border-b-2 border-slate-100">
+            <span class="text-3xl font-extrabold text-[#1D4ED8]">Tech</span>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-3">
+              <h3 class="text-base font-bold text-[#0A3B7A]">Inglés para Software Engineering</h3>
+            </div>
+            <button disabled class="w-full py-3 bg-slate-100 text-slate-500 text-[10px] font-extrabold rounded-xl cursor-not-allowed uppercase tracking-wider">Próximamente (1 Dic)</button>
+          </div>
+        </div>
+
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between opacity-60 grayscale-[40%]">
+          <div class="w-full h-48 bg-[#F1F5F9] flex items-center justify-center p-4 border-b-2 border-slate-100">
+            <span class="text-3xl font-extrabold text-[#334155]">Engineering</span>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-3">
+              <h3 class="text-base font-bold text-[#0A3B7A]">Inglés para Industria</h3>
+            </div>
+            <button disabled class="w-full py-3 bg-slate-100 text-slate-500 text-[10px] font-extrabold rounded-xl cursor-not-allowed uppercase tracking-wider">Próximamente (1 Dic)</button>
+          </div>
+        </div>
+
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between opacity-60 grayscale-[40%]">
+          <div class="w-full h-48 bg-[#ECFDF5] flex items-center justify-center p-4 border-b-2 border-slate-100">
+            <span class="text-3xl font-extrabold text-[#065F46]">Finance</span>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-3">
+              <h3 class="text-base font-bold text-[#0A3B7A]">Contabilidad & Negocios</h3>
+            </div>
+            <button disabled class="w-full py-3 bg-slate-100 text-slate-500 text-[10px] font-extrabold rounded-xl cursor-not-allowed uppercase tracking-wider">Próximamente (1 Dic)</button>
+          </div>
+        </div>
+
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between opacity-60 grayscale-[40%]">
+          <div class="w-full h-48 bg-[#FFF1F2] flex items-center justify-center p-4 border-b-2 border-slate-100">
+            <span class="text-3xl font-extrabold text-[#9F1239]">Sales</span>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-3">
+              <h3 class="text-base font-bold text-[#0A3B7A]">Ventas & Marketing</h3>
+            </div>
+            <button disabled class="w-full py-3 bg-slate-100 text-slate-500 text-[10px] font-extrabold rounded-xl cursor-not-allowed uppercase tracking-wider">Próximamente (1 Dic)</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="sec-examenes" class="tab-content hidden space-y-6">
+      <div class="flex items-center justify-between border-b border-slate-200 pb-2">
+        <h2 class="text-xl font-extrabold text-[#0A3B7A]">🎓 Exámenes Oficiales</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between opacity-60 grayscale-[40%]">
+          <div class="w-full h-48 bg-[#FEF2F2] flex items-center justify-center p-4 border-b-2 border-slate-100">
+            <span class="text-3xl font-extrabold text-[#991B1B]">IELTS</span>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-3">
+              <h3 class="text-base font-bold text-[#0A3B7A]">IELTS Booster Kit</h3>
+            </div>
+            <button disabled class="w-full py-3 bg-slate-100 text-slate-500 text-[10px] font-extrabold rounded-xl cursor-not-allowed uppercase tracking-wider">Próximamente (1 Dic)</button>
+          </div>
+        </div>
+
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between opacity-60 grayscale-[40%]">
+          <div class="w-full h-48 bg-[#EFF6FF] flex items-center justify-center p-4 border-b-2 border-slate-100">
+            <span class="text-3xl font-extrabold text-[#1E40AF]">TOEFL</span>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-3">
+              <h3 class="text-base font-bold text-[#0A3B7A]">TOEFL Master Guide</h3>
+            </div>
+            <button disabled class="w-full py-3 bg-slate-100 text-slate-500 text-[10px] font-extrabold rounded-xl cursor-not-allowed uppercase tracking-wider">Próximamente (1 Dic)</button>
+          </div>
+        </div>
+
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between opacity-60 grayscale-[40%]">
+          <div class="w-full h-48 bg-[#FEFCE8] flex items-center justify-center p-4 border-b-2 border-slate-100">
+            <span class="text-3xl font-extrabold text-[#854D0E]">Cambridge</span>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-3">
+              <h3 class="text-base font-bold text-[#0A3B7A]">Cambridge (B2/C1) Pack</h3>
+            </div>
+            <button disabled class="w-full py-3 bg-slate-100 text-slate-500 text-[10px] font-extrabold rounded-xl cursor-not-allowed uppercase tracking-wider">Próximamente (1 Dic)</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="sec-profes" class="tab-content hidden space-y-6">
+      <div class="flex items-center justify-between border-b border-slate-200 pb-2">
+        <h2 class="text-xl font-extrabold text-[#0A3B7A]">🍎 Para Profes</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between opacity-60 grayscale-[40%]">
+          <div class="w-full h-48 bg-[#E8F3EE] flex items-center justify-center p-4 border-b-2 border-slate-100">
+            <span class="text-3xl font-extrabold text-[#065F46]">Printables</span>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-3">
+              <h3 class="text-base font-bold text-[#0A3B7A]">ESL Starter Pack</h3>
+            </div>
+            <button disabled class="w-full py-3 bg-slate-100 text-slate-500 text-[10px] font-extrabold rounded-xl cursor-not-allowed uppercase tracking-wider">Próximamente (1 Dic)</button>
+          </div>
+        </div>
+
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between opacity-60 grayscale-[40%]">
+          <div class="w-full h-48 bg-[#FAF5FF] flex items-center justify-center p-4 border-b-2 border-slate-100">
+            <span class="text-3xl font-extrabold text-[#581C87]">Warmups</span>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-3">
+              <h3 class="text-base font-bold text-[#0A3B7A]">Fillers & Icebreakers</h3>
+            </div>
+            <button disabled class="w-full py-3 bg-slate-100 text-slate-500 text-[10px] font-extrabold rounded-xl cursor-not-allowed uppercase tracking-wider">Próximamente (1 Dic)</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="sec-programas" class="tab-content hidden space-y-6">
+      <div class="flex items-center justify-between border-b border-slate-200 pb-2">
+        <h2 class="text-xl font-extrabold text-[#0A3B7A]">🎁 Bundles Completos</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between opacity-60 grayscale-[40%]">
+          <div class="w-full h-48 bg-[#E8F3EE] flex items-center justify-center p-4 border-b-2 border-slate-100">
+            <span class="text-3xl font-extrabold text-[#065F46]">Bundle Cero</span>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-3">
+              <h3 class="text-base font-bold text-[#0A3B7A]">Pack De Cero a Conversación</h3>
+            </div>
+            <button disabled class="w-full py-3 bg-slate-100 text-slate-500 text-[10px] font-extrabold rounded-xl cursor-not-allowed uppercase tracking-wider">Próximamente (1 Dic)</button>
+          </div>
+        </div>
+
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between opacity-60 grayscale-[40%]">
+          <div class="w-full h-48 bg-[#EFF6FF] flex items-center justify-center p-4 border-b-2 border-slate-100">
+            <span class="text-3xl font-extrabold text-[#1E3A8A]">Exams Pack</span>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-3">
+              <h3 class="text-base font-bold text-[#0A3B7A]">All-In-One Exam Pass</h3>
+            </div>
+            <button disabled class="w-full py-3 bg-slate-100 text-slate-500 text-[10px] font-extrabold rounded-xl cursor-not-allowed uppercase tracking-wider">Próximamente (1 Dic)</button>
+          </div>
+        </div>
+
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between opacity-60 grayscale-[40%]">
+          <div class="w-full h-48 bg-[#EEF2FF] flex items-center justify-center p-4 border-b-2 border-slate-100">
+            <span class="text-3xl font-extrabold text-[#312E81]">Career</span>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-3">
+              <h3 class="text-base font-bold text-[#0A3B7A]">Career Booster Remote</h3>
+            </div>
+            <button disabled class="w-full py-3 bg-slate-100 text-slate-500 text-[10px] font-extrabold rounded-xl cursor-not-allowed uppercase tracking-wider">Próximamente (1 Dic)</button>
+          </div>
+        </div>
+
+        <div class="bg-white border-2 border-[#1F8A65]/40 rounded-[32px] p-8 shadow-sm flex flex-col justify-between space-y-4 relative overflow-hidden md:col-span-2 lg:col-span-4 opacity-70 grayscale-[20%]">
+          <div class="absolute top-6 right-6 bg-[#1F8A65]/70 text-white text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+            PROGRAMA ESTRELLA ⭐
+          </div>
+          <div class="space-y-3">
+            <h3 class="text-2xl font-bold text-[#0A3B7A]">Corporate English Accelerator</h3>
+            <p class="text-sm text-slate-600 font-medium leading-relaxed max-w-2xl">
+              Simulación de reuniones, redacción ejecutiva y corrección directa.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <div>
+              <span class="text-2xl font-extrabold text-[#1F8A65] opacity-60">73 €</span>
+            </div>
+            <button disabled class="px-8 py-4 bg-slate-100 text-slate-500 text-xs font-extrabold rounded-full cursor-not-allowed shadow-none uppercase tracking-wider">
+              Próximamente (1 Dic)
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </main>
 
-  <div id="product-modal" class="fixed inset-0 bg-[#0f294a]/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 hidden">
-    <div class="bg-[#FAF8F5] border border-slate-200 p-8 rounded-[32px] max-w-md w-full relative text-left shadow-2xl space-y-6">
-      <button onclick="closeProductModal()" class="absolute top-6 right-6 text-[#0f294a] font-bold text-lg cursor-pointer">✕</button>
-      <div class="w-full h-48 rounded-2xl overflow-hidden border border-slate-200 bg-white">
-        <img id="modal-img" src="" alt="Vista previa" class="w-full h-full object-cover">
-      </div>
-      <div class="space-y-2">
-        <h3 id="modal-title" class="text-xl font-bold text-[#0f294a]">Título</h3>
-        <p id="modal-desc" class="text-xs text-slate-600 font-medium">Descripción...</p>
-      </div>
-      <ul id="modal-bullets" class="text-xs text-slate-600 space-y-2 font-medium"></ul>
-      <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
-        <span id="modal-price" class="text-2xl font-extrabold text-[#0f294a]">$0 USD</span>
-        <button id="modal-add-btn" class="px-6 py-3 bg-[#1F8A65] text-white text-xs font-bold rounded-full cursor-pointer">Añadir al Carrito 🛒</button>
-      </div>
-    </div>
-  </div>
-
   <footer class="bg-white py-12 text-center space-y-6 border-t border-slate-100 mt-auto">
-    <div class="flex justify-center space-x-10 text-[#0f294a] text-3xl">
-      <a href="https://tiktok.com/@melidanacademy" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a>
-      <a href="https://instagram.com/melidanacademy" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://www.youtube.com/@melidanacademy/shorts" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+    <div class="flex justify-center space-x-10 text-[#0A3B7A] text-3xl">
+      <a href="https://tiktok.com/@melidanacademy" target="_blank" rel="noopener noreferrer" class="hover:text-[#1F8A65] transform hover:scale-110 transition-all"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="https://instagram.com/melidanacademy" target="_blank" rel="noopener noreferrer" class="hover:text-[#1F8A65] transform hover:scale-110 transition-all"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.youtube.com/@melidanacademy/shorts" target="_blank" rel="noopener noreferrer" class="hover:text-[#1F8A65] transform hover:scale-110 transition-all"><i class="fa-brands fa-youtube"></i></a>
     </div>
     <p class="text-xs font-semibold text-slate-400">© 2026 Melidan Academy · Todos los derechos reservados</p>
   </footer>
 
-  <script>
-    function openProductModal(title, desc, bullets, price, img) {
-      document.getElementById('modal-title').textContent = title;
-      document.getElementById('modal-desc').textContent = desc;
-      document.getElementById('modal-price').textContent = '$' + price + ' USD';
-      document.getElementById('modal-img').src = img;
-      
-      const bulletsList = document.getElementById('modal-bullets');
-      bulletsList.innerHTML = '';
-      bullets.forEach(b => {
-        const li = document.createElement('li');
-        li.className = 'flex items-start gap-2';
-        li.innerHTML = '<span class="text-[#1F8A65] font-bold">✓</span> <span>' + b + '</span>';
-        bulletsList.appendChild(li);
-      });
+  <div id="cart-drawer" class="fixed inset-0 bg-[#0A3B7A]/60 backdrop-blur-md z-50 hidden transition-opacity">
+    <div class="fixed right-0 top-0 h-full w-full max-w-sm bg-white shadow-2xl p-8 flex flex-col justify-between">
+      <div>
+        <div class="flex justify-between items-center pb-6 border-b border-slate-100">
+          <h3 class="text-lg font-bold text-[#0A3B7A] flex items-center gap-2">
+            <i class="fa-solid fa-cart-shopping text-[#1F8A65]"></i>
+            <span>Tu Carrito</span>
+          </h3>
+          <button id="cart-close-btn" class="text-slate-400 bg-slate-50 w-8 h-8 rounded-full hover:text-slate-700 hover:bg-slate-100 font-bold text-sm cursor-pointer transition-all flex items-center justify-center">✕</button>
+        </div>
+        <div id="cart-items" class="py-6 space-y-4 max-h-[60vh] overflow-y-auto">
+          <p class="text-sm text-slate-400 text-center py-10 font-medium">Tu carrito está vacío.</p>
+        </div>
+      </div>
+      <div class="border-t border-slate-100 pt-6 space-y-6">
+        <div class="flex justify-between items-center text-sm font-bold text-[#0A3B7A]">
+          <span class="uppercase tracking-wider">Total:</span>
+          <span id="cart-total" class="text-2xl font-extrabold text-[#1F8A65]">0 €</span>
+        </div>
+        <button id="checkout-btn" class="w-full py-4 bg-[#1F8A65] text-white font-extrabold text-sm rounded-full shadow-[0_8px_20px_-6px_rgba(31,138,101,0.4)] cursor-pointer hover:bg-[#186e51] hover:-translate-y-0.5 transition-all transform">
+          Proceder al Pago 🚀
+        </button>
+      </div>
+    </div>
+  </div>
 
-      document.getElementById('product-modal').classList.remove('hidden');
-    }
-
-    function closeProductModal() {
-      document.getElementById('product-modal').classList.add('hidden');
-    }
-
-    const tabButtons = document.querySelectorAll('.tab-btn');
-    const tabContents = document.querySelectorAll('.tab-content');
-
-    tabButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        tabButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        const tab = btn.getAttribute('data-tab');
-        tabContents.forEach(content => {
-          if (tab === 'todos') {
-            content.classList.remove('hidden');
-          } else {
-            if (content.id === 'sec-' + tab) {
-              content.classList.remove('hidden');
-            } else {
-              content.classList.add('hidden');
-            }
-          }
-        });
-      });
-    });
-  </script>
+  <script src="./tienda.js"></script>
 </body>
 </html>
