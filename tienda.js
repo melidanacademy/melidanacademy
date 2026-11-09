@@ -1,30 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const DEFAULT_STRIPE_LINK = 'https://buy.stripe.com/bJe8wQ0mZ2pX9Evaa7fw400';
+  const STRIPE_LINK = 'https://buy.stripe.com/bJe8wQ0mZ2pX9Evaa7fw400';
   let cart = [];
-
-  const tabs = document.querySelectorAll('.tab-btn');
-  const sections = document.querySelectorAll('.tab-section');
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-
-      const target = tab.dataset.tab;
-
-      if (target === 'todos') {
-        sections.forEach(sec => sec.classList.remove('hidden'));
-      } else {
-        sections.forEach(sec => {
-          if (sec.dataset.category === target) {
-            sec.classList.remove('hidden');
-          } else {
-            sec.classList.add('hidden');
-          }
-        });
-      }
-    });
-  });
 
   const toggleCartDrawer = () => {
     const drawer = document.getElementById('cart-drawer');
@@ -41,10 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (cart.length === 0) {
       if (cartItemsContainer) {
-        const defaultEmptyMsg = cartItemsContainer.getAttribute('data-empty-text') || 'Tu carrito está vacío.';
-        cartItemsContainer.innerHTML = `<p class="text-sm text-slate-400 text-center py-10 font-medium">${defaultEmptyMsg}</p>`;
+        const defaultEmptyMsg = cartItemsContainer.getAttribute('data-empty-text') || '...';
+        cartItemsContainer.innerHTML = `<p class="text-xs text-slate-400 text-center py-8">${defaultEmptyMsg}</p>`;
       }
-      if (cartTotal) cartTotal.innerText = '$0 USD';
+      if (cartTotal) cartTotal.innerText = '0 €';
       return;
     }
 
@@ -60,17 +36,17 @@ document.addEventListener('DOMContentLoaded', () => {
       itemEl.innerHTML = `
         <div class="pr-2">
           <h4 class="font-bold text-[#0A3B7A] leading-tight">${item.title}</h4>
-          <span class="text-slate-400 text-[11px]">${item.quantity} x $${item.price} USD</span>
+          <span class="text-slate-400 text-[11px]">${item.quantity} x ${item.price} €</span>
         </div>
         <div class="flex items-center gap-3 shrink-0">
-          <span class="font-bold text-[#1F8A65]">$${itemTotal} USD</span>
+          <span class="font-bold text-[#1F8A65]">${itemTotal} €</span>
           <button data-remove-item="${item.title}" class="text-slate-400 hover:text-red-500 font-bold cursor-pointer transition-colors p-1">✕</button>
         </div>
       `;
       cartItemsContainer?.appendChild(itemEl);
     });
 
-    if (cartTotal) cartTotal.innerText = `$${total} USD`;
+    if (cartTotal) cartTotal.innerText = `${total} €`;
 
     document.querySelectorAll('[data-remove-item]').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -81,12 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-
   document.querySelectorAll('[data-add-item]').forEach(btn => {
     btn.addEventListener('click', () => {
       const title = btn.getAttribute('data-add-item');
       const price = parseFloat(btn.getAttribute('data-price') || '0');
-      const link = btn.getAttribute('data-link') || DEFAULT_STRIPE_LINK;
+      const link = btn.getAttribute('data-link') || STRIPE_LINK; // Lee el link específico o usa el por defecto
 
       const existing = cart.find(item => item.title === title);
       if (existing) {
@@ -106,33 +81,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-
   document.getElementById('cart-toggle-btn')?.addEventListener('click', toggleCartDrawer);
   document.getElementById('cart-close-btn')?.addEventListener('click', toggleCartDrawer);
 
   document.getElementById('checkout-btn')?.addEventListener('click', () => {
     if (cart.length === 0) return;
-    
 
-    const checkoutLink = cart[0].link || DEFAULT_STRIPE_LINK;
+    const checkoutLink = cart[0].link || STRIPE_LINK;
     window.location.href = checkoutLink;
-  });
-
-
-  const modalBtns = document.querySelectorAll('[data-modal-target]');
-  const closeBtns = document.querySelectorAll('[data-close-modal]');
-
-  modalBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const modalId = btn.getAttribute('data-modal-target');
-      document.getElementById(modalId)?.classList.remove('hidden');
-    });
-  });
-
-  closeBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const modalId = btn.getAttribute('data-close-modal');
-      document.getElementById(modalId)?.classList.add('hidden');
-    });
   });
 });
