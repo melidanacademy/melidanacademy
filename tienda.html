@@ -126,13 +126,16 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         
-        <!-- 1. Diario 30 Días (Inactivo) -->
-        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between opacity-60 grayscale-[40%]">
-          <div class="w-full h-48 bg-[#FFF7ED] flex items-center justify-center p-4 border-b-2 border-slate-100">
-            <img src="./image_811eb4f6.jpg" alt="Diario de Escritura Guiada" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-60">
+        <!-- 1. Diario 30 Días (Activo) -->
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-[0_10px_35px_rgb(0,0,0,0.08)] hover:shadow-[0_20px_45px_-15px_rgba(10,59,122,0.15)] transition-all flex flex-col justify-between group transform hover:-translate-y-1">
+          <div data-modal-target="product-modal" class="w-full h-48 bg-slate-900 flex items-center justify-center p-2 border-b-2 border-slate-100 cursor-pointer overflow-hidden relative">
+            <img src="./image_811eb4f6.jpg" alt="Diario de Escritura Guiada" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-70">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end p-4">
+              <span class="text-white font-extrabold text-sm tracking-wide drop-shadow-md">Diario de Escritura Guiada (30 Days)</span>
+            </div>
           </div>
-          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
-            <div class="space-y-3">
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between bg-white">
+            <div class="space-y-3 cursor-pointer" data-modal-target="product-modal">
               <span class="px-3 py-1 bg-rose-50 text-rose-700 text-[9px] font-extrabold rounded-full tracking-widest uppercase border border-rose-200">WORKBOOK PDF</span>
               <h3 class="text-base font-bold text-[#0A3B7A] leading-snug">Diario de Escritura Guiada (30 Days)</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
@@ -141,15 +144,20 @@
             </div>
             <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
               <span class="text-xl font-extrabold text-[#0A3B7A]">$12 USD</span>
-              <button disabled class="px-4 py-2 bg-slate-100 text-slate-500 text-[10px] font-extrabold rounded-xl cursor-not-allowed uppercase tracking-wider">Próximamente (1 Dic)</button>
+              <button data-add-item="Diario de Escritura Guiada (30 Days)" data-price="12" data-link="https://buy.stripe.com/3cI5kEglX5C9g2Tdmjfw402" class="w-10 h-10 flex items-center justify-center bg-[#0A3B7A] text-white rounded-full cursor-pointer hover:bg-[#082e60] transition-colors shadow-md">
+                <i class="fa-solid fa-plus"></i>
+              </button>
             </div>
           </div>
         </div>
 
         <!-- 2. Multinational Playbook (Activo) -->
         <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-[0_10px_35px_rgb(0,0,0,0.08)] hover:shadow-[0_20px_45px_-15px_rgba(10,59,122,0.15)] transition-all flex flex-col justify-between group transform hover:-translate-y-1">
-          <div data-modal-target="product-modal" class="w-full h-48 bg-white flex items-center justify-center p-2 border-b-2 border-slate-100 cursor-pointer overflow-hidden">
-            <img src="./Melidan Academy - 21 Days The Multinational Playbook.jpg" alt="21 Days The Multinational Playbook - Kit Anti-Bloqueo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <div data-modal-target="product-modal" class="w-full h-48 bg-slate-900 flex items-center justify-center p-2 border-b-2 border-slate-100 cursor-pointer overflow-hidden relative">
+            <img src="./Melidan Academy - 21 Days The Multinational Playbook.jpg" alt="21 Days The Multinational Playbook - Kit Anti-Bloqueo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-70">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end p-4">
+              <span class="text-white font-extrabold text-sm tracking-wide drop-shadow-md">21 Days The Multinational Playbook</span>
+            </div>
           </div>
           <div class="p-6 space-y-4 flex-1 flex flex-col justify-between bg-white">
             <div class="space-y-3 cursor-pointer" data-modal-target="product-modal">
@@ -168,13 +176,16 @@
           </div>
         </div>
 
-        <!-- 3. Ruta 6 Meses (Activo) -->
-        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-[0_10px_35px_rgb(0,0,0,0.08)] hover:shadow-[0_20px_45px_-15px_rgba(10,59,122,0.15)] transition-all flex flex-col justify-between group transform hover:-translate-y-1">
-          <div data-modal-target="product-modal" class="w-full h-48 bg-white flex items-center justify-center p-2 border-b-2 border-slate-100 cursor-pointer overflow-hidden">
-            <img src="./image_53330abd.jpg" alt="Aprende Inglés en 6 Meses" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <!-- 3. Ruta 6 Meses (Inactivo / Próximamente) -->
+        <div class="bg-white border-2 border-slate-200 rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-between opacity-60 grayscale-[40%]">
+          <div class="w-full h-48 bg-slate-900 flex items-center justify-center p-2 border-b-2 border-slate-100 relative overflow-hidden">
+            <img src="./image_53330abd.jpg" alt="Aprende Inglés en 6 Meses" class="w-full h-full object-cover opacity-50">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end p-4">
+              <span class="text-white font-extrabold text-sm tracking-wide drop-shadow-md">Aprende Inglés en 6 Meses</span>
+            </div>
           </div>
-          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between bg-white">
-            <div class="space-y-3 cursor-pointer" data-modal-target="product-modal">
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-3">
               <span class="px-3 py-1 bg-[#E8F3EE] text-[#1F8A65] text-[9px] font-extrabold rounded-full tracking-widest uppercase border border-[#1F8A65]/20">PDF GUIDE</span>
               <h3 class="text-base font-bold text-[#0A3B7A] leading-snug">Aprende Inglés en 6 Meses: La Ruta Exacta</h3>
               <p class="text-xs text-slate-500 font-medium leading-relaxed">
@@ -186,16 +197,14 @@
                 <span class="block text-[10px] text-slate-400 line-through font-bold">$25 USD</span>
                 <span class="text-xl font-extrabold text-[#1F8A65]">$14 USD</span>
               </div>
-              <button data-add-item="Aprende Inglés en 6 Meses: La Ruta Exacta" data-price="14" data-link="https://buy.stripe.com/bJe8wQ0mZ2pX9Evaa7fw400" class="w-10 h-10 flex items-center justify-center bg-[#0A3B7A] text-white rounded-full cursor-pointer hover:bg-[#082e60] transition-colors shadow-md">
-                <i class="fa-solid fa-plus"></i>
-              </button>
+              <button disabled class="px-4 py-2 bg-slate-100 text-slate-500 text-[10px] font-extrabold rounded-xl cursor-not-allowed uppercase tracking-wider">Próximamente (1 Dic)</button>
             </div>
           </div>
         </div>
 
       </div>
 
-      <!-- Pack Dúo (Actualizado con nuevo link de Stripe) -->
+      <!-- Pack Dúo -->
       <div class="w-full bg-[#0f294a] rounded-[28px] p-6 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden mt-10">
         <div class="absolute -right-10 -top-10 w-48 h-48 bg-[#1F8A65]/20 rounded-full blur-2xl pointer-events-none"></div>
         <div class="space-y-2 relative z-10 text-center md:text-left">
