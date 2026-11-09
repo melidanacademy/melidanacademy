@@ -1,21 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const STRIPE_LINK = 'https://buy.stripe.com/bJe8wQ0mZ2pX9Evaa7fw400';
+  const DEFAULT_STRIPE_LINK = 'https://buy.stripe.com/bJe8wQ0mZ2pX9Evaa7fw400';
   let cart = [];
 
-  const tabButtons = document.querySelectorAll('[data-tab]');
-  const tabContents = document.querySelectorAll('.tab-content');
+  const tabs = document.querySelectorAll('.tab-btn');
+  const sections = document.querySelectorAll('.tab-section');
 
-  tabButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const tabKey = button.getAttribute('data-tab');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
 
-      tabButtons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
+      const target = tab.dataset.tab;
 
-      tabContents.forEach(content => content.classList.add('hidden'));
-      const activeContent = document.getElementById(`sec-${tabKey}`);
-      if (activeContent) {
-        activeContent.classList.remove('hidden');
+      if (target === 'todos') {
+        sections.forEach(sec => sec.classList.remove('hidden'));
+      } else {
+        sections.forEach(sec => {
+          if (sec.dataset.category === target) {
+            sec.classList.remove('hidden');
+          } else {
+            sec.classList.add('hidden');
+          }
+        });
       }
     });
   });
@@ -35,10 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (cart.length === 0) {
       if (cartItemsContainer) {
-        const defaultEmptyMsg = cartItemsContainer.getAttribute('data-empty-text') || '...';
-        cartItemsContainer.innerHTML = `<p class="text-xs text-slate-400 text-center py-8">${defaultEmptyMsg}</p>`;
+        const defaultEmptyMsg = cartItemsContainer.getAttribute('data-empty-text') || 'Tu carrito está vacío.';
+        cartItemsContainer.innerHTML = `<p class="text-sm text-slate-400 text-center py-10 font-medium">${defaultEmptyMsg}</p>`;
       }
-      if (cartTotal) cartTotal.innerText = '0 €';
+      if (cartTotal) cartTotal.innerText = '$0 USD';
       return;
     }
 
@@ -54,17 +60,17 @@ document.addEventListener('DOMContentLoaded', () => {
       itemEl.innerHTML = `
         <div class="pr-2">
           <h4 class="font-bold text-[#0A3B7A] leading-tight">${item.title}</h4>
-          <span class="text-slate-400 text-[11px]">${item.quantity} x ${item.price} €</span>
+          <span class="text-slate-400 text-[11px]">${item.quantity} x $${item.price} USD</span>
         </div>
         <div class="flex items-center gap-3 shrink-0">
-          <span class="font-bold text-[#1F8A65]">${itemTotal} €</span>
+          <span class="font-bold text-[#1F8A65]">$${itemTotal} USD</span>
           <button data-remove-item="${item.title}" class="text-slate-400 hover:text-red-500 font-bold cursor-pointer transition-colors p-1">✕</button>
         </div>
       `;
       cartItemsContainer?.appendChild(itemEl);
     });
 
-    if (cartTotal) cartTotal.innerText = `${total} €`;
+    if (cartTotal) cartTotal.innerText = `$${total} USD`;
 
     document.querySelectorAll('[data-remove-item]').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -75,16 +81,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+
   document.querySelectorAll('[data-add-item]').forEach(btn => {
     btn.addEventListener('click', () => {
       const title = btn.getAttribute('data-add-item');
       const price = parseFloat(btn.getAttribute('data-price') || '0');
+      const link = btn.getAttribute('data-link') || DEFAULT_STRIPE_LINK;
 
       const existing = cart.find(item => item.title === title);
       if (existing) {
         existing.quantity += 1;
       } else {
-        cart.push({ title, price, quantity: 1 });
+        cart.push({ title, price, quantity: 1, link });
       }
 
       const originalText = btn.innerHTML;
@@ -98,11 +106,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+
   document.getElementById('cart-toggle-btn')?.addEventListener('click', toggleCartDrawer);
   document.getElementById('cart-close-btn')?.addEventListener('click', toggleCartDrawer);
 
   document.getElementById('checkout-btn')?.addEventListener('click', () => {
     if (cart.length === 0) return;
-    window.location.href = STRIPE_LINK;
+    
+
+    const checkoutLink = cart[0].link || DEFAULT_STRIPE_LINK;
+    window.location.href = checkoutLink;
+  });
+
+
+  const modalBtns = document.querySelectorAll('[data-modal-target]');
+  const closeBtns = document.querySelectorAll('[data-close-modal]');
+
+  modalBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const modalId = btn.getAttribute('data-modal-target');
+      document.getElementById(modalId)?.classList.remove('hidden');
+    });
+  });
+
+  closeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const modalId = btn.getAttribute('data-close-modal');
+      document.getElementById(modalId)?.classList.add('hidden');
+    });
   });
 });
