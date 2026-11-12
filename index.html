@@ -25,6 +25,11 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied'
+    });
+    
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX');
   </script>
@@ -864,6 +869,90 @@
         icon.textContent = '+';
       }
     }
+  </script>
+
+  <style>
+    #cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #0A3B7A;
+      color: #fff;
+      padding: 16px 24px;
+      text-align: center;
+      font-family: inherit;
+      z-index: 99999;
+      box-sizing: border-box;
+      box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+      display: none;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+      justify-content: center;
+    }
+    @media (min-width: 768px) {
+      #cookie-banner {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+    }
+    #cookie-banner p { margin: 0; font-size: 13px; font-weight: 500; }
+    #cookie-banner a { color: #1F8A65; text-decoration: underline; font-weight: 700; }
+    .cookie-buttons { display: flex; gap: 10px; }
+    .cookie-btn {
+      background-color: #1F8A65;
+      color: white;
+      border: none;
+      padding: 8px 20px;
+      cursor: pointer;
+      border-radius: 9999px;
+      font-weight: bold;
+      font-size: 12px;
+      transition: background-color 0.3s;
+    }
+    .cookie-btn:hover { background-color: #186e51; }
+    .cookie-btn.deny { 
+      background-color: transparent; 
+      border: 1px solid white; 
+    }
+    .cookie-btn.deny:hover { background-color: rgba(255,255,255,0.1); }
+  </style>
+
+  <div id="cookie-banner">
+    <p>We use cookies to analyze site traffic and improve your experience. By clicking "Accept", you consent to our use of cookies. 
+       <a href="#" data-modal="modal-privacy">Read Privacy Policy</a>.</p>
+    <div class="cookie-buttons">
+      <button class="cookie-btn deny" onclick="denyCookies()">Decline</button>
+      <button class="cookie-btn" onclick="acceptCookies()">Accept</button>
+    </div>
+  </div>
+
+  <script>
+    function acceptCookies() {
+      localStorage.setItem("cookiesAccepted", "true");
+      document.getElementById("cookie-banner").style.display = "none";
+      
+      gtag('consent', 'update', {
+        'analytics_storage': 'granted'
+      });
+    }
+    
+    function denyCookies() {
+      localStorage.setItem("cookiesAccepted", "false");
+      document.getElementById("cookie-banner").style.display = "none";
+      
+      gtag('consent', 'update', {
+        'analytics_storage': 'denied'
+      });
+    }
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+      if (!localStorage.getItem("cookiesAccepted")) {
+        document.getElementById("cookie-banner").style.display = "flex";
+      }
+    });
   </script>
 
   <script src="./main.js"></script>
